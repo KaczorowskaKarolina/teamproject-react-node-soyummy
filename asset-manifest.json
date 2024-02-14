@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/teamproject-react-node-soyummy/static/css/main.7acaea2f.css",
+    "main.js": "/teamproject-react-node-soyummy/static/js/main.07d3183d.js",
+    "index.html": "/teamproject-react-node-soyummy/index.html",
+    "main.7acaea2f.css.map": "/teamproject-react-node-soyummy/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/teamproject-react-node-soyummy/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
