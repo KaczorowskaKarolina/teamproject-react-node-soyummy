@@ -1,0 +1,36 @@
+.CurvedButton {
+  padding: 20px 52px;
+  border-radius: 24px 44px;
+  border: 1px solid var(--secondary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.CurvedButton:hover {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
+
+.green {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
+
+.green:hover {
+  background-color: var(--primary-color);
+}
+
+.black {
+  background-color: var(--primary-color);
+  color: var(--main-color);
+}
+
+.black:hover {
+  background-color: var(--secondary-color);
+}
+
+.darkMode {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--main-color);
+}
