@@ -1,0 +1,12 @@
+.StartPageText {
+    font-size: 0.875rem;
+    font-weight: 400;
+
+    color: var(--main-color);
+}
+
+@media screen and (min-width: 768px) {
+    .StartPageText {
+        font-size: 1.125rem;
+    }
+}
