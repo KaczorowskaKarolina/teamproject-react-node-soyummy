@@ -1,4 +1,4 @@
-import { StartPage } from "client/pages/startPage/StartPage";
+import { StartPage } from "client/pages/startPage/StartPage.jsx";
 
 export const App = () => {
   return (

@@ -1,7 +1,7 @@
-import { CurvedButton } from 'client/components/Atoms/CurvedButton/CurvedButton';
+import { CurvedButton } from 'client/components/Atoms/CurvedButton/CurvedButton.jsx';
 import css from './StartPageButtons.module.css';
 
-export const StartPageButtons = () => {
+const StartPageButtons = () => {
   const handleRegistration = () => {
     console.log('Registration button test');
   };
@@ -14,11 +14,12 @@ export const StartPageButtons = () => {
     <div className={css.StartPageButtons}>
       <CurvedButton
         title="Registration"
-        type="button"
         greenOrBlack="green"
         onClick={handleRegistration}
       />
-      <CurvedButton title="Login" type="button" onClick={handleLogin} />
+      <CurvedButton title="Login" onClick={handleLogin} />
     </div>
   );
 };
+
+export { StartPageButtons };

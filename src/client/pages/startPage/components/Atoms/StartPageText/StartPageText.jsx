@@ -1,6 +1,6 @@
 import css from './StartPageText.module.css';
 
-export const StartPageText = () => {
+const StartPageText = () => {
   return (
     <p className={css.StartPageText}>
       This app offers more than just a collection of recipes - it is designed to
@@ -9,3 +9,5 @@ export const StartPageText = () => {
     </p>
   );
 };
+
+export { StartPageText };
