@@ -9,6 +9,17 @@ import { resendVerifyEmail } from '#controllers/resendVerifyEmail.js';
 
 const router = express.Router();
 
+router.get('/', (req, res, next) => {
+  return res.status(200).json({
+    status: 'success',
+    code: 200,
+    data: {
+      file: null,
+    },
+    message: 'nothing to load',
+  });
+});
+
 router.post('/signUp', signUp);
 router.post('/logIn', logIn);
 router.post('/verify', resendVerifyEmail);

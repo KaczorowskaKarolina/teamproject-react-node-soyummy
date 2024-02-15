@@ -1,6 +1,9 @@
-import { StartPage } from "client/pages/startPage/StartPage.jsx";
+import { StartPage } from 'client/pages/startPage/StartPage.jsx';
 
-export const App = () => {
+import { Routes, Route } from 'react-router-dom';
+// several pages imports
+
+const App = () => {
   return (
     <div
       style={{
@@ -9,12 +12,23 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-
       <StartPage />
-
+      React homework template
+      <Routes>
+        <Route path="/" />
+        <Route path="/categories/:categoryName" element={<CategoriesPage />} />
+        <Route path="/add" element={<AddRecipiesPage />} />
+        <Route path="/my" element={<MyRecipiesPage />} />
+        <Route path="/favorite" element={<FavoritePage />} />
+        <Route path="/shopping-list" element={<ShoppingListPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="*" element={<Page404 />} />
+      </Routes>
     </div>
   );
 };
+
+export { App };
