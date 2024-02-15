@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
-import fb from "./fb.svg";
-import yt from "./yt.svg";
-import twiter from "./twiter.svg";
-import instagram from "./instagram.svg";
-import "./App.css";
+import logo from './logo.svg';
+import fb from './fb.svg';
+import yt from './yt.svg';
+import twiter from './twiter.svg';
+import instagram from './instagram.svg';
+import './App.css';
 
 function App() {
   return (
