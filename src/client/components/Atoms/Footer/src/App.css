@@ -1,0 +1,188 @@
+.footer {
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #22252a;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-top: 28px;
+  margin-bottom: 32px;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+}
+
+.app-name {
+  margin-left: 10px; /* Adjust as needed */
+  /* font-family: Poppins; Wybierz odpowiednią czcionkę */
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.015em;
+  text-align: left;
+}
+
+.additional-content {
+  margin-bottom: 32px;
+}
+
+.additional-content,
+.bottom-input {
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.footer-link {
+  display: block;
+  margin-bottom: 10px; /* Adjust as needed */
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.input-with-icon {
+  position: relative;
+  color: white;
+}
+
+.input-with-icon input {
+  padding-left: 30px; /* Zapobiega zakryciu tekstu przez ikonkę */
+  background-image: url("/src/koperta.svg"); /* Ścieżka do twojej ikony koperty SVG */
+  background-repeat: no-repeat;
+  background-position: 10px center; /* Dostosuj odległość ikonki od lewej krawędzi */
+}
+
+.bottom-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.button-input-field {
+  color: white; /* Kolor tekstu */
+  border-color: #ffffff; /* Kolor ramki */
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.bottom-input-field {
+  color: #fff;
+  background-color: #22252a; /* Ustawia kolor tła inputa */
+  width: 204px;
+  height: 38px;
+  border: 1px solid #000; /* Adjust border color as needed */
+  opacity: 0.16; /* Adjust opacity as needed */
+  box-sizing: border-box; /* Ensure width and height include borders */
+  margin-bottom: 10px; /* Adjust as needed */
+  border-radius: 6px;
+}
+
+.submit-button {
+  width: 204px;
+  height: 38px;
+  background-color: #8baa36;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  border-radius: 6px;
+  margin-bottom: 44px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px; /* Adjust spacing between icons */
+}
+
+.footer {
+  /* Pozostałe style */
+  position: relative;
+}
+
+.social-icons {
+  margin-top: 20px; /* Odstęp między elementami */
+}
+
+.copyrigh {
+  position: relative;
+  font-size: 12px;
+  background-image: url("./lisciu.svg");
+  background-size: cover;
+  background-position: right bottom;
+  padding: 10px; /* Dostosuj padding według potrzeb */
+  margin-top: auto; /* Element będzie umieszczony na dole */
+}
+
+p span {
+  display: inline-block;
+  margin-right: 20px; /* Dostosuj odstęp między elementami */
+  margin-top: 28px;
+  margin-bottom: 28px;
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 10px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.copyright p span:first-child {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: -1%;
+  color: #22252a;
+}
+
+.copyright p span:last-child {
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #22252a;
+}
