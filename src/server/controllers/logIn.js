@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { User } from 'server/models/schema/users/userSchema.js';
 
-async function logIn(req, res, next) {
+async function logIn(req, res) {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
