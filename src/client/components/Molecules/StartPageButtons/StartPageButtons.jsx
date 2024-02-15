@@ -1,6 +1,7 @@
-//import CurvedButton from '../Atoms/CurvedButton' (button import, check file path)
+import { CurvedButton } from "client/components/Atoms/CurvedButton/CurvedButton";
+import css from './StartPageButtons.module.css'
 
-export const StartPageButtons = props => {
+export const StartPageButtons = () => {
   const handleRegistration = () => {
     console.log('Registration button test');
   };
@@ -10,7 +11,7 @@ export const StartPageButtons = props => {
   };
 
   return (
-    <div>
+    <div className={css.StartPageButtons}>
       <CurvedButton
         title="Registration"
         type="button"
