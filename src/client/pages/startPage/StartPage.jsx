@@ -1,4 +1,4 @@
-import { StartPageTemplate } from "client/components/Templates/StartPageTemplate/StartPageTemplate";
+import { StartPageTemplate } from "client/pages/startPage/components/Templates/StartPageTemplate";
 
 export const StartPage = () => {
     return (

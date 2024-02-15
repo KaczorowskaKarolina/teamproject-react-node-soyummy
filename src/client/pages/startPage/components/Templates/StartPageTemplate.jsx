@@ -1,4 +1,4 @@
-import { StartPageOrganism } from 'client/components/Organisms/StartPageOrganism/StartPageOrganism';
+import { StartPageOrganism } from 'client/pages/startPage/components/Organisms/StartPageOrganism';
 import css from './StartPageTemplate.module.css';
 
 export const StartPageTemplate = () => {
