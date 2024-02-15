@@ -1,0 +1,40 @@
+.RectangleButton {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--main-color);
+}
+
+.large {
+  background-color: var(--secondary-color);
+  padding: 21px 138px;
+}
+
+.large:hover {
+  color: var(--primary-color);
+}
+
+.large.darkMode {
+  background-color: var(--primary-color);
+}
+
+.large.darkMode:hover {
+  color: var(--secondary-color);
+}
+
+.small {
+  background-color: var(--secondary-color);
+  padding: 21px 39px;
+}
+
+.small:hover {
+  background-color: var(--primary-color);
+}
+
+.small.darkMode {
+  background-color: var(--sectionb-color);
+  color: var(--primary-color);
+}
+
+.small.darkMode:hover {
+  border: 1px solid var(--primary-color);
+}
