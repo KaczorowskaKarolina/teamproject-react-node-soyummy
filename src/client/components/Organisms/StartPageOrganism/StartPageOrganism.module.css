@@ -9,13 +9,13 @@
 }
 
 @media screen and (min-width: 768px) {
-    .StartPageOrganism {
-        max-width: 490px;
-    }
+  .StartPageOrganism {
+    max-width: 490px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .StartPageOrganism {
-        max-width: 500px;
-    }
+  .StartPageOrganism {
+    max-width: 500px;
+  }
 }

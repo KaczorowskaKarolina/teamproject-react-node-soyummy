@@ -3,10 +3,10 @@ import { StartPageText } from 'client/components/Atoms/StartPageText/StartPageTe
 import css from './StartPageTexts.module.css';
 
 export const StartPageTexts = () => {
-    return (
-        <div className={css.StartPageTexts}>
-            <StartPageTitle></StartPageTitle>
-            <StartPageText></StartPageText>
-        </div>
-    )
-}
+  return (
+    <div className={css.StartPageTexts}>
+      <StartPageTitle />
+      <StartPageText />
+    </div>
+  );
+};
