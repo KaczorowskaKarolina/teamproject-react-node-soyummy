@@ -1,6 +1,11 @@
 import styles from './CurvedButton.module.css';
 
-export const CurvedButton = ({ title, type = 'button', greenOrBlack, onClick = () => {} }) => {
+const CurvedButton = ({
+  title,
+  type = 'button',
+  greenOrBlack,
+  onClick = () => {},
+}) => {
   const classes = `${styles.CurvedButton} ${styles[`${greenOrBlack}`]}`;
   return (
     <button className={classes} type={type} onClick={onClick}>
@@ -8,6 +13,8 @@ export const CurvedButton = ({ title, type = 'button', greenOrBlack, onClick = (
     </button>
   );
 };
+
+export { CurvedButton };
 
 // title is a text that appears on button f.ex. 'Submit'
 
