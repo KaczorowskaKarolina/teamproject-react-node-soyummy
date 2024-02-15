@@ -1,0 +1,12 @@
+.StartPageTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    color: var(--main-color);
+}
+
+@media screen and (min-width: 768px) {
+    .StartPageTitle {
+        font-size: 1.75rem;
+    }
+}
