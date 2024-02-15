@@ -1,5 +1,6 @@
-import { User } from 'server/models/schema/users/userSchema.js';
 import { nanoid } from 'nanoid';
+import { sendEmail } from 'server/handlers/sendEmail';
+import { User } from 'server/models/schema/users/userSchema.js';
 
 async function signUp(req, res) {
   try {
@@ -16,10 +17,12 @@ async function signUp(req, res) {
     // question if we will use it
     const verificationToken = nanoid();
     user.verificationToken = verificationToken;
-    //   functionThatSendsEmailToVerifyAccount({
-    //     emailTo: user.email,
-    //     emailToken: verificationToken,
-    //   });
+    sendEmail({
+      to: user.email,
+      subject: 'SoYummy - veryfi your account',
+      text: 'Welcome in SoYummy! To verify your account please click this email:',
+      html: `<button type="button><a href="http://localhost:3000/users/verify/${verificationToken}">Confirm account</a></button>`,
+    });
     await user.save();
     return res.status(200).json({ data: user });
   } catch (error) {
