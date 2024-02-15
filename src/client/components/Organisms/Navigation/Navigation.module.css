@@ -7,6 +7,12 @@
   background-color: #ebf3d4;
 }
 
+.closeButton {
+background-color: transparent;
+font-size: 16px;
+color: #22252a;
+}
+
 .icons {
   display: flex;
   justify-content: space-between;
