@@ -16,3 +16,10 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (min-width: 1240px) {
+  .list {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
