@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  align-items: center;
+}
