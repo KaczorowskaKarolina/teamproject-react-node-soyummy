@@ -1,14 +1,29 @@
+import css from './Navbar.module.css';
 import { NavigationLink } from 'client/components/Atoms/NavigationLink/NavigationLink';
 
 export const Navbar = () => {
   return (
-    <nav>
-      <NavigationLink path="/categories/:categoryName" title="Categories" />
-      <NavigationLink path="/add" title="Add recipes" />
-      <NavigationLink path="/my" title="My recipes" />
-      <NavigationLink path="/favorite" title="Favorite" />
-      <NavigationLink path="/shopping-list" title="Shopping list" />
-      <NavigationLink path="/search" title="Search" />
+    <nav className={css.navigation}>
+      <ul className={css.list}>
+        <li className={css.item}>
+          <NavigationLink path="/categories/:categoryName" title="Categories" />
+        </li>
+        <li className={css.item}>
+          <NavigationLink path="/add" title="Add recipes" />
+        </li>
+        <li className={css.item}>
+          <NavigationLink path="/my" title="My recipes" />
+        </li>
+        <li className={css.item}>
+          <NavigationLink path="/favorite" title="Favorite" />
+        </li>
+        <li className={css.item}>
+          <NavigationLink path="/shopping-list" title="Shopping list" />
+        </li>
+        <li className={css.item}>
+          <NavigationLink path="/search" title="Search" />
+        </li>
+      </ul>
     </nav>
   );
 };
