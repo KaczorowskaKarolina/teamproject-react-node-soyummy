@@ -1,4 +1,4 @@
-import { StartPageTemplate } from "./Templates/StartPageTemplate/StartPageTemplate";
+import { StartPage } from "client/pages/startPage/StartPage";
 
 export const App = () => {
   return (
@@ -13,7 +13,7 @@ export const App = () => {
       }}
     >
 
-      <StartPageTemplate />
+      <StartPage />
 
     </div>
   );
