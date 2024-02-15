@@ -11,6 +11,7 @@ async function signUp(req, res) {
     }
     const user = new User({ email });
     user.setPassword(password);
+    user.name = name;
     // user.avatarURL = gravatar.url(email, { s: 250, protocol: "https" });
     // question if we will use it
     const verificationToken = nanoid();
