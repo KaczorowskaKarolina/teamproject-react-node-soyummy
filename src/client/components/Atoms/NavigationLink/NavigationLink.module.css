@@ -1,0 +1,15 @@
+.link {
+  text-decoration: none;
+  color: #22252a;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: #8baa36;
+}
+
+.active {
+  color: #8baa36;
+}
