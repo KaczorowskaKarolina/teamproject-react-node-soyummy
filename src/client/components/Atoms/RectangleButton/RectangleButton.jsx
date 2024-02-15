@@ -1,6 +1,11 @@
 import styles from './RectangleButton.module.css';
 
-export const RectangleButton = ({ title, type = 'button', size, onClick = () => {} }) => {
+const RectangleButton = ({
+  title,
+  type = 'button',
+  size,
+  onClick = () => {},
+}) => {
   const classes = `${styles.RectangleButton} ${styles[`${size}`]}`;
   return (
     <button className={classes} type={type} onClick={onClick}>
@@ -8,6 +13,8 @@ export const RectangleButton = ({ title, type = 'button', size, onClick = () => 
     </button>
   );
 };
+
+export { RectangleButton };
 
 // title is a text that appears on button f.ex. 'Subscribe'
 
