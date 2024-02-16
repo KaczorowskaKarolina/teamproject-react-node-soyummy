@@ -1,6 +1,6 @@
-import { User } from 'server/models/schema/users/userSchema.js';
+import { User } from '../models/schema/users/userSchema.js';
 
-export async function logout(req, res) {
+async function logout(req, res) {
   try {
     const id = req.user.id;
     const user = await User.findOne({ id });

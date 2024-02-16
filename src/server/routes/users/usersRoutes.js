@@ -1,12 +1,12 @@
 import { Router } from 'express';
 
-import { logIn } from 'server/controllers/logIn.js';
-import { signUp } from 'server/controllers/signUp.js';
-import { logout } from 'server/controllers/logout.js';
-import { currentUser } from 'server/controllers/currentUser.js';
-import { userValidation } from 'server/handlers/userValidation.js';
-import { authMiddleware } from 'server/middlewares/authMiddleware.js';
-import { validationMiddleware } from 'server/middlewares/validationMiddleware.js';
+import { logIn } from '../../controllers/logIn.js';
+import { signUp } from '../../controllers/signUp.js';
+import { logout } from '../../controllers/logout.js';
+import { currentUser } from '../../controllers/currentUser.js';
+import { userValidation } from '../../handlers/userValidation.js';
+import { authMiddleware } from '../../middlewares/authMiddleware.js';
+import { validationMiddleware } from '../../middlewares/validationMiddleware.js';
 
 const router = Router();
 

@@ -1,4 +1,4 @@
-import { User } from 'server/models/schema/users/userSchema.js';
+import { User } from '../models/schema/users/userSchema.js';
 
 async function verify(req, res) {
   try {
