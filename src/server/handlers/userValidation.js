@@ -8,6 +8,7 @@ const userValidation = Joi.object({
       tlds: { allow: ['com', 'net', 'pl'] },
     })
     .required(),
-}).and('email', 'password');
+  name: Joi.string().required(),
+}).and('email', 'password', 'name');
 
 export { userValidation };
