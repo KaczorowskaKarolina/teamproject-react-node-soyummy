@@ -19,9 +19,10 @@ async function resendVerifyEmail(req, res) {
     await sendEmail({
       to: user.email,
       subject: 'SoYummy - confirm your email!',
-      text: `Hi. To confirm your email please click the button below:`,
-      html: `<button type="button"><a href="http:localhost:3000/users/verify/${user.verificationToken}">Confirm email</a></button>`,
+      text: `Hi. To confirm your email please click the link below:`,
+      html: `<a href="http:localhost:3000/api/users/verify/${user.verificationToken}">Confirm email</a>`,
     });
+    return res.status(200).json('Email has been sent');
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
