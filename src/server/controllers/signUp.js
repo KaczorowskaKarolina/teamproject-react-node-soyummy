@@ -19,9 +19,9 @@ async function signUp(req, res) {
     user.verificationToken = verificationToken;
     sendEmail({
       to: user.email,
-      subject: 'SoYummy - veryfi your account',
-      text: 'Welcome in SoYummy! To verify your account please click this email:',
-      html: `<button type="button><a href="http://localhost:3000/users/verify/${verificationToken}">Confirm account</a></button>`,
+      subject: 'SoYummy - confirm your email!',
+      text: 'Welcome in SoYummy! To verify your account please click this link:',
+      html: `<a href="http://localhost:3000/api/users/verify/${verificationToken}">Confirm account</a>`,
     });
     await user.save();
     return res.status(200).json({ data: user });
