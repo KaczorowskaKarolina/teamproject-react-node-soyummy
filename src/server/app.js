@@ -3,6 +3,7 @@ import cors from 'cors';
 import logger from 'morgan';
 import dotenv from 'dotenv';
 import express from 'express';
+import './config/jwt-strategy.js';
 
 import router from './routes/index.js';
 
