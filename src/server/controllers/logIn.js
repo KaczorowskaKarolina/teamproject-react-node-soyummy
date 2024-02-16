@@ -5,7 +5,8 @@ async function logIn(req, res) {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
-    if (!user || user.validatePassword(password)) {
+    console.log(user);
+    if (!user || !user.validatePassword(password)) {
       return res.status(400).json({ message: 'Email or password incorrect.' });
     }
     if (!user.validate) {
