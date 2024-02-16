@@ -1,27 +1,29 @@
 import passport from 'passport';
-import { ExtractJwt, Strategy as JWTStrategy } from 'passport-jwt';
+import passportJWT from 'passport-jwt';
+import { User } from 'server/models/schema/users/userSchema.js';
 
-export default function setJWTStrategy() {
-  const secret = process.env.SECRET;
-  const params = {
-    secretOrKey: secret,
-    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-  };
-
-  passport.use(
-    new JWTStrategy(params, async function (payload, done) {
-      try {
-        //
-        // const user = await getUserById(payload.id);
-        const user = true;
-        if (!user) {
-          return done(new Error('User not found'));
-        }
-        return done(null, user);
-        //
-      } catch (e) {
-        return done(e);
-      }
-    })
-  );
-}
+passport.use(
+  new passportJWT.Strategy(
+    {
+      secretOrKey: process.env.TOKEN_SECRET,
+      jwtFromRequest: passportJWT.ExtractJwt.fromAuthHeaderAsBearerToken(),
+      passReqToCallback: true,
+    },
+    (req, payload, done) => {
+      User.find({
+        _id: payload.id,
+        token: req.headers.autherization.split(' ')[1],
+        verify: true,
+      })
+        .then(user => {
+          if (user) {
+            return done(null, user);
+          }
+          return done(new Error('Toke is invalid'));
+        })
+        .catch(error => {
+          return done(error, null);
+        });
+    }
+  )
+);
