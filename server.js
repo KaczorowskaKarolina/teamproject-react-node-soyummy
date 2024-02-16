@@ -16,7 +16,7 @@ const connection = mongoose.connect(uriDb);
 
 connection
   .then(() => {
-    console.log(`Database connection successful on https://localhost:${PORT}`);
+    console.log(`Database connection successful on http://localhost:${PORT}`);
     app.listen(PORT, function () {
       console.log(`Server running. Use our API on port: ${PORT}`);
     });
