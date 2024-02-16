@@ -9,7 +9,7 @@ async function logIn(req, res) {
     if (!user || !user.validatePassword(password)) {
       return res.status(400).json({ message: 'Email or password incorrect.' });
     }
-    if (!user.validate) {
+    if (!user.verify) {
       return res.status(400).json({ message: 'Account not verified' });
     }
     const payload = {
