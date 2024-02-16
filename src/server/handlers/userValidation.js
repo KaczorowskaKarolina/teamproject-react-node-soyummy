@@ -1,7 +1,7 @@
 import Joi from 'joi';
 
 const userValidation = Joi.object({
-  password: Joi.string().required,
+  password: Joi.string().required(),
   email: Joi.string()
     .email({
       minDomainSegments: 2,
