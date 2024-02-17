@@ -11,7 +11,7 @@ passport.use(
       passReqToCallback: true,
     },
     (req, payload, done) => {
-      User.find({
+      User.findOne({
         _id: payload.id,
         token: req.headers.authorization.split(' ')[1],
         verify: true,
