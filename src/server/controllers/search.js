@@ -1,13 +1,24 @@
+const { getSearchedTitles } = require("../..");
 
-
-const searchRecipesByName = async (req, res, next) => {
+const getSearchedTitlesHandler = async (req, res, next) => {
   try {
-    const name = req.query.name;
-    const recipes = await Recipe.find();
-    res.status(200).json({ recipes });
+    const { query } = req.body;
+    const listOfSearches = await getSearchedTitles(query);
+
+    if (listOfSearches === null) {
+      return res.status(404).json({
+        message:
+          "Nie znaleźliśmy żadnych przepisów które pasują do twojego opisu",
+      });
+    }
+    console.log(listOfSearches.length);
+    return res.status(200).json({ listOfSearches });
   } catch (error) {
-    next(error);
+    console.error(error);
+    return res.status(500).json({ error: "Wystąpił błąd serwera." });
   }
 };
 
-export { searchRecipesByName }
+module.exports = {
+  getSearchedTitlesHandler,
+};

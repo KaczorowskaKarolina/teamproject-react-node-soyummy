@@ -1,0 +1,24 @@
+.title {
+    padding-top: 50px;
+    margin-left: 32px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #001833;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .title {
+      font-size: 32px;
+      padding-top: 72px;
+      margin-left: 100px;
+    }
+  }
+  
+  @media screen and (min-width: 1440px) {
+    .title {
+      font-size: 44px;
+      padding-top: 100px;
+    }
+  }
