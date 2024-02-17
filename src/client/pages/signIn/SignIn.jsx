@@ -1,4 +1,4 @@
-import { SignInTemplate } from './components/Templates/SignInTemplate/SignInTemplate.jsx';
+import { SignInTemplate } from './components/Templates/SignInTemplate.jsx';
 
 const SignIn = () => {
   return <SignInTemplate />;

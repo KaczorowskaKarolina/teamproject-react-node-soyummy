@@ -1,5 +1,5 @@
 import PageImage from 'client/images/pages/RegisterAndSignInPages/register-signin-image.png';
-import { SignInForm } from '../../Organisms/SignInForm/SignInForm.jsx';
+import { SignInForm } from '../Organisms/SignInForm.jsx';
 import css from './SignInTemplate.module.css';
 
 const SignInTemplate = () => {

@@ -1,6 +1,6 @@
-import { SignInInputs } from '../../Molecules/SignInInputs/SignInInputs.jsx';
+import { SignInInputs } from '../Molecules/SignInInputs.jsx';
 import { RectangleButton } from 'client/components/Atoms/RectangleButton/RectangleButton.jsx';
-import { SignInLink } from '../../Atoms/SignInLink/SignInLink.jsx';
+import { SignInLink } from '../Atoms/SignInLink.jsx';
 import css from './SignInForm.module.css';
 
 const SignInForm = () => {
