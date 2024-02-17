@@ -1,0 +1,14 @@
+.iconContainer {
+  width: 100%;
+  margin: 0 32px;
+  border-radius: 8px;
+  color: #fafafa;
+}
+
+.iconContainer:hover {
+  color: black;
+}
+
+.icon {
+  stroke: inherit;
+}
