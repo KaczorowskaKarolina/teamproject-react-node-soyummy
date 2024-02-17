@@ -1,7 +1,7 @@
 import css from './Navbar.module.css';
 import { NavigationLink } from 'client/components/Atoms/NavigationLink/NavigationLink';
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <nav className={css.navigation}>
       <ul className={css.list}>
@@ -21,9 +21,11 @@ export const Navbar = () => {
           <NavigationLink path="/shopping-list" title="Shopping list" />
         </li>
         <li className={css.item}>
-          <NavigationLink path="/search" title="Search" />
+          <NavigationLink path="/search" title="Search" icon="true" />
         </li>
       </ul>
     </nav>
   );
 };
+
+export { Navbar };
