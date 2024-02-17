@@ -1,0 +1,43 @@
+.SignInForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+
+  z-index: 2;
+}
+
+.SignInModal {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  padding: 32px 28px;
+  margin: 0 20px;
+
+  background-color: #2a2c36;
+  border-radius: 30px;
+
+  z-index: 2;
+}
+
+.SignInTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  margin: 0 0 12px 0;
+
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .SignInModal {
+    padding: 44px 50px;
+    margin: 0 20px;
+    gap: 50px;
+  }
+
+  .SignInTitle {
+    font-size: 1.75rem;
+  }
+}
