@@ -3,9 +3,9 @@ import { User } from '../models/schema/users/userSchema.js';
 async function logout(req, res) {
   try {
     const id = req.user.id;
-    const user = await User.findOne({ id });
+    const user = await User.findById(id);
     if (!user || !user.token) {
-      res.status(401).json({ message: 'Unauthorized' });
+      return res.status(401).json({ message: 'Unauthorized' });
     }
     user.token = null;
     await user.save();
