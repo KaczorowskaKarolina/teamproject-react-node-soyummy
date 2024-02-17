@@ -1,6 +1,6 @@
-import { RegistrationInputs } from '../../Molecules/RegistrationInputs/RegistrationInputs.jsx';
+import { RegistrationInputs } from '../Molecules/RegistrationInputs.jsx';
 import { RectangleButton } from 'client/components/Atoms/RectangleButton/RectangleButton.jsx';
-import { RegistrationLink } from '../../Atoms/RegistrationLink/RegistrationLink.jsx';
+import { RegistrationLink } from '../Atoms/RegistrationLink.jsx';
 import css from './RegistrationForm.module.css';
 
 const RegistrationForm = () => {

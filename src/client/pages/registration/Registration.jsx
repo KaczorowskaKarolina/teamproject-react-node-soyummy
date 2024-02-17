@@ -1,4 +1,4 @@
-import { RegistrationTemplate } from './components/Templates/RegistrationTemplate/RegistrationTemplate.jsx';
+import { RegistrationTemplate } from './components/Templates/RegistrationTemplate.jsx';
 
 const Registration = () => {
   return <RegistrationTemplate />;
