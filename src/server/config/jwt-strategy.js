@@ -13,7 +13,7 @@ passport.use(
     (req, payload, done) => {
       User.find({
         _id: payload.id,
-        token: req.headers.autherization.split(' ')[1],
+        token: req.headers.authorization.split(' ')[1],
         verify: true,
       })
         .then(user => {
