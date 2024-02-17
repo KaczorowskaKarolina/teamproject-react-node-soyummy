@@ -18,9 +18,8 @@ async function logIn(req, res) {
     const token = jwt.sign(payload, process.env.TOKEN_SECRET, {
       expiresIn: '1h',
     });
-    // jesli bedziemy token zapisaywac w db to ponizej jest kod
-    //   user.token = token;
-    //   await user.save();
+    user.token = token;
+    await user.save();
     return res.status(200).json({
       token,
       user: { email: user.email, name: user.name },
