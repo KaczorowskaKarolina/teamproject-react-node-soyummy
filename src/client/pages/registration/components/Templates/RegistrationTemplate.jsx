@@ -1,5 +1,5 @@
-import PageImage from 'client/images/pages/RegisterAndSignInPages/register-signin-image.png';
-import { RegistrationForm } from '../Organisms/RegistrationForm.jsx';
+import PageImage from '#images/pages/RegisterAndSignInPages/register-signin-image.png';
+import { RegistrationForm } from '#pages/registration/components/Organisms/RegistrationForm.jsx';
 import css from './RegistrationTemplate.module.css';
 
 const RegistrationTemplate = () => {

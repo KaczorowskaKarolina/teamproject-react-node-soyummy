@@ -1,4 +1,4 @@
-import { FormInput } from 'client/components/Atoms/FormInput/FormInput.jsx';
+import { FormInput } from '#components/Atoms/FormInput/FormInput.jsx';
 import css from './SignInInputs.module.css';
 
 const SignInInputs = () => {

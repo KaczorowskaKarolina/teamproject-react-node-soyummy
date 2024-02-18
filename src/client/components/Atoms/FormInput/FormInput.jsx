@@ -1,7 +1,7 @@
-import { ReactComponent as NameIcon } from 'client/images/icons/name-icon.svg';
-import { ReactComponent as EmailIcon } from 'client/images/icons/email-icon.svg';
-import { ReactComponent as PasswordIcon } from 'client/images/icons/password-icon.svg';
-import { ReactComponent as EditIcon } from 'client/images/icons/edit-icon.svg';
+import { ReactComponent as NameIcon } from '#images/icons/name-icon.svg';
+import { ReactComponent as EmailIcon } from '#images/icons/email-icon.svg';
+import { ReactComponent as PasswordIcon } from '#images/icons/password-icon.svg';
+import { ReactComponent as EditIcon } from '#images/icons/edit-icon.svg';
 import css from './FormInput.module.css';
 
 const FormInput = ({ type, inputName, placeholder, editIcon, darkOrLight }) => {
