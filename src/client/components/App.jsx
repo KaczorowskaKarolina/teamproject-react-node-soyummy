@@ -1,4 +1,4 @@
-import { Page404 } from './src/client/pages/Page404/Page404.jsx';
+import { Page404 } from 'client/pages/Page404/Page404.jsx';
 import { StartPage } from 'client/pages/startPage/StartPage.jsx';
 
 import { Routes, Route } from 'react-router-dom';
@@ -16,8 +16,7 @@ const App = () => {
         color: '#010101',
       }}
     >
-      <StartPage />
-      React homework template
+    
       <Routes>
         <Route path="/teamproject-react-node-soyummy" element={<StartPage />} />
         {/* <Route path="/categories/:categoryName" element={<CategoriesPage />} />
