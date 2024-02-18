@@ -46,6 +46,7 @@ const FormInput = ({ type, inputName, placeholder, editIcon, darkOrLight }) => {
 export { FormInput };
 
 // Props explanation:
+
 // type = text/email/password --> used to determine the type of input data and displayed content,
 // inputName = name/email/password --> used to display icon on the left,
 // placeholder = "Visible text" --> label/placeholder shown in the input,
