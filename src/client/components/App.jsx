@@ -16,15 +16,16 @@ const App = () => {
         color: '#010101',
       }}
     >
-    
       <Routes>
         <Route path="/teamproject-react-node-soyummy" element={<StartPage />} />
-        {/* <Route path="/categories/:categoryName" element={<CategoriesPage />} />
+        {/* 
+        <Route path="/categories/:categoryName" element={<CategoriesPage />} />
         <Route path="/add" element={<AddRecipiesPage />} />
         <Route path="/my" element={<MyRecipiesPage />} />
         <Route path="/favorite" element={<FavoritePage />} />
         <Route path="/shopping-list" element={<ShoppingListPage />} />
-        <Route path="/search" element={<SearchPage />} /> */}
+        <Route path="/search" element={<SearchPage />} />
+        */}
         <Route path="*" element={<Page404 />} />
       </Routes>
     </div>
