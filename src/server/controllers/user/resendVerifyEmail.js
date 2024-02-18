@@ -1,5 +1,5 @@
 import { sendEmail } from '#handlers/sendEmail.js';
-import { User } from '#schema/users/userSchema.js';
+import { User } from '#schemas/users/userSchema.js';
 
 async function resendVerifyEmail(req, res) {
   try {

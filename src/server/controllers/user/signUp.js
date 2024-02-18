@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 import { sendEmail } from '#handlers/sendEmail.js';
-import { User } from '#schema/users/userSchema.js';
+import { User } from '#schemas/users/userSchema.js';
 
 async function signUp(req, res) {
   try {
