@@ -12,7 +12,7 @@
 
   padding: 17px;
 
-  width: 400px;
+  width: 280px;
 }
 
 .FormInputText {
@@ -68,4 +68,10 @@
   color: var(--secondaryColor);
   stroke: var(--secondaryColor);
   transition: ease-in-out 0.1s;
-} 
+}
+
+@media screen and (min-width: 768px) {
+  .FormInput {
+    width: 400px;
+  }
+}
