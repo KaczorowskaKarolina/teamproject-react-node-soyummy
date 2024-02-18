@@ -1,6 +1,6 @@
-import { Page404 } from './src/client/pages/Page404/components/Templates/Page404Template.jsx';
+import { Page404Template } from '../Page404/components/Templates/Page404Template.jsx';
 
-const Page404Template = () => {
+const Page404 = () => {
   return <Page404Template />;
 };
 
