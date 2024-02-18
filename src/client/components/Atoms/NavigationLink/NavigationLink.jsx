@@ -1,6 +1,6 @@
 import css from './NavigationLink.module.css';
 import { NavLink } from 'react-router-dom';
-import { ReactComponent as SearchIcon } from '../../../images/icons/search-icon.svg';
+import { ReactComponent as SearchIcon } from '#icons/search-icon.svg';
 
 const NavigationLink = ({ path, title, icon }) => {
   if (icon) {

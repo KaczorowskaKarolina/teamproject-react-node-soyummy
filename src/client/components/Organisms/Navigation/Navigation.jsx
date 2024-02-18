@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Navbar } from 'client/components/Molecules/Navbar/Navbar';
-import { ReactComponent as CloseIcon } from '../../../images/icons/close-icon.svg';
-import { ReactComponent as LogoIcon } from '../../../images/icons/logo-header-icon.svg';
+import { Navbar } from '#molecules/Navbar/Navbar.jsx';
+import { ReactComponent as CloseIcon } from '#icons/close-icon.svg';
+import { ReactComponent as LogoIcon } from '#icons/logo-header-icon.svg';
 import css from './Navigation.module.css';
 
 const Navigation = () => {
