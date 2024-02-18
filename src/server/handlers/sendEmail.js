@@ -19,4 +19,13 @@ async function sendEmail({ to, from, subject, text, html }) {
   }
 }
 
-export { sendEmail };
+async function sendVerificationEmail({ emailTo, verificationToken }) {
+  await sendEmail({
+    to: emailTo,
+    subject: 'SoYummy - confirm your email!',
+    text: `Hi. To confirm your email please click the link below:`,
+    html: `<a href="http:localhost:5000/api/users/verify/${verificationToken}">Confirm email</a>`,
+  });
+}
+
+export { sendEmail, sendVerificationEmail };
