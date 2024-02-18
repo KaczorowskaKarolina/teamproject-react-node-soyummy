@@ -1,14 +1,14 @@
-import { User } from '#schemas/users/userSchema.js';
+import { getUserById } from '#handlers/usersHelpers.js';
 
-async function currentUser(req, res) {
+async function currentUser(req, res, next) {
   try {
-    const user = await User.findById(req.user.id);
+    const user = await getUserById(req.user.id);
     if (!user) {
       return res.status(401).json({ message: 'Unauthorized' });
     }
     return res.status(200).json({ data: user });
   } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return next(error);
   }
 }
 

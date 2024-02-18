@@ -1,13 +1,13 @@
-import { sendEmail } from '#handlers/sendEmail.js';
-import { User } from '#schemas/users/userSchema.js';
+import { getUserByEmail } from '#handlers/usersHelpers.js';
+import { sendVerificationEmail } from '#handlers/sendEmail.js';
 
-async function resendVerifyEmail(req, res) {
+async function resendVerifyEmail(req, res, next) {
   try {
     const { email } = req.body;
     if (!email) {
       return res.status(400).json({ message: 'Missing required field email' });
     }
-    const user = await User.findOne({ email });
+    const user = await getUserByEmail(email);
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
@@ -16,15 +16,10 @@ async function resendVerifyEmail(req, res) {
         .status(400)
         .json({ message: 'Verification has already been passed' });
     }
-    await sendEmail({
-      to: user.email,
-      subject: 'SoYummy - confirm your email!',
-      text: `Hi. To confirm your email please click the link below:`,
-      html: `<a href="http:localhost:3000/api/users/verify/${user.verificationToken}">Confirm email</a>`,
-    });
-    return res.status(200).json('Email has been sent');
+    await sendVerificationEmail(user.email, user.verificationToken);
+    return res.status(200).json({ data: 'Email has been sent' });
   } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return next(error);
   }
 }
 

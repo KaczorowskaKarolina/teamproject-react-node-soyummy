@@ -1,11 +1,10 @@
 import jwt from 'jsonwebtoken';
-import { User } from '#schemas/users/userSchema.js';
+import { getUserByEmail } from '#handlers/usersHelpers.js';
 
-async function logIn(req, res) {
+async function logIn(req, res, next) {
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email });
-    console.log(user);
+    const user = await getUserByEmail(email);
     if (!user || !user.validatePassword(password)) {
       return res.status(400).json({ message: 'Email or password incorrect.' });
     }
@@ -25,7 +24,7 @@ async function logIn(req, res) {
       user: { email: user.email, name: user.name },
     });
   } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return next(error);
   }
 }
 

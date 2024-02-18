@@ -1,9 +1,9 @@
-import { User } from '#schemas/users/userSchema.js';
+import { getUserById } from '#handlers/usersHelpers.js';
 
-async function logout(req, res) {
+async function logout(req, res, next) {
   try {
     const id = req.user.id;
-    const user = await User.findById(id);
+    const user = await getUserById(id);
     if (!user || !user.token) {
       return res.status(401).json({ message: 'Unauthorized' });
     }
@@ -11,7 +11,7 @@ async function logout(req, res) {
     await user.save();
     return res.status(204).json('No Content');
   } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return next(error);
   }
 }
 
