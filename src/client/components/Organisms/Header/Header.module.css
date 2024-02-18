@@ -4,7 +4,43 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
+  padding: 18px 16px 0;
+  position: relative;
+}
+
+.burgerIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 2px;
+}
+
+.rightContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.userMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.name {
+  color: #22252a;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.7;
 }

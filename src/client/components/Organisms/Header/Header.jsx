@@ -6,7 +6,15 @@ const Header = () => {
   return (
     <div className={css.container}>
       <Logo />
-      <BurgerMenu />
+      <div className={css.rightContainer}>
+        <div className={css.userMenu}>
+          <div className={css.avatar}></div>
+          <p className={css.name}>Name</p>
+        </div>
+        <div className={css.burgerIcon}>
+          <BurgerMenu />
+        </div>
+      </div>
     </div>
   );
 };
