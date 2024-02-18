@@ -1,6 +1,6 @@
 .page404_container {
     position: relative;
-    background-image: url('../../../../images/pages/Page404/bro_mobile.png');
+    background-image: url('#images/pages/Page404/bro_mobile.png');
     background-repeat: no-repeat;
     background-position: bottom;
 }
@@ -12,7 +12,18 @@
     width: 259px;
     height: 170px;
     z-index: 1;
-    /* Ustawienie warstwy z-indeksu obrazka */
+    
+        @media screen and (min-width: 768px) {
+            .page404_container {
+                background-image: url('#images/pages/Page404/bro_tablet.png');
+            }
+        }
+    
+        @media screen and (min-width: 1024px) {
+            .page404_container {
+                background-image: url('#images/pages/Page404/bro_desktop.png');
+            }
+        }
 }
 
 /* .page404_text {
