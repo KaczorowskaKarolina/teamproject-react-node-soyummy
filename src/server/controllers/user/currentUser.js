@@ -1,4 +1,4 @@
-import { User } from '../../models/schema/users/userSchema.js';
+import { User } from '#schema/users/userSchema.js';
 
 async function currentUser(req, res) {
   try {
