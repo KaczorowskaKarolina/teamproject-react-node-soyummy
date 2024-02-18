@@ -1,19 +1,51 @@
 .container {
+  position: relative;
+  top: 18px;
+  bottom: 18px;
+  right: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
+  overflow: hidden;
   background-color: #ebf3d4;
+  background-image: url('../../../images/pages/navigationMenu/nav-menu-background-mobile.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  padding: 18px 16px;
 }
 
 .closeButton {
-background-color: transparent;
-font-size: 16px;
-color: #22252a;
+  border: none;
+  background-color: transparent;
+  height: 16px;
+  margin-right: 8px;
 }
 
 .icons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.switch {
+  height: 27px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    background-image: url('../../../images/pages/navigationMenu/nav-menu-background-tablet.png');
+    padding: 18px 32px;
+  }
+
+  .logo {
+    width: 44px;
+    height: 44px;
+  }
 }
