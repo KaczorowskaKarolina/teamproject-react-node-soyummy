@@ -1,17 +1,17 @@
-import { Page404Texts } from 'client/pages/Page404/components/Molecules/Page404Texts.jsx';
-import css from './StartPageTemplate.module.css';
+import React from 'react';
+import { Page404Texts } from '../Molecules/Texts/Page404Texts.jsx';
+import css from './Page404Template.module.css';
 
 const Page404Template = () => {
-  return (
-    <div className={css.Page404Template}>
-      {/* <div className={css.BackgroundImageLayer1}></div>
-      <div className={css.BackgroundImageLayer2}></div>
-      <div className={css.BackgroundImageLayer3}></div> */}
-      <div className={css.BackgroundImageLayer4}></div>
-      {/* <div className={css.BackgroundImageLayer5}></div>
-      <div className={css.BackgroundImageLayer6}></div> */}
-      <Page404Texts />
-    </div>
+    return (
+        <div className={css.page404_container}>
+            {/* <div>
+                <img src="../../../../images/pages/Page404/bro_mobile.png" alt="people" className={css.page404_image} />
+                </div> */}
+            <div className={css.page404_text}>
+                <Page404Texts />
+            </div>
+      </div>
   );
 };
 
