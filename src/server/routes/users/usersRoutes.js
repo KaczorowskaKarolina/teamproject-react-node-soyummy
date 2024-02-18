@@ -1,17 +1,17 @@
 import { Router } from 'express';
 
-import { logIn } from '../../controllers/logIn.js';
-import { signUp } from '../../controllers/signUp.js';
-import { logout } from '../../controllers/logout.js';
-import { verify } from '../../controllers/verify.js';
-import { currentUser } from '../../controllers/currentUser.js';
+import { logIn } from '#controllers/user/logIn.js';
+import { signUp } from '#controllers/user/signUp.js';
+import { logout } from '#controllers/user/logout.js';
+import { verify } from '#controllers/user/verify.js';
+import { currentUser } from '#controllers/user/currentUser.js';
 import {
   userSignUpValidation,
   userLogInValidation,
-} from '../../handlers/userValidation.js';
-import { authMiddleware } from '../../middlewares/authMiddleware.js';
-import { resendVerifyEmail } from '../../controllers/resendVerifyEmail.js';
-import { validationMiddleware } from '../../middlewares/validationMiddleware.js';
+} from '#handlers/userValidation.js';
+import { authMiddleware } from '#middlewares/authMiddleware.js';
+import { resendVerifyEmail } from '#controllers/user/resendVerifyEmail.js';
+import { validationMiddleware } from '#middlewares/validationMiddleware.js';
 
 const router = Router();
 
