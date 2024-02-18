@@ -63,7 +63,10 @@
   "imports": {
     "#example/*": "./test/path/folder/*",
     "#controllers/*": "./src/server/controllers/*",
-    "#middlewares/*": "./src/server/middlewares/*"
+    "#middlewares/*": "./src/server/middlewares/*",
+    "#atoms/*": "./src/client/components/Atoms/*",
+    "#molecules/*": "./src/client/components/Molecules/*",
+    "#icons/*": "./src/client/images/icons/*"
   },
   "type": "module"
 }
