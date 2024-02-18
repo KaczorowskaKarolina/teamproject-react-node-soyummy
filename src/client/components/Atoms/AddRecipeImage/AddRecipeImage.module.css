@@ -1,8 +1,14 @@
 .iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  max-width: 357px;
+  height: 344px;
   margin: 0 32px;
   border-radius: 8px;
   color: #fafafa;
+  background-color: #8baa36;
 }
 
 .iconContainer:hover {
@@ -10,5 +16,6 @@
 }
 
 .icon {
-  stroke: inherit;
+  stroke: currentColor;
+  fill: currentColor;
 }
