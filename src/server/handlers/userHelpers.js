@@ -1,4 +1,4 @@
-import { User } from 'server/models/schema/users/userSchema';
+import { User } from '#schemas/users/userSchema.js';
 
 async function getUserById(id) {
   const user = await User.findById(id);

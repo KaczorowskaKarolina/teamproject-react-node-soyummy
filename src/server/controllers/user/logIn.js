@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { getUserByEmail } from '#handlers/usersHelpers.js';
+import { getUserByEmail } from '#handlers/userHelpers.js';
 
 async function logIn(req, res, next) {
   try {
