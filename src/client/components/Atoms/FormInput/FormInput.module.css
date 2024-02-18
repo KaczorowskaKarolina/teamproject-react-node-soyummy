@@ -1,0 +1,71 @@
+.FormInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  background-color: none;
+
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+
+  padding: 17px;
+
+  width: 400px;
+}
+
+.FormInputText {
+  font-size: 1.125rem;
+  font-weight: 400;
+  opacity: 1;
+
+  background: none;
+  border: 0;
+  outline: 0;
+
+  flex: 2;
+}
+
+.FormInputText::placeholder {
+  opacity: 1;
+}
+
+.FormIcon svg {
+  width: 24px;
+  height: 24px;
+
+  flex: 1;
+}
+
+.dark,
+.dark path {
+  border-color: rgba(var(--primaryColor), 0.5);
+  color: rgba(var(--primaryColor), 0.5);
+  stroke: rgba(var(--primaryColor), 0.5);
+  transition: ease-in-out 0.1s;
+}
+
+.dark:hover *,
+.FormInput:has(.dark):hover {
+  border-color: var(--primaryColor);
+  color: var(--primaryColor);
+  stroke: var(--primaryColor);
+  transition: ease-in-out 0.1s;
+}
+
+.light,
+.light path {
+  border-color: rgba(var(--secondaryColor), 0.5);
+  color: rgba(var(--secondaryColor), 0.5);
+  stroke: rgba(var(--secondaryColor), 0.5);
+  transition: ease-in-out 0.1s;
+}
+
+.light:hover *,
+.FormInput:has(.light):hover {
+  border-color: var(--secondaryColor);
+  color: var(--secondaryColor);
+  stroke: var(--secondaryColor);
+  transition: ease-in-out 0.1s;
+}
