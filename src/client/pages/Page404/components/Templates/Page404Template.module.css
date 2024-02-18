@@ -1,85 +1,21 @@
-.Page404Template {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-
-        background-color: white;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+.page404_container {
+    position: relative;
+    background-image: url('../../../../images/pages/Page404/bro_mobile.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
-    /* .BackgroundImageLayer1 {
-            background-image: url('client/images/pages/Page404/Rectangle_11_mobile.png');
-        }
-    .BackgroundImageLayer2 {
-            background-image: url('client/images/pages/Page404/Rectangle_9_mobile.png');
-        }
-    .BackgroundImageLayer3 {
-            background-image: url('client/images/pages/Page404/Rectangle_8_mobile.png');
-        } */
-    .BackgroundImageLayer4 {
-            background-image: url('client/images/pages/Page404/bro_mobile.png');
-        }
-    /* .BackgroundImageLayer5 {
-            background-image: url('client/images/pages/Page404/big_pasta_404_mobile.png');
-        }
-    .BackgroundImageLayer6 {
-            background-image: url('client/images/pages/Page404/small_pasta_404_mobile.png');
-        } */
-
-
-
-@media screen and (min-width: 768px) {
-    /* .BackgroundImageLayer1 {
-            background-image: url('client/images/pages/Page404/Rectangle_11_tablet.png');
-        }
-    
-        .BackgroundImageLayer2 {
-            background-image: url('client/images/pages/Page404/Rectangle_9_tablet.png');
-        }
-    
-        .BackgroundImageLayer3 {
-            background-image: url('client/images/pages/Page404/Rectangle_8_tablet.png');
-        } */
-    
-        .BackgroundImageLayer4 {
-            background-image: url('client/images/pages/Page404/bro_tablet.png');
-        }
-    
-        /* .BackgroundImageLayer5 {
-            background-image: url('client/images/pages/Page404/big_pasta_404_tablet.png');
-        }
-    
-        .BackgroundImageLayer6 {
-            background-image: url('client/images/pages/Page404/small_pasta_404_tablet.png');
-        } */
+.page404__image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 259px;
+    height: 170px;
+    z-index: 1;
+    /* Ustawienie warstwy z-indeksu obrazka */
 }
 
-@media screen and (min-width: 1024px) {
-    /* .BackgroundImageLayer1 {
-            background-image: url('client/images/pages/Page404/Rectangle_11_desktop.png');
-        }
-    
-        .BackgroundImageLayer2 {
-            background-image: url('client/images/pages/Page404/Rectangle_9_desktop.png');
-        }
-    
-        .BackgroundImageLayer3 {
-            background-image: url('client/images/pages/Page404/Rectangle_8_desktop.png');
-        }
-     */
-        .BackgroundImageLayer4 {
-            background-image: url('client/images/pages/Page404/bro_desktop.png');
-        }
-/*     
-        .BackgroundImageLayer5 {
-            background-image: url('client/images/pages/Page404/big_pasta_404_desktop.png');
-        }
-    
-        .BackgroundImageLayer6 {
-            background-image: url('client/images/pages/Page404/small_pasta_404_desktop.png');
-        } */
-}
+/* .page404_text {
+    position: relative;
+    z-index: 2;
+    /* Ustawienie warstwy z-indeksu tekstu wyżej niż obrazka */
