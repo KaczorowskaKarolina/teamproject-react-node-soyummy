@@ -1,11 +1,11 @@
 import styles from './AddRecipeImage.module.css';
-import Icons from './icons.svg';
+import { ReactComponent as Icon } from './iconAddRecipeImage.svg';
 
 const AddRecipeImage = () => {
   return (
     <div className={styles.iconContainer}>
-      <svg className={styles.icon} width="64px" height="64px">
-        <use href={`${Icons}#icon-addRecipeImage`}></use>
+      <svg className={styles.icon} width="64" height="64">
+        <Icon />
       </svg>
     </div>
   );
