@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Pagination } from '@mui/material';
 import Stack from '@mui/material/Stack';
-import css from './Pagination.module.css';
+import css from './SearchPagination.module.css';
 
 export default function SearchPagination({ count, page, isChange }) {
   return (

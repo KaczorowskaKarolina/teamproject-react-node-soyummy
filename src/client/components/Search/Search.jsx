@@ -13,8 +13,8 @@ import {
   updateSearchResult,
   updateSearchType,
 } from '../../redux/search/searchSlice';
-import BGDots from './SearchComponents/BGDots/BGDots';
-import DishCard from './';
+import SquareDots from './SearchComponents/SquareDots/SquareDots';
+import DishCard from './SearchComponents/DishCard/DishCard';
 import BasicPagination from './SearchComponents/SearchPagination/SearchPagination';
 import SearchInput from './SearchComponents/SearchInput/SearchInput';
 import Title from './SearchComponents/Title/Title';
@@ -25,6 +25,7 @@ import {
 
 import css from './Search.module.css';
 import SearchTypeSelector from './SearchTypeSelector/SearchTypeSelector';
+
 
 export const Search = () => {
   const location = useLocation();
@@ -107,7 +108,7 @@ export const Search = () => {
 
   return (
     <div className="container">
-      <BGDots />
+      <SquareDots />
       <Title text={'Search'} />
       <form className={css.searchWrapper} onSubmit={onFormSubmit}>
         <SearchInput name="search" searchQuery={searchQuery} />
@@ -134,7 +135,7 @@ export const Search = () => {
           <ul className={css.searchList}>
             {searchResult.map(({ _id, preview, title }) => (
               <li key={_id} className={css.searchItem}>
-                <DishCard // To confirm
+                <DishCard 
                   image={preview}
                   altText={title}
                   text={title}
