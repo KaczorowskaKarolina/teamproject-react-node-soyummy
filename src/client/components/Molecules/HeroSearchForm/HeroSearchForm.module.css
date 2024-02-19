@@ -1,0 +1,78 @@
+.formSearch {
+    margin-top: 400px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+            margin-top: 30px;
+            display: block;
+            margin-left: 10vw;
+        }
+}
+.formSearchLabel {
+    position: relative;
+    display: inline-block;
+}
+.formSearchInput {
+    background-color: #FAFAFA;
+    outline: 0;
+    border: 0;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 300px;
+    padding-block: 17px;
+    color: #22252A;
+
+    @media screen and (min-width: 768px) {
+        width: 350px;
+        padding-block: 30px;
+
+        @media screen and (min-width: 1280px) {
+                width: 450px;
+                padding-block: 40px;
+            }
+        }
+}
+.formSearchInput::placeholder {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: #BDBDBD;
+}
+.formSearchButton {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 113px;
+    height: 52px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #22252A;
+    color: #FAFAFA;
+    cursor: pointer;
+    border: 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @media screen and (min-width: 768px) {
+            height: 59px;
+            width: 161px;
+    
+            @media screen and (min-width: 1280px) {
+                height: 70px;
+                border-top-right-radius: 50px;
+                border-bottom-left-radius: 50px;
+                border-top-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                size: 16px;
+            }
+        }
+}
