@@ -1,4 +1,4 @@
-import { getUserByEmail } from '#handlers/userHelpers.js';
+import { getUserByEmail } from '#handlers/userHandlers.js';
 import { sendVerificationEmail } from '#handlers/sendEmail.js';
 
 async function resendVerifyEmail(req, res, next) {
