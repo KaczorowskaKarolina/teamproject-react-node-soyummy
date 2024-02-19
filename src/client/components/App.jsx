@@ -1,7 +1,7 @@
 import { StartPage } from 'client/pages/startPage/StartPage.jsx';
 
 import { Routes, Route } from 'react-router-dom';
-import { SharedLayout } from './Templates/SharedLayout/SharedLayout';
+import { SharedLayout } from './Templates/SharedLayout/SharedLayout.jsx';
 
 // several pages imports
 
