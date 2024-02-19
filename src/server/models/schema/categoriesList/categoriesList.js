@@ -4,8 +4,8 @@ const getAllCategoriesList = async () => {
   return await Categories.find({});
 };
 
-const getCategoriesList = async () => {
+const getCategoriesListFromDb = async () => {
   return await Categories.find({}).sort({ title: 1 });
 };
 
-export { getAllCategoriesList, getCategoriesList };
+export { getCategoriesListFromDb, getAllCategoriesList };

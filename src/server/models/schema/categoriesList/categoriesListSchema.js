@@ -18,6 +18,6 @@ const categories = new Schema(
   { versionKey: false, timestamps: false }
 );
 
-const Categories = mongoose.model('categories', categories);
+const Categories = mongoose.model('categories', categories, 'categories');
 
 export { Categories };
