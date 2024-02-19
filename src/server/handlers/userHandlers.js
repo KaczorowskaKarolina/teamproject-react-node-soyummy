@@ -10,4 +10,9 @@ async function getUserByEmail(email) {
   return user;
 }
 
-export { getUserByEmail, getUserById };
+async function getUserByToken(token) {
+  const user = await User.findOne({ varificationToken: token });
+  return user;
+}
+
+export { getUserByEmail, getUserById, getUserByToken };
