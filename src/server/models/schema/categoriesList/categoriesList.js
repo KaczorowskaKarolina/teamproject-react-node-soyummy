@@ -1,7 +1,11 @@
 import { Categories } from './categoriesListSchema.js';
 
 const getAllCategoriesList = async () => {
-  return Categories.find({});
+  return await Categories.find({});
 };
 
-export { getAllCategoriesList };
+const getCategoriesList = async () => {
+  return await Categories.find({}).sort({ title: 1 });
+};
+
+export { getAllCategoriesList, getCategoriesList };
