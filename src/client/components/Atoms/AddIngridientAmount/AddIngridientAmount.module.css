@@ -1,0 +1,33 @@
+.AddIngridientAmount {
+  box-sizing: border-box;
+  width: 84px;
+  height: 53px;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #00000050;
+  border-radius: 6px;
+  background-color: #d9d9d950;
+  text-align: left;
+  padding: 16px;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.icon {
+  stroke: #8baa36;
+  position: absolute;
+  right: 16px;
+}
