@@ -1,0 +1,19 @@
+.RecipeTitleAtom {
+  /*take from vars*/
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  letter-spacing: -0.01em;
+
+  padding: 1em;
+  position: absolute;
+  bottom: 1.6em;
+  height: 3.2em;
+  border-radius: 0.5em;
+  width: 80%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: 48em) {
+    bottom: 1.5em;
+  }
+}
