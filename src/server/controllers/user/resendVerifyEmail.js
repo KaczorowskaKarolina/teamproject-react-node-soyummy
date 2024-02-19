@@ -1,4 +1,4 @@
-import { getUserByEmail } from '#handlers/userHelpers.js';
+import { getUserByEmail } from '#handlers/userHandlers.js';
 import { sendVerificationEmail } from '#handlers/sendEmail.js';
 
 async function resendVerifyEmail(req, res, next) {
@@ -7,16 +7,20 @@ async function resendVerifyEmail(req, res, next) {
     if (!email) {
       return res.status(400).json({ message: 'Missing required field email' });
     }
-    const user = await getUserByEmail(email);
-    if (!user) {
+    const {
+      userEmail = email,
+      token = verificationToken,
+      isVerified = verify,
+    } = await getUserByEmail(email);
+    if (!userEmail) {
       return res.status(404).json({ message: 'User not found' });
     }
-    if (user.verify) {
+    if (isVerified) {
       return res
         .status(400)
         .json({ message: 'Verification has already been passed' });
     }
-    await sendVerificationEmail(user.email, user.verificationToken);
+    await sendVerificationEmail(userEmail, token);
     return res.status(200).json({ data: 'Email has been sent' });
   } catch (error) {
     return next(error);
