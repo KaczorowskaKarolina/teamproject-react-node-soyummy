@@ -18,6 +18,8 @@ const App = () => {
     >
       <Routes>
         <Route path="/teamproject-react-node-soyummy" element={<StartPage />} />
+
+        <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/categories/:categoryName" element={<CategoriesPage />} />
         {/* 
         <Route path="/add" element={<AddRecipiesPage />} />
