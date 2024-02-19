@@ -1,10 +1,8 @@
-import { User } from '#schemas/users/userSchema.js';
+import { getUserByToken } from '#handlers/userHandlers.js';
 
 async function verify(req, res) {
   try {
-    const user = await User.findOne({
-      verificationToken: req.params.verificationToken,
-    });
+    const user = await getUserByToken(req.params.verificationToken);
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }

@@ -1,7 +1,6 @@
 import { nanoid } from 'nanoid';
-import { User } from '#schemas/users/userSchema.js';
-import { getUserByEmail } from '#handlers/userHelpers.js';
 import { sendVerificationEmail } from '#handlers/sendEmail.js';
+import { getUserByEmail, createUser } from '#handlers/userHandlers.js';
 
 async function signUp(req, res) {
   try {
@@ -11,7 +10,7 @@ async function signUp(req, res) {
         .status(409)
         .json({ message: 'User with this email already exist.' });
     }
-    const user = new User({ email });
+    const user = createUser(email);
     user.setPassword(password);
     user.name = name;
     // user.avatarURL = gravatar.url(email, { s: 250, protocol: "https" });

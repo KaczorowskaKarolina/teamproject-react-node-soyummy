@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { getUserByEmail } from '#handlers/userHelpers.js';
+import { getUserByEmail } from '#handlers/userHandlers.js';
 
 async function logIn(req, res, next) {
   try {
@@ -15,7 +15,7 @@ async function logIn(req, res, next) {
       id: user.id,
     };
     const token = jwt.sign(payload, process.env.TOKEN_SECRET, {
-      expiresIn: '1h',
+      expiresIn: '5h',
     });
     user.token = token;
     await user.save();
