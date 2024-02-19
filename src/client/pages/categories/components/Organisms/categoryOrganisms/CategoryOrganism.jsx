@@ -9,7 +9,10 @@ const CategoryOrganism = ({ titles }) => {
       <CategoriesText />
       <Square />
       <ul className={css.CategoryOrganism}>
-        {titles && titles.map(el => <CategoryMolecule title={el} key={el} />)}
+        {titles &&
+          titles.map(el => {
+            return <CategoryMolecule title={el} />;
+          })}
       </ul>
     </div>
   );
