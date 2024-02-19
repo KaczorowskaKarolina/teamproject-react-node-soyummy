@@ -15,4 +15,9 @@ async function getUserByToken(token) {
   return user;
 }
 
-export { getUserByEmail, getUserById, getUserByToken };
+function createUser(email) {
+  const user = new User({ email });
+  return user;
+}
+
+export { getUserByEmail, getUserById, getUserByToken, createUser };
