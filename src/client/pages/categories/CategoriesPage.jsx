@@ -47,7 +47,6 @@ const CategoriesPage = () => {
         console.log(err);
       }
     };
-    console.log(recipes);
     fetchData();
   }, [categoryName, recipes]);
 

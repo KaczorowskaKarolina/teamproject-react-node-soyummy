@@ -1,12 +1,9 @@
-import { nanoid } from 'nanoid';
 import { CategoryAtom } from '../../Atoms/categoryAtoms/CategoryAtom';
 import css from './CategoryMolecule.module.css';
 
-const id = nanoid();
-
-const CategoryMolecule = ({ title }) => {
+const CategoryMolecule = ({ title, id }) => {
   return (
-    <li className={css.categoryMolecule} key={id}>
+    <li className={css.categoryMolecule}>
       <CategoryAtom title={title} />
     </li>
   );
