@@ -1,4 +1,5 @@
 import styles from './RectangleButton.module.css';
+import { variables } from 'client/styles/_vars.css';
 
 const RectangleButton = ({
   title,
