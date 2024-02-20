@@ -2,7 +2,8 @@ import { getUserByToken } from '#handlers/userHandlers.js';
 
 async function verify(req, res) {
   try {
-    const user = await getUserByToken(req.params.verificationToken);
+    const { verificationToken } = req.params;
+    const user = await getUserByToken(verificationToken);
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
