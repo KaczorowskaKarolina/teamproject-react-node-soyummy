@@ -1,5 +1,4 @@
 :root {
-
   /* font */
   --font-family: 'Poppins', sans-serif;
   --font-regular: 400;
@@ -7,7 +6,6 @@
   --font-mediumBold: 600;
   --font-bold: 700;
 
-  
   --accent: #8baa36;
   --primaryColor: #ffffff;
   --secondaryColor: #000000;
@@ -32,6 +30,7 @@
   --descriptionTextDark: #fafafa;
   --popularDescriptionText: #7e7e7e;
   --footerText: #fafafa;
+  --shoppingListBorder: #e0e0e0;
 
   /* buttons */
   --activeBtn: #8baa36;
@@ -81,6 +80,4 @@
   --logoIconFillFt: #ebf3d4;
   --logoIconBgFt: #ebf3d4;
   --logoIconFillFt: #8baa36;
-
-  
 }
