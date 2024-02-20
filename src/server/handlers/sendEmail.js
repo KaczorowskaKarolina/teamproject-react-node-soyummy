@@ -28,4 +28,4 @@ async function sendVerificationEmail({ emailTo, verificationToken }) {
   });
 }
 
-export { sendEmail, sendVerificationEmail };
+export { sendVerificationEmail };
