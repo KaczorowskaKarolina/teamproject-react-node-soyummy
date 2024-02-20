@@ -1,0 +1,13 @@
+.imageBox {
+  border-radius: 8px;
+  width: 124px;
+  height: 124px;
+
+  background-color: gray;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

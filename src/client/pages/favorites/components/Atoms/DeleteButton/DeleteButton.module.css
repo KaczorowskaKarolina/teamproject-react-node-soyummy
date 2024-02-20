@@ -1,0 +1,15 @@
+.deleteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebf3d4;
+  border: none;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+.iconBox {
+  width: 14px;
+  height: 14px;
+}
