@@ -1,0 +1,17 @@
+.AddRecipeCloseButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border: none;
+  background: none;
+  outline: none;
+  width: 18px;
+  height: 18px;
+}
+
+.icon {
+  width: 12px;
+  height: 13px;
+  stroke: #000;
+}
