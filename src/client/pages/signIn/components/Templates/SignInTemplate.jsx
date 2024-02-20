@@ -1,4 +1,4 @@
-import PageImage from '#images/pages/RegisterAndSignInPages/register-signin-image.png';
+import PageImage from '#images/pages/registerSigninPage/register-signin-image.png';
 import { SignInForm } from '#pages/signIn/components/Organisms/SignInForm.jsx';
 import css from './SignInTemplate.module.css';
 
