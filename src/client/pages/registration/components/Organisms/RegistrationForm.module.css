@@ -30,6 +30,11 @@
   color: white;
 }
 
+.RegistrationButton {
+  width: 279px;
+  height: 45px;
+}
+
 @media screen and (min-width: 768px) {
   .RegistrationModal {
     padding: 44px 50px;
@@ -39,5 +44,10 @@
 
   .RegistrationTitle {
     font-size: 1.75rem;
+  }
+
+  .RegistrationButton {
+    width: 400px;
+    height: 59px;
   }
 }

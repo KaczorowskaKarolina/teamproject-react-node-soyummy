@@ -9,7 +9,9 @@ const SignInForm = () => {
       <div className={css.SignInModal}>
         <h2 className={css.SignInTitle}>Sign In</h2>
         <SignInInputs />
-        <RectangleButton title="Sign In" size="large" />
+        <div className={css.SignInButton}>
+          <RectangleButton title="Sign In" size="large" />
+        </div>
       </div>
       <SignInLink />
     </div>

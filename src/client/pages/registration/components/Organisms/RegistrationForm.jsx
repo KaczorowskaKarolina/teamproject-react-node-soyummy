@@ -9,7 +9,9 @@ const RegistrationForm = () => {
       <div className={css.RegistrationModal}>
         <h2 className={css.RegistrationTitle}>Registration</h2>
         <RegistrationInputs />
-        <RectangleButton title="Sign Up" size="large" />
+        <div className={css.RegistrationButton}>
+          <RectangleButton title="Sign Up" size="large" />
+        </div>
       </div>
       <RegistrationLink />
     </div>
