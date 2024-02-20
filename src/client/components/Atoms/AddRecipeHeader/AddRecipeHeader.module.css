@@ -1,0 +1,18 @@
+.header {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.pageHeader {
+  font-size: 28px;
+  color: #001833;
+  padding-bottom: 28px;
+}
+
+.formHeader {
+  font-size: 24px;
+  color: #3e4462;
+  padding-bottom: 24px;
+}
