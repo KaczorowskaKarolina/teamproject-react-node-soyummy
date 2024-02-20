@@ -11,11 +11,14 @@
   background-color: #8baa36;
 }
 
-.iconContainer:hover {
-  color: black;
+.iconContainer:hover .icon {
+  transform: scale(1.2);
+  transition: transform 500ms;
 }
 
 .icon {
-  stroke: currentColor;
-  fill: currentColor;
+  transition: transform 500ms;
+  width: 64px;
+  height: 64px;
+  color: #fafafa;
 }
