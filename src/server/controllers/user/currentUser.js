@@ -1,4 +1,4 @@
-import { getUserById } from '#handlers/userHelpers.js';
+import { getUserById } from '#handlers/userHandlers.js';
 
 async function currentUser(req, res, next) {
   try {
