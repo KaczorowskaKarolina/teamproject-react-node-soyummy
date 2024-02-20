@@ -1,0 +1,6 @@
+.AddRecipeForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 44px;
+}
