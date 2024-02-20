@@ -1,0 +1,7 @@
+.AddRecipeIngredients {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+}
