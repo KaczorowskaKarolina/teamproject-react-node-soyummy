@@ -1,6 +1,6 @@
-import styles from './AddRecipeDescriptionInput.module.css';
+import styles from './AddRecipeTextarea.module.css';
 
-const AddRecipeDescriptionInput = () => {
+const AddRecipeTextarea = () => {
   return (
     <textarea
       name="recipeDescription"
@@ -11,4 +11,4 @@ const AddRecipeDescriptionInput = () => {
   );
 };
 
-export { AddRecipeDescriptionInput };
+export { AddRecipeTextarea };
