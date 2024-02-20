@@ -6,4 +6,6 @@ const getIngredientsById = async id => {
 };
 // example
 
+//przygotowac do wyswietlania
+
 export { getIngredientsById };
