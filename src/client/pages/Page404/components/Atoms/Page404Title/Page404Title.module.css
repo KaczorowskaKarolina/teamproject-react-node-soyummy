@@ -1,10 +1,9 @@
 .Page404Title {
 font-family: var(--font-family);
     font-weight: 600;
-    font-size: 18px;
-    line-height: 111%;
-    letter-spacing: -0.02em;
+    font-size: 1.125rem;
     color: var(--main-color);
+    margin: 0;
 }
 
 @media screen and (min-width: 768px) {
