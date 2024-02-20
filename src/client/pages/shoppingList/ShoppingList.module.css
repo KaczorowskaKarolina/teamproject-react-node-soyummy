@@ -1,0 +1,123 @@
+/* .mainContainer {
+  min-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+
+  @media  (min-width: 375px) {
+    width: 375px;
+  }
+  @media  (min-width: 768px) {
+    width: 768px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+  @media  (min-width: 1280px) {
+    width: 1280px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+} */
+
+.pageTitle {
+  /* Stylizacja tytułu strony */
+
+  color: var(--categorieTitle);
+  font-size: 28px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 44px;
+  }
+}
+
+.productsHead {
+  /* Stylizacja nagłówka produktów */
+
+  margin-top: 40px;
+  padding: 12px 8px 12px 8px;
+  background-color: var(--accent);
+  border-radius: 8px;
+
+  width: 359px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--primaryColor);
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    width: 704px;
+    height: 48px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 18px 35px 18px 35px;
+    width: 1240px;
+    height: 60px;
+  }
+}
+
+.headContainer {
+  /* Stylizacja kontenera nagłówka */
+
+  display: flex;
+  gap: 32px;
+
+  @media screen and (min-width: 768px) {
+    gap: 50px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 120px;
+  }
+}
+
+.shoppingList {
+  /* Stylizacja listy zakupów */
+
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 14px;
+  padding-left: 7px;
+  padding-right: 7px;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 500;
+
+  @media screen and (min-width: 768px) {
+    font-size: 10px;
+  }
+}
+
+.item {
+  /* Stylizacja pojedynczego elementu na liście */
+  padding: 22px;
+  border-bottom: 2px solid;
+  border-color: var(--shoppingListBorder);
+}
+
+.notFound {
+  /* Stylizacja komunikatu, gdy lista jest pusta */
+
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    margin-top: 100px;
+  }
+}
