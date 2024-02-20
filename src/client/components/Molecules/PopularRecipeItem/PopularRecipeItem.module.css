@@ -1,0 +1,16 @@
+.PopularRecipeItem {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  border-bottom: 1px solid #707070;
+  padding-bottom: 13px;
+}
+
+.imageTest {
+  width: 104px;
+  height: 85px;
+  border-radius: 8px;
+  background-color: chartreuse;
+}
