@@ -1,7 +1,7 @@
 .FormInput {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
   gap: 8px;
 
   background-color: none;
@@ -10,13 +10,23 @@
   border-radius: 5px;
   border-width: 1px;
 
-  padding: 17px;
+  max-width: 100%;
+  max-height: 100%;
 
-  width: 280px;
+  padding: 13px;
+
+  cursor: text;
+}
+
+.FormInput div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 1;
 }
 
 .FormInputText {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: 400;
   opacity: 1;
 
@@ -24,26 +34,25 @@
   border: 0;
   outline: 0;
 
-  flex: 2;
+  min-width: 200px;
+  flex: 1 0 1;
 }
 
 .FormInputText::placeholder {
   opacity: 1;
 }
 
-.FormIcon svg {
-  width: 24px;
-  height: 24px;
-
-  flex: 1;
+.FormIcon {
+  width: 18px;
+  height: 18px;
 }
 
-.dark,
-.dark path {
-  border-color: rgba(var(--primaryColor), 0.5);
-  color: rgba(var(--primaryColor), 0.5);
-  stroke: rgba(var(--primaryColor), 0.5);
-  transition: ease-in-out 0.1s;
+.dark *,
+.FormInput:has(.dark) {
+  border-color: var(--popularDescriptionText);
+  color: var(--popularDescriptionText);
+  stroke: var(--popularDescriptionText);
+  transition: ease-in-out 0.25s;
 }
 
 .dark:hover *,
@@ -51,15 +60,15 @@
   border-color: var(--primaryColor);
   color: var(--primaryColor);
   stroke: var(--primaryColor);
-  transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.25s;
 }
 
-.light,
+.light *,
 .light path {
-  border-color: rgba(var(--secondaryColor), 0.5);
-  color: rgba(var(--secondaryColor), 0.5);
-  stroke: rgba(var(--secondaryColor), 0.5);
-  transition: ease-in-out 0.1s;
+  border-color: var(--userEditDark);
+  color: var(--userEditDark);
+  stroke: var(--userEditDark);
+  transition: ease-in-out 0.25s;
 }
 
 .light:hover *,
@@ -67,11 +76,16 @@
   border-color: var(--secondaryColor);
   color: var(--secondaryColor);
   stroke: var(--secondaryColor);
-  transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.25s;
 }
 
 @media screen and (min-width: 768px) {
   .FormInput {
-    width: 400px;
+    padding: 16px 18px;
+  }
+
+  .FormInputText {
+    font-size: 1.125rem;
+    min-width: 300px;
   }
 }

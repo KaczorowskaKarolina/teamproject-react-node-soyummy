@@ -2,9 +2,13 @@ import { ReactComponent as NameIcon } from '#images/icons/name-icon.svg';
 import { ReactComponent as EmailIcon } from '#images/icons/email-icon.svg';
 import { ReactComponent as PasswordIcon } from '#images/icons/password-icon.svg';
 import { ReactComponent as EditIcon } from '#images/icons/edit-icon.svg';
+
+import { variables } from 'client/styles/_vars.css';
 import css from './FormInput.module.css';
 
-const FormInput = ({ type, inputName, placeholder, editIcon, darkOrLight }) => {
+
+
+const FormInput = ({ type, inputName, placeholder, editIcon, darkOrLight = "dark" }) => {
   const iconStyles = `${css.FormIcon} ${css[`${darkOrLight}`]}`;
   const inputStyles = `${css.FormInput} ${css[`${darkOrLight}`]}`;
   const textStyles = `${css.FormInputText} ${css[`${darkOrLight}`]}`;
@@ -29,7 +33,9 @@ const FormInput = ({ type, inputName, placeholder, editIcon, darkOrLight }) => {
 
   return (
     <div className={inputStyles}>
-      {icon}
+      <div>
+        {icon}
+      </div>
       <input
         type={type}
         name={inputName}
@@ -38,7 +44,9 @@ const FormInput = ({ type, inputName, placeholder, editIcon, darkOrLight }) => {
         required
         className={textStyles}
       />
-      {editIcon && <EditIcon className={iconStyles} />}
+      <div>
+        {editIcon && <EditIcon className={iconStyles}/>}
+      </div>
     </div>
   );
 };
