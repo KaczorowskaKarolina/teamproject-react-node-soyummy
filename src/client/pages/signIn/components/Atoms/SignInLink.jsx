@@ -2,7 +2,7 @@ import css from './SignInLink.module.css';
 
 const SignInLink = () => {
   return (
-    <a href="/teamproject-react-node-soyummy/registration" className={css.SignInLink}>
+    <a href="./registration" className={css.SignInLink}>
       Registration
     </a>
   );
