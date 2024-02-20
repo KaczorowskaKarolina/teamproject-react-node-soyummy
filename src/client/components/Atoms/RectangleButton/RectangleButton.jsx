@@ -5,9 +5,10 @@ const RectangleButton = ({
   title,
   type = 'button',
   size,
+  colorScheme,
   onClick = () => {},
 }) => {
-  const classes = `${styles.RectangleButton} ${styles[`${size}`]}`;
+  const classes = `${styles.RectangleButton} ${styles[`${size}`] } ${styles[`${colorScheme}`] }`;
   return (
     <button className={classes} type={type} onClick={onClick}>
       {title}
@@ -26,5 +27,7 @@ export { RectangleButton };
 
 // size property have a string value and it can be either
 // 'small' or 'large' depending on which one you want
+
+// colorScheme
 
 // onClick is obvious. By default this prop is an empty function so

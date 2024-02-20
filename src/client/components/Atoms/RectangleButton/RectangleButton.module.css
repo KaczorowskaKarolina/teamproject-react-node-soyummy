@@ -44,5 +44,6 @@
 }
 
 .small.darkMode:hover {
-  border: 1px solid var(--primaryColor);
+  background-color: var(--primaryColor);
+  border: 1px solid var(--secondaryColor);
 }
