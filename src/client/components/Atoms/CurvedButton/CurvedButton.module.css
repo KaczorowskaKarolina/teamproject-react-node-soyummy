@@ -1,5 +1,5 @@
 .CurvedButton {
-  padding: 20px 52px;
+  padding: 12px 24px;
 
   border-radius: 24px 44px;
   border: 1px solid var(--primaryColor);
@@ -37,4 +37,10 @@
   border: none;
   background-color: var(--accent);
   color: var(--primaryColor);
+}
+
+@media screen and (min-width: 768px) {
+  .CurvedButton {
+    padding: 22px 44px;
+  }
 }
