@@ -69,7 +69,9 @@
     "#molecules/*": "./src/client/components/Molecules/*",
     "#icons/*": "./src/client/images/icons/*",
     "#handlers/*": "./src/server/handlers/*",
-    "#schemas/*": "./src/server/models/schema/*"
+    "#schemas/*": "./src/server/models/schema/*",
+    "#pages/*": "./src/client/pages/*"
+    
   },
   "type": "module"
 }
