@@ -63,7 +63,9 @@
   "imports": {
     "#example/*": "./test/path/folder/*",
     "#controllers/*": "./src/server/controllers/*",
-    "#middlewares/*": "./src/server/middlewares/*"
+    "#middlewares/*": "./src/server/middlewares/*",
+    "#handlers/*": "./src/server/handlers/*",
+    "#schemas/*": "./src/server/models/schema/*"
   },
   "type": "module"
 }
