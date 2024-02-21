@@ -66,7 +66,9 @@
     "#middlewares/*": "./src/server/middlewares/*",
     "#atoms/*": "./src/client/components/Atoms/*",
     "#molecules/*": "./src/client/components/Molecules/*",
-    "#icons/*": "./src/client/images/icons/*"
+    "#icons/*": "./src/client/images/icons/*",
+    "#handlers/*": "./src/server/handlers/*",
+    "#schemas/*": "./src/server/models/schema/*"
   },
   "type": "module"
 }

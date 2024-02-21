@@ -12,10 +12,9 @@ const users = new Schema(
       required: [true, 'Email is required'],
       unique: true,
     },
-    subscription: {
+    name: {
       type: String,
-      enum: ['starter', 'pro', 'business'],
-      default: 'starter',
+      required: [true, 'Name is required'],
     },
     token: {
       type: String,
@@ -36,12 +35,12 @@ const users = new Schema(
   { versionKey: false, timestamps: true }
 );
 
-users.methods.setPassword = async function (password) {
-  this.password = await bCrypt.hash(password, 10);
+users.methods.setPassword = function (password) {
+  this.password = bCrypt.hashSync(password, 10);
 };
 
-users.methods.validatePassword = async function (password) {
-  return bCrypt.compare(password, this.password);
+users.methods.validatePassword = function (password) {
+  return bCrypt.compareSync(password, this.password);
 };
 
 const User = mongoose.model('users', users);
