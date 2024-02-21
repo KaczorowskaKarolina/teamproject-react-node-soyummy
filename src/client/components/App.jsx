@@ -2,6 +2,8 @@ import { Page404 } from 'client/pages/Page404/Page404.jsx';
 import { StartPage } from 'client/pages/startPage/StartPage.jsx';
 
 import { Routes, Route } from 'react-router-dom';
+import { SharedLayout } from './Templates/SharedLayout/SharedLayout.jsx';
+
 // several pages imports
 
 const App = () => {
@@ -18,7 +20,9 @@ const App = () => {
     >
       <Routes>
         <Route path="/teamproject-react-node-soyummy" element={<StartPage />} />
-        {/* 
+        <Route path="/" element={<SharedLayout />}>
+          {/* <Route index element={<Home />} /> */}
+          {/* 
         <Route path="/categories/:categoryName" element={<CategoriesPage />} />
         <Route path="/add" element={<AddRecipiesPage />} />
         <Route path="/my" element={<MyRecipiesPage />} />
@@ -27,6 +31,7 @@ const App = () => {
         <Route path="/search" element={<SearchPage />} />
         */}
         <Route path="*" element={<Page404 />} />
+        </Route>
       </Routes>
     </div>
   );
