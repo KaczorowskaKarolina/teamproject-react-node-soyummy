@@ -1,5 +1,4 @@
 import styles from './AddIngridientUnit.module.css';
-import { ReactComponent as Icon } from './iconAddIngridientUnit.svg';
 
 const AddIngridientUnit = () => {
   return (
@@ -21,7 +20,6 @@ const AddIngridientUnit = () => {
         <option value="g">g</option>
         <option value="ml">ml</option>
       </select>
-      {/* <div className={styles.icon}><Icon /></div> */}
     </label>
   );
 };
