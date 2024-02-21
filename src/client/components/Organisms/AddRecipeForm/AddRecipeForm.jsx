@@ -1,7 +1,7 @@
 import styles from './AddRecipeForm.module.css';
 import { AddRecipeImage } from '../../Atoms/AddRecipeImage/AddRecipeImage.jsx';
 import { AddRecipeHeaders } from '../../Atoms/AddRecipeHeader/AddRecipeHeader.jsx';
-import { AddRecipeInfoInput } from '../../Molecules/AddRecipeInfoInput/AddRecipeInfoInput.jsx';
+import { AddRecipeInfo } from '../AddRecipeInfo/AddRecipeInfo';
 import { AddRecipeIngredients } from '../../Molecules/AddRecipeIngredientsInput/AddRecipeIngredients.jsx';
 import { AddRecipeTextarea } from '../../Atoms/AddRecipeTextarea/AddRecipeTextarea.jsx';
 import { CurvedButton } from '../../Atoms/CurvedButton/CurvedButton.jsx';
@@ -12,11 +12,12 @@ const AddRecipeForm = () => {
       className={styles.AddRecipeForm}
       onSubmit={event => {
         event.preventDefault();
-        console.log(event);
+        const form = event.currentTarget;
+        console.log(form);
       }}
     >
       <AddRecipeImage />
-      <AddRecipeInfoInput />
+      <AddRecipeInfo />
       <AddRecipeHeaders isTitle={false}>Ingridients</AddRecipeHeaders>
       <AddRecipeIngredients />
       <AddRecipeHeaders isTitle={false}>Recipe Preparetion</AddRecipeHeaders>
