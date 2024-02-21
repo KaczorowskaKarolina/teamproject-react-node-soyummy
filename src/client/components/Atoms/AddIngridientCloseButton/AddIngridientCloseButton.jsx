@@ -10,7 +10,9 @@ const AddIngridientCloseButton = () => {
         console.log('Test');
       }}
     >
-      X{/* <Icon className={styles.icon} /> */}
+      <div className={styles.icon}>
+        <Icon />
+      </div>
     </button>
   );
 };
