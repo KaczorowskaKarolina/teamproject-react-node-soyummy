@@ -1,0 +1,19 @@
+.AddRecipeInfoInput {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-bottom: 18px;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #00000050;
+}
+
+.inputTitle {
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.5;
+  color: #000;
+  width: 100%;
+  border: 0;
+  outline: 0;
+}
