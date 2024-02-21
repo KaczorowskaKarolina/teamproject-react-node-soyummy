@@ -2,7 +2,7 @@ import styles from './AddIngredientUnit.module.css';
 
 const AddIngredientUnit = () => {
   return (
-    <label htmlFor="ingdredientAmount" className={styles.AddIngridientUnit}>
+    <label htmlFor="ingdredientAmount" className={styles.AddIngredientUnit}>
       <input
         name="amount"
         id="ingdredientAmount"
