@@ -5,6 +5,7 @@
   "homepage": "https://kaczorowskakarolina.github.io/teamproject-react-node-soyummy/",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
+    "@reduxjs/toolkit": "^2.2.1",
     "@sendgrid/mail": "^8.1.0",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -26,8 +27,11 @@
     "passport-jwt": "^4.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-redux": "^9.1.0",
     "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
+    "redux": "^5.0.1",
+    "redux-persist": "^6.0.0",
     "uuidv4": "^6.2.13",
     "web-vitals": "^2.1.3"
   },
