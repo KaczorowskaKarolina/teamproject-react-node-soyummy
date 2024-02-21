@@ -5,20 +5,16 @@ import { AddIngredientsItem } from '../../Molecules/AddIngredientsItem/AddIngred
 import { useEffect, useState } from 'react';
 
 const AddIngredients = () => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(1);
 
   useEffect(() => {}, [counter]);
 
   const handleMinus = () => {
-    setCounter(counter => {
-      counter--;
-    });
+    setCounter(counter - 1);
   };
   const handlePlus = () => {
     console.log(counter);
-    setCounter(counter => {
-      counter++;
-    });
+    setCounter(counter + 1);
   };
   return (
     <div className={styles.AddIngredients}>
@@ -31,9 +27,10 @@ const AddIngredients = () => {
         />
       </div>
       <ul className={styles.inputs}>
-        <AddIngredientsItem />
-        <AddIngredientsItem />
-        <AddIngredientsItem />
+        {counter > 0 &&
+          Array.from(Array(counter), (e, i) => {
+            return <AddIngredientsItem key={i} id={i} />;
+          })}
       </ul>
     </div>
   );
