@@ -1,6 +1,6 @@
 import styles from './AddIngredientsItem.module.css';
-import { AddIngredientName } from '../AddIngredientName/AddIngredientName.jsx';
-import { AddIngredientUnit } from '../AddIngredientUnit/AddIngredientUnit.jsx';
+import { AddIngredientName } from '../../Atoms/AddIngredientName/AddIngredientName.jsx';
+import { AddIngredientUnit } from '../../Atoms/AddIngredientUnit/AddIngredientUnit.jsx';
 import { AddIngredientCloseButton } from '../../Atoms/AddIngredientCloseButton/AddIngredientCloseButton.jsx';
 
 const AddIngredientsItem = () => {
