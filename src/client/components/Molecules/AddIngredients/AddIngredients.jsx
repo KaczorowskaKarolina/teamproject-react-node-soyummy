@@ -1,20 +1,20 @@
 import styles from './AddIngredients.module.css';
-import { AddIngridientName } from '../AddIngridientName/AddIngridientName.jsx';
-import { AddIngridientUnit } from '../AddIngridientUnit/AddIngridientUnit.jsx';
-import { AddIngridientCloseButton } from '../../Atoms/AddIngridientCloseButton/AddIngridientCloseButton.jsx';
 import { AddRecipeHeaders } from '../../Atoms/AddRecipeHeader/AddRecipeHeader.jsx';
+import { AddIngridientsCounter } from 'client/components/Atoms/AddIngridientsCounter/AddIngridientsCounter';
+import { AddIngredientsItem } from '../AddIngredientsItem/AddIngredientsItem';
 
 const AddIngredients = () => {
   return (
     <div className={styles.AddIngredients}>
       <div className={styles.header}>
         <AddRecipeHeaders isTitle={false}>Ingridients</AddRecipeHeaders>
+        <AddIngridientsCounter />
       </div>
-      <div className={styles.inputs}>
-        <AddIngridientName />
-        <AddIngridientUnit />
-        <AddIngridientCloseButton />
-      </div>
+      <ul className={styles.inputs}>
+        <AddIngredientsItem />
+        <AddIngredientsItem />
+        <AddIngredientsItem />
+      </ul>
     </div>
   );
 };
