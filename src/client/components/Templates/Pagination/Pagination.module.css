@@ -1,0 +1,39 @@
+.paginationWrapper {
+    margin: 0 auto;
+    height: 51px;
+    width: 275;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 26px;
+    background-color:var(--primaryColor);
+    box-shadow: 0px 4px 4px 0px rgba(135, 135, 135, 0.2);
+  }
+  @media screen and (min-width: 768px) {
+    .paginationWrapper {
+      height: 55px;
+      width: 436px;
+    }
+  }
+  
+  .mui button[aria-current] {
+    background-color:var(-- --elementBg);
+    color: var(--footerBg);
+  }
+  .mui button[aria-current]:hover,
+
+  .mui button:hover {
+    background-color:var(--elementBg);
+  }
+
+
+  .paginationWrapper.darkTheme {
+    background-color: var(--paginationBgDark);
+  }
+  .mui.mui.darkTheme button[aria-current]:hover{
+    background-color: var(----activeBtn);
+  }
+  .mui.darkTheme button[aria-current] {
+    color: var(--addRecipeTextDark);
+  }
+  
