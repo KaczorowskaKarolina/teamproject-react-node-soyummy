@@ -1,0 +1,22 @@
+.AddIngridientsCounter {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 14px;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #3333334d;
+  border-radius: 18px;
+  width: 92px;
+  height: 28px;
+}
+
+.minusIcon {
+  width: 14px;
+  height: 14px;
+  color: #333333;
+}
+.plusIcon {
+  width: 14px;
+  height: 14px;
+  color: #8baa36;
+}
