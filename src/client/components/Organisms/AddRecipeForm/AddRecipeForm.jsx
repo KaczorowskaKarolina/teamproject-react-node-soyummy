@@ -2,7 +2,7 @@ import styles from './AddRecipeForm.module.css';
 import { AddRecipeImage } from '../../Atoms/AddRecipeImage/AddRecipeImage.jsx';
 import { AddRecipeHeaders } from '../../Atoms/AddRecipeHeader/AddRecipeHeader.jsx';
 import { AddRecipeInfo } from '../AddRecipeInfo/AddRecipeInfo';
-import { AddRecipeIngredients } from '../../Molecules/AddRecipeIngredientsInput/AddRecipeIngredients.jsx';
+import { AddIngredients } from '../../Molecules/AddIngredientsInput/AddIngredients.jsx';
 import { AddRecipeTextarea } from '../../Atoms/AddRecipeTextarea/AddRecipeTextarea.jsx';
 import { CurvedButton } from '../../Atoms/CurvedButton/CurvedButton.jsx';
 
@@ -19,7 +19,7 @@ const AddRecipeForm = () => {
       <AddRecipeImage />
       <AddRecipeInfo />
       <AddRecipeHeaders isTitle={false}>Ingridients</AddRecipeHeaders>
-      <AddRecipeIngredients />
+      <AddIngredients />
       <AddRecipeHeaders isTitle={false}>Recipe Preparetion</AddRecipeHeaders>
       <AddRecipeTextarea />
       <CurvedButton greenOrBlack={'black'} type="submit" title={'Add recipe'} />
