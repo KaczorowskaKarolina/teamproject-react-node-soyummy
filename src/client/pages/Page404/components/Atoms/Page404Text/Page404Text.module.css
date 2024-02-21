@@ -1,9 +1,9 @@
 .Page404Text {
     font-family: var(--font-family);
-        font-weight: 400;
+        font-weight: var(--font-regular);
         font-size: 0.875rem;
         text-align: center;
-        color: var(--main-color);
+        color: var(--secondaryColor);
         margin: 0;
 }
 

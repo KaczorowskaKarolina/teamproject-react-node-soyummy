@@ -1,8 +1,8 @@
 .Page404Title {
 font-family: var(--font-family);
-    font-weight: 600;
+    font-weight: var(--font-mediumBold);
     font-size: 1.125rem;
-    color: var(--main-color);
+    color: var(--secondaryColor);
     margin: 0;
 }
 
