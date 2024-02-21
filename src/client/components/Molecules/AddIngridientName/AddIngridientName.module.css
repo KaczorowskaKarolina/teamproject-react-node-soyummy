@@ -1,0 +1,29 @@
+.AddIngridientName {
+  box-sizing: border-box;
+  width: 200px;
+  height: 53px;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.input {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #d9d9d950;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #00000050;
+  padding: 16px;
+  background-image: url('./iconAddIngridientName.svg');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 18px 18px;
+}
