@@ -1,10 +1,10 @@
-import styles from './AddIngridientsCounter.module.css';
+import styles from './AddIngredientsCounter.module.css';
 import { ReactComponent as IconMinus } from './iconMinus.svg';
 import { ReactComponent as IconPlus } from './iconPlus.svg';
 
-const AddIngridientsCounter = ({ plusCb, minusCb, counter }) => {
+const AddIngredientsCounter = ({ plusCb, minusCb, counter }) => {
   return (
-    <div className={styles.AddIngridientsCounter}>
+    <div className={styles.AddIngredientsCounter}>
       <button type="button" onClick={minusCb}>
         <div className={styles.minusIcon}>
           <IconMinus />
@@ -20,4 +20,4 @@ const AddIngridientsCounter = ({ plusCb, minusCb, counter }) => {
   );
 };
 
-export { AddIngridientsCounter };
+export { AddIngredientsCounter };

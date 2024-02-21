@@ -1,4 +1,4 @@
-.AddIngridientName {
+.AddIngredientName {
   box-sizing: border-box;
   width: 200px;
   height: 53px;
@@ -22,10 +22,8 @@
   text-align: left;
   color: #00000050;
   padding: 16px;
-}
-
-.icon {
-  stroke: #8baa36;
-  position: absolute;
-  right: 16px;
+  background-image: url('./iconAddIngredientName.svg');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 18px 18px;
 }

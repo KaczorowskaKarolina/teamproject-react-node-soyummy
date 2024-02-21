@@ -1,7 +1,7 @@
 import styles from './AddRecipeForm.module.css';
 import { AddRecipeImage } from '../../Atoms/AddRecipeImage/AddRecipeImage.jsx';
 import { AddRecipeInfo } from '../AddRecipeInfo/AddRecipeInfo';
-import { AddIngredients } from '../../Molecules/AddIngredients/AddIngredients.jsx';
+import { AddIngredients } from '../AddIngredients/AddIngredients.jsx';
 import { CurvedButton } from '../../Atoms/CurvedButton/CurvedButton.jsx';
 import { AddPreparation } from 'client/components/Molecules/AddPreparation/AddPreparation';
 

@@ -1,14 +1,14 @@
 import styles from './AddIngredientsItem.module.css';
-import { AddIngridientName } from '../AddIngridientName/AddIngridientName.jsx';
-import { AddIngridientUnit } from '../AddIngridientUnit/AddIngridientUnit.jsx';
-import { AddIngridientCloseButton } from '../../Atoms/AddIngridientCloseButton/AddIngridientCloseButton.jsx';
+import { AddIngredientName } from '../AddIngredientName/AddIngredientName.jsx';
+import { AddIngredientUnit } from '../AddIngredientUnit/AddIngredientUnit.jsx';
+import { AddIngredientCloseButton } from '../../Atoms/AddIngredientCloseButton/AddIngredientCloseButton.jsx';
 
 const AddIngredientsItem = () => {
   return (
     <li className={styles.AddIngredientsItem}>
-      <AddIngridientName />
-      <AddIngridientUnit />
-      <AddIngridientCloseButton />
+      <AddIngredientName />
+      <AddIngredientUnit />
+      <AddIngredientCloseButton />
     </li>
   );
 };

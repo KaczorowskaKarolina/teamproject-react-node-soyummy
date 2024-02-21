@@ -1,19 +1,15 @@
-import styles from './AddIngridientUnit.module.css';
+import styles from './AddIngredientUnit.module.css';
 
-const AddIngridientUnit = () => {
+const AddIngredientUnit = () => {
   return (
-    <label htmlFor="ingdridientAmount" className={styles.AddIngridientUnit}>
+    <label htmlFor="ingdredientAmount" className={styles.AddIngridientUnit}>
       <input
         name="amount"
-        id="ingdridientAmount"
+        id="ingdredientAmount"
         className={styles.input}
         type="text"
       />
-      <select
-        id="ingdridientAmount"
-        name="amountUnit"
-        className={styles.select}
-      >
+      <select id="amountUnit" name="amountUnit" className={styles.select}>
         <option value="tbs">tbs</option>
         <option value="ts">ts</option>
         <option value="kg">kg</option>
@@ -24,4 +20,4 @@ const AddIngridientUnit = () => {
   );
 };
 
-export { AddIngridientUnit };
+export { AddIngredientUnit };

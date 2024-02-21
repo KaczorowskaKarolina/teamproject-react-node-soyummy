@@ -1,14 +1,14 @@
 import styles from './AddIngredients.module.css';
 import { AddRecipeHeaders } from '../../Atoms/AddRecipeHeader/AddRecipeHeader.jsx';
-import { AddIngridientsCounter } from 'client/components/Atoms/AddIngridientsCounter/AddIngridientsCounter';
-import { AddIngredientsItem } from '../AddIngredientsItem/AddIngredientsItem';
+import { AddIngredientsCounter } from 'client/components/Atoms/AddIngredientsCounter/AddIngredientsCounter';
+import { AddIngredientsItem } from '../../Molecules/AddIngredientsItem/AddIngredientsItem';
 
 const AddIngredients = () => {
   return (
     <div className={styles.AddIngredients}>
       <div className={styles.header}>
         <AddRecipeHeaders isTitle={false}>Ingridients</AddRecipeHeaders>
-        <AddIngridientsCounter />
+        <AddIngredientsCounter />
       </div>
       <ul className={styles.inputs}>
         <AddIngredientsItem />

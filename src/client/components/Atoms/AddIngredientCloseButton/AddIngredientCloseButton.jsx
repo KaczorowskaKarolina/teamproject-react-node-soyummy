@@ -1,7 +1,7 @@
-import styles from './AddIngridientCloseButton.module.css';
+import styles from './AddIngredientCloseButton.module.css';
 import { ReactComponent as Icon } from './iconCloseButton.svg';
 
-const AddIngridientCloseButton = () => {
+const AddIngredientCloseButton = () => {
   return (
     <button
       type="button"
@@ -17,4 +17,4 @@ const AddIngridientCloseButton = () => {
   );
 };
 
-export { AddIngridientCloseButton };
+export { AddIngredientCloseButton };
