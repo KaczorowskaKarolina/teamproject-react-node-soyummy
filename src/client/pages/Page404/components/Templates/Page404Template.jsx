@@ -1,5 +1,5 @@
 import Page404Image from "#images/pages/Page404/bro.png";
-import { Page404Texts } from '../Molecules/Texts/Page404Texts.jsx';
+import { Page404Texts } from '#pages/Page404/components/Molecules/Texts/Page404Texts.jsx';
 import css from './Page404Template.module.css';
 
 const Page404Template = () => {
