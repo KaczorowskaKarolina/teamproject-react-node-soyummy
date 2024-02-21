@@ -32,10 +32,12 @@ a {
   outline: none;
   border: none;
   cursor: pointer;
+  background: none;
 }
 
 input {
   outline: none;
+  background: none;
 }
 
 h1,
