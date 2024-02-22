@@ -9,6 +9,7 @@
   border-radius: 8px;
   color: #fafafa;
   background-color: #8baa36;
+  position: relative;
 }
 
 .iconContainer:hover .icon {
@@ -21,4 +22,17 @@
   width: 64px;
   height: 64px;
   color: #fafafa;
+}
+
+.input {
+  overflow: hidden;
+  position: relative;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+  z-index: 1;
 }
