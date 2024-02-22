@@ -24,7 +24,7 @@ const CategoriesPage = () => {
       }
     };
     fetchData();
-  }, [categoryName, recipes]);
+  }, []);
 
   return (
     <div>

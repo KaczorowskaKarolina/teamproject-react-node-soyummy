@@ -22,8 +22,11 @@ const App = () => {
       <Routes>
         <Route path="/teamproject-react-node-soyummy" element={<StartPage />} />
         <Route path="/" element={<SharedLayout />}>
+          <Route
+            path="/categories/:categoryName"
+            element={<CategoriesPage />}
+          />
           {/* <Route index element={<Home />} /> }
-          <Route path="/categories/:categoryName" element={<CategoriesPage />} />
 
         <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/categories/:categoryName" element={<CategoriesPage />} />
