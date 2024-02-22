@@ -1,4 +1,5 @@
 import { StartPage } from 'client/pages/startPage/StartPage.jsx';
+import { AddRecipeForm } from './Organisms/AddRecipeForm/AddRecipeForm.jsx';
 
 import { Routes, Route } from 'react-router-dom';
 import { SharedLayout } from './Templates/SharedLayout/SharedLayout.jsx';
@@ -9,7 +10,6 @@ const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -18,7 +18,10 @@ const App = () => {
       }}
     >
       <Routes>
-        <Route path="/teamproject-react-node-soyummy" element={<StartPage />} />
+        <Route
+          path="/teamproject-react-node-soyummy"
+          element={<AddRecipeForm />}
+        />
         <Route path="/" element={<SharedLayout />}>
           {/* <Route index element={<Home />} /> */}
           {/* <Route path="/categories/:categoryName" element={<CategoriesPage />} />
