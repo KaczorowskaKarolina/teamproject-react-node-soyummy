@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
 import { app } from './src/server/app.js';
+import { log } from 'console';
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ connection
       `Database connection successful on http://localhost:${SERVER_PORT}`
     );
     app.listen(SERVER_PORT, function () {
+      console.log('');
       console.log(`Server running. Use our API on port: ${SERVER_PORT}`);
     });
   })

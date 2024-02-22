@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 axios.defaults.baseURL =
-  process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+  process.env.REACT_APP_API_URL || 'http://localhost:3000';
 
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
