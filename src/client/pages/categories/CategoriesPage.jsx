@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { CategoryTemplate } from 'client/pages/categories/components/Templates/CategoryTemplate.jsx';
 import { RecipeTemplate } from './components/Templates/RecipeTemplate.jsx';
+import { CategoryTemplate } from 'client/pages/categories/components/Templates/CategoryTemplate.jsx';
 
 const CategoriesPage = () => {
   const { categoryName } = useParams();
@@ -12,37 +12,13 @@ const CategoriesPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const categoriesResponse = await fetch(
-          'http://localhost:3000/getAllCategoriesList'
-        );
-
-        if (!categoriesResponse.ok) {
-          throw new Error('No results');
-        }
-
-        const categoriesResponseData = await categoriesResponse.json();
-        const categoriesArray = categoriesResponseData.data.file;
-
-        const categoriesTitleList = categoriesArray.map(
-          category => category.title
-        );
-
+        const categoriesTitleList = await fetchCategories();
         setCategories(categoriesTitleList);
-        const RecipesResponse = await fetch(
-          'http://localhost:3000/getAllRecipes'
-        );
-
-        if (!RecipesResponse.ok) {
-          throw new Error('No results');
-        }
-
-        const RecipesResponseData = await RecipesResponse.json();
-        const recipesArray = await RecipesResponseData.data.file;
-
-        const categoryRecipes = recipesArray.filter(
+        const categoryRecipes = await fetchRecipes();
+        const filteredRecipes = categoryRecipes.filter(
           recipe => recipe.category === categoryName
         );
-        setRecipes(categoryRecipes);
+        setRecipes(filteredRecipes);
       } catch (err) {
         console.log(err);
       }
@@ -58,4 +34,30 @@ const CategoriesPage = () => {
   );
 };
 
-export { CategoriesPage };
+const fetchCategories = async () => {
+  const categoriesResponse = await fetch(
+    'http://localhost:3000/getAllCategoriesList'
+  );
+
+  if (!categoriesResponse.ok) {
+    throw new Error('No results');
+  }
+
+  const categoriesResponseData = await categoriesResponse.json();
+  const categoriesArray = categoriesResponseData.data.file;
+
+  return categoriesArray.map(category => category.title);
+};
+
+const fetchRecipes = async () => {
+  const RecipesResponse = await fetch('http://localhost:3000/getAllRecipes');
+
+  if (!RecipesResponse.ok) {
+    throw new Error('No results');
+  }
+
+  const RecipesResponseData = await RecipesResponse.json();
+  return RecipesResponseData.data.file;
+};
+
+export { CategoriesPage, fetchCategories, fetchRecipes };
