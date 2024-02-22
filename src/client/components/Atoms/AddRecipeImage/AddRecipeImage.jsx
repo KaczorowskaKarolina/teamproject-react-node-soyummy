@@ -1,8 +1,31 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './AddRecipeImage.module.css';
 import { ReactComponent as Icon } from './iconAddRecipeImage.svg';
 
 const AddRecipeImage = () => {
+  const [file, setFile] = useState();
+  const [imagePath, setImageUrl] = useState();
+
+  useEffect(() => {
+    if (!file) {
+      return;
+    }
+    console.log('Test');
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setImageUrl(reader.result);
+    };
+
+    reader.readAsDataURL(file);
+  }, [file]);
+
+  const onUpload = event => {
+    console.log('Test2');
+    setFile(event.target.files[0]);
+  };
+
+  useEffect(() => {}, [imagePath]);
   return (
     <label className={styles.iconContainer} htmlFor="image">
       <input
@@ -11,10 +34,16 @@ const AddRecipeImage = () => {
         id="recipeImage"
         accept="image/png, image/jpg, image/jpeg"
         className={styles.input}
+        onChange={onUpload}
       />
-      <div className={styles.icon}>
-        <Icon />
-      </div>
+      {!imagePath && (
+        <div className={styles.icon}>
+          <Icon />
+        </div>
+      )}
+      {imagePath && (
+        <img className={styles.imageBackground} src={imagePath} alt="Preview" />
+      )}
     </label>
   );
 };

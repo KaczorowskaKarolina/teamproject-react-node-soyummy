@@ -10,9 +10,15 @@
   color: #fafafa;
   background-color: #8baa36;
   position: relative;
+  overflow: hidden;
 }
 
 .iconContainer:hover .icon {
+  transform: scale(1.2);
+  transition: transform 500ms;
+}
+
+.iconContainer:hover .imageBackground {
   transform: scale(1.2);
   transition: transform 500ms;
 }
@@ -35,4 +41,11 @@
   text-align: right;
   top: 0;
   z-index: 1;
+}
+
+.imageBackground {
+  transition: transform 500ms;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
