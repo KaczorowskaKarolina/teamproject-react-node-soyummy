@@ -1,4 +1,5 @@
 import { CategoriesPage } from 'client/pages/categories/CategoriesPage.jsx';
+import { HomePage } from 'client/pages/home/HomePage.jsx';
 import { StartPage } from 'client/pages/startPage/StartPage.jsx';
 
 import { Routes, Route } from 'react-router-dom';
@@ -21,6 +22,7 @@ const App = () => {
 
         <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/categories/:categoryName" element={<CategoriesPage />} />
+        <Route path="/" element={<HomePage />} />
         {/* 
         <Route path="/add" element={<AddRecipiesPage />} />
         <Route path="/my" element={<MyRecipiesPage />} />
