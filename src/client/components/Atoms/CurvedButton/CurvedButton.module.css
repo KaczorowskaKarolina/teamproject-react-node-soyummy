@@ -44,3 +44,27 @@
     padding: 22px 44px;
   }
 }
+
+.recipes {
+  padding: 6px 14px;
+  font-size: 0.6rem;
+}
+
+.recipes:hover {
+  background-color: var(--addBtn);
+  color: var(--primaryColor);
+}
+
+@media screen and (min-width: 768px) {
+  .recipes {
+    padding: 12px 32px;
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .recipes {
+    padding: 18px 44px;
+    font-size: 1rem;
+  }
+}
