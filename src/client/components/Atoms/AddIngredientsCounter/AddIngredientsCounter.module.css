@@ -8,6 +8,11 @@
   border-radius: 18px;
   width: 92px;
   height: 28px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  color: #333;
 }
 
 .minusIcon {
