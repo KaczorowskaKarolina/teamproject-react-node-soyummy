@@ -14,6 +14,7 @@
   background-repeat: no-repeat;
   background-position: right bottom;
   padding: 18px 16px;
+  z-index: 1000;
 }
 
 .closeButton {
