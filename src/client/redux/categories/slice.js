@@ -10,13 +10,14 @@ const categoriesSlice = createSlice({
   },
   extraReducers: builder => {
     builder
-      .addCase(fetchCategories.fulfilled, (state, action) => {
+      .addCase(fetchCategories.pending, (state, action) => {
         state.error = null;
-        state.isLoading = false;
-        state.items = action.push;
-      })
-      .addCase(fetchCategories.pending, state => {
         state.isLoading = true;
+      })
+      .addCase(fetchCategories.fulfilled, state => {
+        state.isLoading = false;
+        state.error = null;
+        state.items.push(...action.payload);
       })
       .addCase(fetchCategories.rejected, (state, action) => {
         state.isLoading = false;
