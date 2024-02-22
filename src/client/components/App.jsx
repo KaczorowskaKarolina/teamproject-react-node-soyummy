@@ -1,4 +1,6 @@
-import { StartPage } from 'client/pages/startPage/StartPage.jsx';
+import { StartPage } from '#pages/startPage/StartPage.jsx';
+import { Registration } from '#pages/registration/Registration.jsx';
+import { SignIn } from '#pages/signIn/SignIn.jsx';
 
 import { Routes, Route } from 'react-router-dom';
 import { SharedLayout } from './Templates/SharedLayout/SharedLayout.jsx';
@@ -19,6 +21,8 @@ const App = () => {
     >
       <Routes>
         <Route path="/teamproject-react-node-soyummy" element={<StartPage />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/signin" element={<SignIn />} />
         <Route path="/" element={<SharedLayout />}>
           {/* <Route index element={<Home />} /> */}
           {/* <Route path="/categories/:categoryName" element={<CategoriesPage />} />
