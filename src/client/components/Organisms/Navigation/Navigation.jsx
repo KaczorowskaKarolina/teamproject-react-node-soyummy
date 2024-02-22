@@ -4,14 +4,19 @@ import { ReactComponent as CloseIcon } from '#icons/close-icon.svg';
 import { ReactComponent as LogoIcon } from '#icons/logo-header-icon.svg';
 import css from './Navigation.module.css';
 
-const Navigation = () => {
+const Navigation = ({ closeMenu }) => {
   return (
     <div className={css.container}>
       <div className={css.icons}>
         <Link to="/" className={css.logo}>
           <LogoIcon />
         </Link>
-        <button onClick={() => {}} className={css.closeButton}>
+        <button
+          onClick={() => {
+            closeMenu(false);
+          }}
+          className={css.closeButton}
+        >
           <CloseIcon />
         </button>
       </div>
