@@ -1,4 +1,4 @@
-import { Header } from 'client/components/Organisms/Header/Header.jsx';
+import { Header } from '#organisms/Header/Header.jsx';
 import { Outlet } from 'react-router-dom';
 import css from './SharedLayout.module.css';
 

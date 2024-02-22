@@ -1,7 +1,7 @@
-import { ReactComponent as HeaderLogo } from '../../../images/icons/logo-header-icon.svg';
+import { ReactComponent as HeaderLogo } from '#icons/logo-header-icon.svg';
 import css from './Header.module.css';
-import { BurgerMenu } from 'client/components/Atoms/BurgerMenu/BurgerMenu.jsx';
-import { Navbar } from 'client/components/Molecules/Navbar/Navbar';
+import { BurgerMenu } from '#atoms/BurgerMenu/BurgerMenu.jsx';
+import { Navbar } from '#molecules/Navbar/Navbar';
 import { useState } from 'react';
 import { Navigation } from '../Navigation/Navigation';
 import { Link } from 'react-router-dom';
