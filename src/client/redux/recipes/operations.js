@@ -5,7 +5,7 @@ const fetchRecipes = createAsyncThunk(
   'recipes/fetchAll',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get('http://localhost:3000/api/recipes');
+      const response = await axios.get('/recipes');
       return response.data.file;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { PersistGate } from 'redux-persist/lib/integration/react.js';
-import { store, persistor } from './client/redux/store.js';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/lib/integration/react.js';
 import { App } from 'client/components/App.jsx';
+import { store, persistor } from 'client/redux/store.js';
 import './client/styles/main.css';
 import 'index.css';
 
