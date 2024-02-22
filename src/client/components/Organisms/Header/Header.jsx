@@ -4,6 +4,7 @@ import { BurgerMenu } from 'client/components/Atoms/BurgerMenu/BurgerMenu.jsx';
 import { Navbar } from 'client/components/Molecules/Navbar/Navbar';
 import { useState } from 'react';
 import { Navigation } from '../Navigation/Navigation';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   let width = window.innerWidth;
@@ -14,9 +15,9 @@ const Header = () => {
     <>
       <div className={css.container}>
         <div className={css.box}>
-          <div className={css.logo}>
+          <Link to="/" className={css.logo}>
             <HeaderLogo />
-          </div>
+          </Link>
           {width < 1240 ? null : <Navbar />}
           <div className={css.rightContainer}>
             <div className={css.userMenu}>
