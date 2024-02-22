@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import css from './SignInLink.module.css';
 
 const SignInLink = () => {
   return (
-    <a href="./registration" className={css.SignInLink}>
+    <Link to="/registration" className={css.SignInLink}>
       Registration
-    </a>
+    </Link>
   );
 };
 
