@@ -8,7 +8,13 @@ const Navigation = ({ closeMenu }) => {
   return (
     <div className={css.container}>
       <div className={css.icons}>
-        <Link to="/" className={css.logo}>
+        <Link
+          to="/"
+          onClick={() => {
+            closeMenu(false);
+          }}
+          className={css.logo}
+        >
           <LogoIcon />
         </Link>
         <button
