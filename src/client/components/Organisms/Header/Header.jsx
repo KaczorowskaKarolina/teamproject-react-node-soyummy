@@ -1,4 +1,4 @@
-import { Logo } from 'client/components/Atoms/Logo/Logo.jsx';
+import { ReactComponent as HeaderLogo } from '../../../images/icons/logo-header-icon.svg';
 import css from './Header.module.css';
 import { BurgerMenu } from 'client/components/Atoms/BurgerMenu/BurgerMenu.jsx';
 import { Navbar } from 'client/components/Molecules/Navbar/Navbar';
@@ -14,7 +14,9 @@ const Header = () => {
     <>
       <div className={css.container}>
         <div className={css.box}>
-          <Logo />
+          <div className={css.logo}>
+            <HeaderLogo />
+          </div>
           {width < 1240 ? null : <Navbar />}
           <div className={css.rightContainer}>
             <div className={css.userMenu}>

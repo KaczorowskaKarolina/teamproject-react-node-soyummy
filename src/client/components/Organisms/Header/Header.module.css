@@ -16,6 +16,11 @@
   width: 343px;
 }
 
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
 .rightContainer {
   display: flex;
   justify-content: space-between;
@@ -50,6 +55,11 @@
 
 @media screen and (min-width: 768px) {
   .avatar {
+    width: 44px;
+    height: 44px;
+  }
+
+  .logo {
     width: 44px;
     height: 44px;
   }
