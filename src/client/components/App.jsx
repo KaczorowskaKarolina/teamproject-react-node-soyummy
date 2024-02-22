@@ -1,4 +1,5 @@
 import { StartPage } from 'client/pages/startPage/StartPage.jsx';
+import { SearchPage } from 'client/pages/searchPage/SearchPage';
 
 import { Routes, Route } from 'react-router-dom';
 // several pages imports
@@ -17,6 +18,7 @@ const App = () => {
     >
       <Routes>
         <Route path="/teamproject-react-node-soyummy" element={<StartPage />} />
+        <Route path="/search" element={<SearchPage />} />
         {/* <Route path="/categories/:categoryName" element={<CategoriesPage />} />
         <Route path="/add" element={<AddRecipiesPage />} />
         <Route path="/my" element={<MyRecipiesPage />} />

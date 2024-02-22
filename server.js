@@ -7,7 +7,7 @@ import { app } from './src/server/app.js';
 dotenv.config();
 
 // Upload our PORT incase if you want to use different than 3000
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 // Upload our MongoDB .env file and delete this comment line
 const uriDb = process.env.DB_HOST;
 // DONT FORGET ABOUT OUR SECRET

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+
 import styles from './SearchTypeSelector.module.css';
 //optionally future import { useTheme }? (Dark Theme) and styles below
 
-export const SearchTypeSelector = () => {
+
+const SearchTypeSelector = () => {
   //const { theme } = useTheme();
   const [searchType, setSearchType] = useState('query');
 
@@ -34,7 +36,7 @@ export const SearchTypeSelector = () => {
             //className={`${styles.option} ${
              // theme === 'dark' ? styles.darkTheme : ''
            // }`}
-          //  value="query"
+           value="query"
           >
             Title
           </option>
@@ -52,3 +54,6 @@ export const SearchTypeSelector = () => {
     </div>
   );
 };
+
+
+export { SearchTypeSelector };

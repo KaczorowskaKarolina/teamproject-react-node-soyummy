@@ -1,9 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// axios.defaults.baseURL = 'http://localhost:5000';
+// axios.defaults.baseURL = 'http://localhost:3000';
 
-export const searchRecipesByName = createAsyncThunk(
+ const searchRecipesByName = createAsyncThunk(
     'search/searchRecipesByName',
     async (name, thunkAPI) => {
       try {
@@ -20,3 +20,4 @@ export const searchRecipesByName = createAsyncThunk(
     }
   );
   
+  export {searchRecipesByName};

@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import styles from './SearchForm.module.css';
-//optionally future import { useTheme }? (Dark Theme) and styles in the code to be replaced
 
-export const SearchForm = ({ onSearch }) => {
+import styles from './SearchForm.module.css';
+
+//Future import { useTheme }? (Dark Theme) and styles in the code to be replaced
+
+
+ const SearchForm = ({ onSearch }) => {
  // const { theme } = useTheme();
   const [query, setQuery] = useState('');
 
@@ -40,3 +43,6 @@ export const SearchForm = ({ onSearch }) => {
     </form>
   );
 };
+
+
+export { SearchForm };
