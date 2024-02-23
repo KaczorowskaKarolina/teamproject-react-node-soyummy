@@ -30,20 +30,15 @@ const App = () => {
             path="/categories/:categoryName"
             element={<CategoriesPage />}
           />
-          
-          {/* 
-        <Route path="/categories/:categoryName" element={<CategoriesPage />} />
-          
-        <Route path="/search" element={<SearchPage />} />
+
+          {/* <Route path="/search" element={<SearchPage />} />
         <Route path="/add" element={<AddRecipiesPage />} />
         <Route path="/my" element={<MyRecipiesPage />} />
         <Route path="/favorite" element={<FavoritePage />} />
         <Route path="/shopping-list" element={<ShoppingListPage />} />
-        <Route path="/search" element={<SearchPage />} />
-        
-        <Route path="*" element={<Page404 />} />
-        
-          
+        <Route path="/search" element={<SearchPage />} /> */}
+
+          <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
     </div>
