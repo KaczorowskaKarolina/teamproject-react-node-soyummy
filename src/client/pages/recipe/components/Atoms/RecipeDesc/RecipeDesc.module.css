@@ -1,0 +1,14 @@
+.RecipeDesc {
+    font-size: 0.75rem;
+    color: var(--descriptionText);
+    text-align: center;
+
+    margin: 0;
+    cursor: default;
+}
+
+@media screen and (min-width: 768px) {
+    .RecipeDesc {
+      font-size: 1.125rem;
+    }
+  }

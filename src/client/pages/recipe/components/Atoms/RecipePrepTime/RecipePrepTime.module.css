@@ -1,0 +1,44 @@
+.RecipePrepTime {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-top: 18px;
+    cursor: default;
+}
+
+.PrepTimeIcon {
+    display: flex;
+    width: 14px;
+    height: 14px;
+}
+
+.PrepTimeText {
+    font-size: 0.625rem;
+    font-weight: 500;
+    color: var(--descriptionText);
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .RecipePrepTime {
+    gap: 8px;
+    margin-top: 36px;
+  }
+
+  .PrepTimeIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .PrepTimeText {
+    font-size: 0.875rem;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .RecipePrepTime {
+    margin-top: 18px;
+  }
+}
