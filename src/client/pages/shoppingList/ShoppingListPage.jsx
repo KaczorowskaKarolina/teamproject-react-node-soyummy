@@ -57,4 +57,4 @@ const ShoppingListPage = () => {
   );
 };
 
-export default ShoppingListPage;
+export { ShoppingListPage };
