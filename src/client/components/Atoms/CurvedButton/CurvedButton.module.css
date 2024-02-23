@@ -55,15 +55,28 @@
   color: var(--primaryColor);
 }
 
+.favorites {
+  background-color: var(--addBtn);
+  padding: 6px 14px;
+  font-size: 0.6rem;
+}
+
+.favorites:hover {
+  background-color: var(--accent);
+  color: var(--primaryColor);
+}
+
 @media screen and (min-width: 768px) {
-  .recipes {
+  .recipes,
+  .favorites {
     padding: 12px 32px;
     font-size: 0.875rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .recipes {
+  .recipes,
+  .favorites {
     padding: 18px 44px;
     font-size: 1rem;
   }

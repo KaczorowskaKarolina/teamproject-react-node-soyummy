@@ -22,10 +22,10 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .Description {
-        font-size: 1.125rem;
-    
-        width: 806px;
-        height: 134px;
-      }
+  .Description {
+    font-size: 1.125rem;
+
+    width: 806px;
+    height: 134px;
+  }
 }

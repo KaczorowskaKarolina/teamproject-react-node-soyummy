@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
 
-  background-color: var(--accent);
   border: none;
   border-radius: 4px;
 
@@ -16,10 +15,6 @@
 .IconBox {
   width: 14px;
   height: 14px;
-}
-
-.IconBox path {
-  stroke: var(--primaryColor);
 }
 
 @media screen and (min-width: 768px) {
@@ -35,13 +30,25 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .DeleteButton {
-        width: 44px;
-        height: 44px;
-      }
-    
-      .IconBox {
-        width: 24px;
-        height: 24px;
-      }
+  .DeleteButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .IconBox {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.recipes,
+.recipes path {
+  background-color: var(--accent);
+  stroke: var(--primaryColor);
+}
+
+.favorites,
+.favorites path {
+  background-color: var(--logoIconBgFt);
+  stroke: var(--secondaryColor);
 }
