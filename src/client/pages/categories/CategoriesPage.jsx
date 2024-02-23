@@ -16,8 +16,8 @@ const CategoriesPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetchCategories = await dispatch(fetchCategories());
-        const allCategories = fetchCategories.payload.map(
+        const fetchAllCategories = await dispatch(fetchCategories());
+        const allCategories = fetchAllCategories.payload.map(
           category => category.title
         );
         setCategories(allCategories);
@@ -42,4 +42,4 @@ const CategoriesPage = () => {
   );
 };
 
-export { CategoriesPage, fetchCategories };
+export { CategoriesPage };
