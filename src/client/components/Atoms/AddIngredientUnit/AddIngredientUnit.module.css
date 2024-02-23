@@ -1,6 +1,7 @@
 .AddIngredientUnit {
   box-sizing: border-box;
-  width: 84px;
+  width: 30%;
+  max-width: 99px;
   height: 53px;
   position: relative;
   display: flex;
