@@ -1,0 +1,49 @@
+.Footer {
+  width: 100%;
+  justify-self: flex-end;
+}
+
+.FooterMain {
+  background-color: var(--footerBg);
+  padding: 28px 85px 18px;
+}
+
+.FooterContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 32px;
+
+  padding-bottom: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .FooterMain {
+    padding: 50px 94px 24px 32px;
+  }
+
+  .FooterContent {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+
+    padding-bottom: 38px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .FooterMain {
+    padding: 64px 100px 50px;
+  }
+
+  .FooterContent {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-bottom: 41px;
+  }
+}

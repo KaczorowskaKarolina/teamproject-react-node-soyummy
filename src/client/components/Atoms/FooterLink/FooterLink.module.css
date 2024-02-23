@@ -1,0 +1,16 @@
+.FooterLink {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--footerText);
+
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  transition: ease-in-out 0.25s;
+}
+
+.FooterLink:hover,
+.FooterLink:active,
+.FooterLink:focus {
+  color: var(--accent);
+}

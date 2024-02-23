@@ -64,12 +64,20 @@
     "#example/*": "./test/path/folder/*",
     "#controllers/*": "./src/server/controllers/*",
     "#middlewares/*": "./src/server/middlewares/*",
+
     "#atoms/*": "./src/client/components/Atoms/*",
     "#molecules/*": "./src/client/components/Molecules/*",
     "#organisms/*": "./src/client/components/Organisms/*",
+    "#templates/*": "./src/client/components/Templates/*",
+
+    "#pages/*": "./src/client/pages/*",
+
+    "#images/*": "./src/client/images/*",
     "#icons/*": "./src/client/images/icons/*",
+
     "#handlers/*": "./src/server/handlers/*",
-    "#schemas/*": "./src/server/models/schema/*"
+    "#schemas/*": "./src/server/models/schema/*",
+    "#server/*": "./src/server/*"
   },
   "type": "module"
 }
