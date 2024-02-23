@@ -1,0 +1,10 @@
+.HomeAtomButton {
+  background-color: var(--accent);
+  width: 5.8em;
+  height: 2.3em;
+  border-radius: 0.37em;
+  border: none;
+  color: var(--primaryColor);
+  font-family: var(--font-family);
+  font-size: 0.87em;
+}

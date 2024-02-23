@@ -1,10 +1,12 @@
 import { nanoid } from 'nanoid';
 import { useMediaQuery } from '@mui/material';
 
-import css from './HomeOrganism.module.css';
-import categoryPageCss from 'client/pages/categories/components/Templates/RecipeTemplate.module.css';
+import { HomeAtomButton } from '../Atoms/HomeAtomButton.jsx';
 import { CategoryAtom } from 'client/pages/categories/components/Atoms/categoryAtoms/CategoryAtom';
 import { RecipeOrganism } from 'client/pages/categories/components/Organisms/recipeOrganisms/RecipeOrganism';
+
+import css from './HomeOrganism.module.css';
+import categoryPageCss from 'client/pages/categories/components/Templates/RecipeTemplate.module.css';
 
 const HomeOrganism = ({ recipesByCategory }) => {
   const countOfElement = CheckMediaQuery();
@@ -17,6 +19,7 @@ const HomeOrganism = ({ recipesByCategory }) => {
             while (index < countOfElement) {
               return (
                 <RecipeOrganism
+                  className={css.HomeOrganismButton}
                   key={nanoid()}
                   imageSource={recipe.thumb}
                   title={recipe.title}
@@ -24,6 +27,9 @@ const HomeOrganism = ({ recipesByCategory }) => {
               );
             }
           })}
+          <HomeAtomButton>
+            <CategoryAtom title={recipe.title} />
+          </HomeAtomButton>
         </ul>
       </ul>
     );
