@@ -12,7 +12,6 @@ const fetchRecipes = createAsyncThunk(
       const file = response.data.data.file;
       return file;
     } catch (error) {
-      console.log(error);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
