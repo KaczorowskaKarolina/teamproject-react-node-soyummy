@@ -1,0 +1,17 @@
+.FooterLink {
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.FooterIcon {
+  display: flex;
+  align-items: center;
+}
+
+.green path {
+  fill: var(--accent);
+}
+
+.white path {
+  fill: var(--footerText);
+}

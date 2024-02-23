@@ -34,6 +34,7 @@
   border: 0;
   outline: 0;
 
+
   min-width: 200px;
   flex: 1 0 1;
 }
@@ -73,19 +74,51 @@
 
 .light:hover *,
 .FormInput:has(.light):hover {
-  border-color: var(--secondaryColor);
-  color: var(--secondaryColor);
-  stroke: var(--secondaryColor);
-  transition: ease-in-out 0.25s;
+    border-color: var(--secondaryColor);
+    color: var(--secondaryColor);
+    stroke: var(--secondaryColor);
+    transition: ease-in-out 0.25s;
 }
 
 @media screen and (min-width: 768px) {
-  .FormInput {
-    padding: 16px 18px;
+    .FormInput {
+        padding: 16px 18px;
+    }
+    
+    .FormInputText {
+        font-size: 1.125rem;
+        min-width: 300px;
+    }
+}
+
+
+/* Newsletter styles */
+
+.FormInput:has(.newsletter) {
+  justify-content: start;
+  padding: 10px 14px;
+}
+
+.newsletter {
+  font-size: 0.625rem;
+}
+
+@media screen and (min-width: 768px) {
+  .FormInput:has(.newsletter) {
+    padding: 15px;
   }
 
-  .FormInputText {
+  .newsletter {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .FormInput:has(.newsletter) {
+    padding: 16px 20px;
+  }
+
+  .newsletter {
     font-size: 1.125rem;
-    min-width: 300px;
   }
 }

@@ -5,12 +5,19 @@ import { ReactComponent as EditIcon } from '#images/icons/edit-icon.svg';
 
 import css from './FormInput.module.css';
 
-
-
-const FormInput = ({ type, inputName, placeholder, editIcon, darkOrLight = "dark" }) => {
+const FormInput = ({
+  type,
+  inputName,
+  placeholder,
+  editIcon,
+  destination,
+  darkOrLight = 'dark',
+}) => {
   const iconStyles = `${css.FormIcon} ${css[`${darkOrLight}`]}`;
   const inputStyles = `${css.FormInput} ${css[`${darkOrLight}`]}`;
-  const textStyles = `${css.FormInputText} ${css[`${darkOrLight}`]}`;
+  const textStyles = `${css.FormInputText} ${css[`${darkOrLight}`]} ${
+    css[destination]
+  }`;
 
   //   handleChange = evt => {
   //   };
