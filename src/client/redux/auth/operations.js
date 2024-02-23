@@ -59,7 +59,7 @@ const refresh = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
 
   try {
     setAuthHeader(persistedToken);
-    const response = await axios.get('/current');
+    const response = await axios.post('/current');
     return response.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
