@@ -1,0 +1,4 @@
+.HomeTemplate {
+  display: flex;
+  flex-direction: column;
+}

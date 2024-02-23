@@ -1,11 +1,11 @@
+import css from './HomeTemplate.module.css';
 const { HomeOrganism } = require('../Organisms/HomeOrganism');
 
-const HomeTemplate = (categories, recipesByCategory) => {
+const HomeTemplate = ({ recipesByCategory }) => {
   return (
-    <HomeOrganism
-      categories={categories}
-      recipesByCategory={recipesByCategory}
-    />
+    <div>
+      <HomeOrganism recipesByCategory={recipesByCategory} />;
+    </div>
   );
 };
 

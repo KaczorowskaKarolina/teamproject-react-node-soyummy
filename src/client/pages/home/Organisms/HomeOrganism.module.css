@@ -1,0 +1,6 @@
+.HomeOrganism {
+  ul {
+    display: flex;
+  }
+  padding-inline-start: 0;
+}

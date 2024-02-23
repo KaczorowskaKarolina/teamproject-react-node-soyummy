@@ -1,4 +1,10 @@
 .CategoryNameAtom {
-  /* VARS! */
-  font-size: 44px;
+  font-size: 1.75em;
+  font-family: var(--font-family);
+  text-decoration: none;
+  color: var(--secondaryColor);
+  font-weight: var(--font-mediumBold);
+  @media screen and (min-width: 30em) {
+    font-size: 2.75em;
+  }
 }
