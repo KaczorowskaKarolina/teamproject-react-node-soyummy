@@ -16,10 +16,12 @@ const CategoriesPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const categoriesTitleList = await dispatch(fetchCategories());
-        setCategories(
-          categoriesTitleList.payload.map(category => category.title)
+        const fetchCategories = await dispatch(fetchCategories());
+        const allCategories = fetchCategories.payload.map(
+          category => category.title
         );
+        setCategories(allCategories);
+
         const allRecipes = await dispatch(fetchRecipes());
         const filteredRecipes = allRecipes.payload.filter(
           recipe => recipe.category === categoryName
