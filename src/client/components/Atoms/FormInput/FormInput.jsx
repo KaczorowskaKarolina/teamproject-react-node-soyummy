@@ -39,7 +39,9 @@ const FormInput = ({
 
   return (
     <div className={inputStyles}>
-      <div>{icon}</div>
+      <div>
+        {icon}
+      </div>
       <input
         type={type}
         name={inputName}
@@ -48,7 +50,9 @@ const FormInput = ({
         required
         className={textStyles}
       />
-      <div>{editIcon && <EditIcon className={iconStyles} />}</div>
+      <div>
+        {editIcon && <EditIcon className={iconStyles}/>}
+      </div>
     </div>
   );
 };

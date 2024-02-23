@@ -34,6 +34,8 @@
   border: 0;
   outline: 0;
 
+
+  min-width: 200px;
   flex: 1 0 1;
 }
 
@@ -42,32 +44,32 @@
 }
 
 .FormIcon {
-    width: 18px;
-    height: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 .dark *,
 .FormInput:has(.dark) {
-    border-color: var(--popularDescriptionText);
-    color: var(--popularDescriptionText);
-    stroke: var(--popularDescriptionText);
-    transition: ease-in-out 0.25s;
+  border-color: var(--popularDescriptionText);
+  color: var(--popularDescriptionText);
+  stroke: var(--popularDescriptionText);
+  transition: ease-in-out 0.25s;
 }
 
 .dark:hover *,
 .FormInput:has(.dark):hover {
-    border-color: var(--primaryColor);
-    color: var(--primaryColor);
-    stroke: var(--primaryColor);
-    transition: ease-in-out 0.25s;
+  border-color: var(--primaryColor);
+  color: var(--primaryColor);
+  stroke: var(--primaryColor);
+  transition: ease-in-out 0.25s;
 }
 
 .light *,
 .light path {
-    border-color: var(--userEditDark);
-    color: var(--userEditDark);
-    stroke: var(--userEditDark);
-    transition: ease-in-out 0.25s;
+  border-color: var(--userEditDark);
+  color: var(--userEditDark);
+  stroke: var(--userEditDark);
+  transition: ease-in-out 0.25s;
 }
 
 .light:hover *,
