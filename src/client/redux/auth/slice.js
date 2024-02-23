@@ -18,6 +18,18 @@ const isRejectAction = action => {
   return action.type.endsWith('/rejected');
 };
 
+const isLoginOrSignupAction = action => {
+  return action.type.endsWith('/signup') || action.type.endsWith('/login');
+};
+
+const handleLogin = state => {
+  state.user = action.payload.user;
+  state.token = action.payload.token;
+  state.isLoggedIn = true;
+  state.isRefreshing = false;
+  state.error = false;
+};
+
 const handlePending = state => {
   state.isRefreshing = true;
   state.error = null;
@@ -36,20 +48,6 @@ const authSlice = createSlice({
   initialState,
   extraReducers: builder => {
     builder
-      .addCase(register.fulfilled, (state, action) => {
-        state.user = action.payload.user;
-        state.token = action.payload.token;
-        state.isLoggedIn = true;
-        state.isRefreshing = false;
-        state.error = false;
-      })
-      .addCase(login.fulfilled, (state, action) => {
-        state.user = action.payload.user;
-        state.token = action.payload.token;
-        state.isLoggedIn = true;
-        state.isRefreshing = false;
-        state.error = false;
-      })
       .addCase(logout.fulfilled, state => {
         state.user = { name: null, email: null };
         state.token = null;
@@ -63,6 +61,7 @@ const authSlice = createSlice({
         state.isRefreshing = false;
         state.error = false;
       })
+      .addMatcher(isLoginOrSignupAction, handleLogin)
       .addMatcher(isPendingAction, handlePending)
       .addMatcher(isRejectAction, handleRejected);
   },
