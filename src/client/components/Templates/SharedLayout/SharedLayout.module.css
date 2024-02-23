@@ -13,6 +13,12 @@
 
 .titleBox {
   width: 343px;
+  background-image: url('../../../images/icons/black-dot-mobile.png'),
+    url('../../../images/icons/green-dot-mobile.png'),
+    url('../../../images/icons/green-dot-mobile.png');
+  background-position: right 104px top 141px, right top 108px,
+    left 104px top 76px;
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -32,6 +38,11 @@
 
   .titleBox {
     width: 704px;
+    background-image: url('../../../images/icons/black-dot-mobile.png'),
+      url('../../../images/icons/green-dot.png'),
+      url('../../../images/icons/green-dot.png');
+    background-position: right 283px top 155px, right top 98px,
+      left 187px top 85px;
   }
 
   .title {
@@ -40,7 +51,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1240px) {
   .container {
     background-image: url('../../../images/pages/layout/layout-left-desktop.png'),
       url('../../../images/pages/layout/layout-right-desktop.png');
@@ -49,6 +60,8 @@
 
   .titleBox {
     width: 1240px;
+    background-position: right 517px top 199px, right 71px top 129px,
+      left 228px top 116px;
   }
 
   .title {
