@@ -1,19 +1,19 @@
 .container {
   position: relative;
-  top: 18px;
-  bottom: 18px;
-  right: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   background-color: #ebf3d4;
   background-image: url('../../../images/pages/navigationMenu/nav-menu-background-mobile.png');
   background-repeat: no-repeat;
   background-position: right bottom;
   padding: 18px 16px;
+  z-index: 1000;
 }
 
 .closeButton {
@@ -27,6 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 18px;
 }
 
 .logo {
@@ -36,6 +37,7 @@
 
 .switch {
   height: 27px;
+  margin-bottom: 18px;
 }
 
 @media screen and (min-width: 768px) {
