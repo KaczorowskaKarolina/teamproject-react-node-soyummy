@@ -2,10 +2,10 @@ import { StartPage } from '#pages/startPage/StartPage.jsx';
 import { Registration } from '#pages/registration/Registration.jsx';
 import { SignIn } from '#pages/signIn/SignIn.jsx';
 import { CategoriesPage } from 'client/pages/categories/CategoriesPage.jsx';
-import { StartPage } from 'client/pages/startPage/StartPage.jsx';
 
 import { Routes, Route } from 'react-router-dom';
 import { SharedLayout } from './Templates/SharedLayout/SharedLayout.jsx';
+import { SearchPage } from '#pages/searchPage/SearchPage.jsx';
 
 // several pages imports
 
