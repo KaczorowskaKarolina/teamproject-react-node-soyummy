@@ -2,9 +2,9 @@ import { useDispatch } from 'react-redux';
 
 import styles from './SearchBar.module.css';
 
-import { SearchTypeSelector } from '../../Atoms/SearchTypeSelector/SearchTypeSelector.jsx';
-import { SearchForm } from '../../Molecules/SearchForm/SearchForm.jsx';
-import { searchRecipesByName } from '../../../../redux/reducers/search/actions.js';
+import { SearchTypeSelector } from '#pages/searchPage/Atoms/SearchTypeSelector/SearchTypeSelector.jsx';
+import { SearchForm } from '#pages/Molecules/SearchForm/SearchForm.jsx';
+import { searchRecipesByName } from '#redux/reducers/search/actions.js';
 
 
 const SearchBar = () => {

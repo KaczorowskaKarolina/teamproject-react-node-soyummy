@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import styles from './SearchedRecipesList.module.css';
 
-import { Pagination } from '../../../../components/Templates/Pagination/Pagination.jsx';
+import { Pagination } from '#components/Templates/Pagination/Pagination.jsx';
 //optionally future import { useTheme }? (Dark Theme) and styles in the code to be replaced
 
 const SearchedRecipesList = ({ recipes, error }) => {

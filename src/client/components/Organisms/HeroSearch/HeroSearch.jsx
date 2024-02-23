@@ -1,6 +1,5 @@
 import { useNavigate, useSearchParams } from 'react-router-dom';
-
-import styles from '../HeroSearch/HeroSearch.module.css';
+import styles from './HeroSearch.module.css';
 //optionally future import { useTheme }? (Dark Theme) and styles below
 
 const HeroSearch = () => {
@@ -17,6 +16,12 @@ const HeroSearch = () => {
   const handleSubmit = () => {
     handleSearchFormInput(valueInput);
   };
+
+  const handleQueryChange = e => {
+    const queryValue = e.target.value;
+    setSearchParams({ query: queryValue });
+    };
+
 
   return (
     <div className={styles.containerImage}>
@@ -47,9 +52,7 @@ const HeroSearch = () => {
           <input
             type="text"
             name="query"
-            onChange={e => {
-              setSearchParams({ query: e.target.value });
-            }}
+            onChange={handleQueryChange}
             className={styles.input}
             // className={`${s.input} ${theme === 'dark' ? s.darkTheme : ''}`}
             placeholder="Write something here"

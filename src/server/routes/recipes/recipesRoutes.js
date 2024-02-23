@@ -1,5 +1,5 @@
 import express from 'express';
-import { searchRecipesByName } from '../../models/schema/recipes/recipe';
+import { searchRecipesByName } from '#models/schema/recipes/recipe';
 
 const router = express.Router();
 
