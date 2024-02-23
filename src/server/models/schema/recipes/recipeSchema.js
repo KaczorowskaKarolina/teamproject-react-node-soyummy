@@ -1,71 +1,60 @@
 import mongoose, { Schema } from 'mongoose';
 
-const recipe = new mongoose.Schema(
+const recipes = new Schema(
   {
-    _id: {
-      type: Schema.Types.ObjectId,
-      required: true,
-    },
     title: {
       type: String,
-      required: true,
+      required: [true, 'Title is required'],
     },
     category: {
       type: String,
-      required: true,
+      required: [true, 'category is required'],
     },
     area: {
       type: String,
-      required: true,
+      required: [true, 'area is required'],
     },
     instructions: {
       type: String,
-      required: true,
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-    thumb: {
-      type: String,
-      required: true,
+      required: [true, 'instructions is required'],
     },
     preview: {
       type: String,
-      required: true,
+      required: [true, 'preview is required'],
     },
     time: {
       type: String,
-      required: true,
-    },
-    favorites: {
-      type: Array,
-      required: true,
+      required: [true, 'time is required'],
     },
     youtube: {
       type: String,
-      required: true,
+      required: [true, 'youtube is required'],
     },
     tags: {
       type: Array,
-      required: true,
+      required: [true, 'tags are required'],
     },
-    createdAt: {
-      type: Date,
-      required: true,
-    },
-    updatedAt: {
-      type: Date,
-      required: true,
+    favorites: {
+      type: Array,
+      required: [true, 'favorites are required'],
     },
     ingredients: {
       type: Array,
-      required: true,
+      required: [true, 'ingredients are required'],
+    },
+
+    thumb: {
+      type: String,
+      required: [true, 'Image is required'],
+    },
+    description: {
+      type: String,
+      required: [true, 'Description is required'],
     },
   },
-  { versionKey: false }
+  { versionKey: false, timestamps: true }
 );
 
-const Recipe = mongoose.model('Recipe', recipe);
+const Recipes = mongoose.model('recipes', recipes);
 
-export { Recipe };
+export { Recipes };

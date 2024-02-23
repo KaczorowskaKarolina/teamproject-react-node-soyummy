@@ -1,0 +1,27 @@
+.ImageBox {
+  border-radius: 8px;
+  width: 124px;
+  height: 124px;
+
+  background-color: var(--chooseOptionBg);
+}
+
+.Image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .ImageBox {
+    width: 228px;
+    height: 232px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ImageBox {
+    width: 318px;
+    height: 324px;
+  }
+}
