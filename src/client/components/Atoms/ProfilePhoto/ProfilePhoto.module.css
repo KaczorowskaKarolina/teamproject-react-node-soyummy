@@ -1,0 +1,71 @@
+.HeaderPhoto {
+  display: flex;
+  border-radius: 50%;
+
+  width: 34px;
+  height: 34px;
+}
+
+.HeaderPlaceholder {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+  background-color: var(--inactiveBtn);
+
+  width: 34px;
+  height: 34px;
+}
+
+.HeaderPlaceholder svg {
+  stroke: var(--placeholderText);
+  width: 40%;
+}
+
+@media screen and (min-width: 768px) {
+  .HeaderPhoto,
+  .HeaderPlaceholder {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .HeaderPhoto,
+  .HeaderPlaceholder {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+.ProfilePhoto {
+  display: flex;
+  border-radius: 50%;
+
+  width: 88px;
+  height: 88px;
+}
+
+.PhotoPlaceholder {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+  background-color: var(--inactiveBtn);
+
+  width: 88px;
+  height: 88px;
+}
+
+.PhotoPlaceholder svg {
+  stroke: var(--placeholderText);
+  width: 40%;
+}
+
+@media screen and (min-width: 768px) {
+  .ProfilePhoto,
+  .PhotoPlaceholder {
+    width: 103px;
+    height: 103px;
+  }
+}
