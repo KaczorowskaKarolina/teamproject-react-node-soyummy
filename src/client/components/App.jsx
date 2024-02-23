@@ -30,7 +30,7 @@ const App = () => {
             path="/categories/:categoryName"
             element={<CategoriesPage />}
           />
-          <Route path="*" element={<Page404 />} />
+          {/* <Route path="*" element={<Page404 />} /> */}
           {/* <Route index element={<Home />} /> */}
           {/* <Route path="/categories/:categoryName" element={<CategoriesPage />} />
         {/* 
