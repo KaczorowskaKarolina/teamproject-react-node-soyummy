@@ -6,28 +6,31 @@ const fetchRecipes = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const response = await axios.get('/recipes');
-      return response.data.file;
+      return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
-const addRecipe = createAsyncThunk('recipes/addRecipe', async (_, thunkAPI) => {
-  try {
-    console.log('Testing');
-    return;
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+const addRecipe = createAsyncThunk(
+  'recipes/addRecipe',
+  async (recipe, thunkAPI) => {
+    try {
+      const response = await axios.post('/recipes', recipe);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
   }
-});
+);
 
 const deleteRecipe = createAsyncThunk(
   'recipes/deleteRecipe',
-  async (_, thunkAPI) => {
+  async (recipeId, thunkAPI) => {
     try {
-      console.log('Testing');
-      return;
+      const response = await axios.post(`/recipes/${recipeId}`);
+      return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
