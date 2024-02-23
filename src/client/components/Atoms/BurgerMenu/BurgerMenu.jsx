@@ -1,11 +1,11 @@
-import { ReactComponent as BurgerIcon } from 'client/images/icons/menu-03.svg';
+import { ReactComponent as BurgerIcon } from '#icons/menu-03.svg';
 import css from './BurgerMenu.module.css';
 
-const BurgerMenu = () => {
+const BurgerMenu = ({ openMenu }) => {
   return (
     <button
       onClick={() => {
-        // return <Navigation />
+        openMenu(true);
       }}
       className={css.burgerIcon}
     >
