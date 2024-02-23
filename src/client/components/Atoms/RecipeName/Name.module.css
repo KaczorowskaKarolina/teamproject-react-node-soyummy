@@ -1,0 +1,15 @@
+.MealName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--recipeTitle);
+
+  margin: 0;
+
+  cursor: default;
+}
+
+@media screen and (min-width: 768px) {
+  .MealName {
+    font-size: 1.5rem;
+  }
+}
