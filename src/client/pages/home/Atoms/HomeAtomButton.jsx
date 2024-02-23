@@ -1,8 +1,8 @@
 import css from './HomeAtomButton.module.css';
 
-const HomeAtomButton = ({ handleClick }) => {
+const HomeAtomButton = () => {
   return (
-    <button className={css.HomeAtomButton} type="button" onClick={handleClick}>
+    <button className={css.HomeAtomButton} type="button">
       See all
     </button>
   );
