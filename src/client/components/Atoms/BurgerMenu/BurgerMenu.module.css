@@ -2,7 +2,7 @@
   display: block;
   height: 28px;
   border: none;
-  background-color: transparent;
+  background-color: var(--addInputBgDark);
 }
 
 @media screen and (min-width: 768px) {
