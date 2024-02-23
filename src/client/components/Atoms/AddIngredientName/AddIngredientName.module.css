@@ -1,6 +1,7 @@
 .AddIngredientName {
   box-sizing: border-box;
-  width: 200px;
+  width: 66%;
+  max-width: 398px;
   height: 53px;
   position: relative;
   display: flex;
