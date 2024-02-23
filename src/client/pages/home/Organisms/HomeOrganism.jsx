@@ -7,31 +7,34 @@ import { RecipeOrganism } from 'client/pages/categories/components/Organisms/rec
 
 import css from './HomeOrganism.module.css';
 import categoryPageCss from 'client/pages/categories/components/Templates/RecipeTemplate.module.css';
+import { HomeAtomLinkButton } from '../Atoms/HomeAtomLinkButton.jsx';
 
 const HomeOrganism = ({ recipesByCategory }) => {
   const countOfElement = CheckMediaQuery();
-  return recipesByCategory.map(recipe => {
+  return recipesByCategory.map(recipeByCategory => {
     return (
-      <ul className={css.HomeOrganism}>
-        <CategoryAtom title={recipe.title} />
-        <ul className={categoryPageCss.RecipeTemplate}>
-          {recipe.recipes.map((recipe, index) => {
-            while (index < countOfElement) {
-              return (
-                <RecipeOrganism
-                  className={css.HomeOrganismButton}
-                  key={nanoid()}
-                  imageSource={recipe.thumb}
-                  title={recipe.title}
-                />
-              );
-            }
-          })}
-          <HomeAtomButton>
-            <CategoryAtom title={recipe.title} />
-          </HomeAtomButton>
+      <>
+        <ul className={css.HomeOrganism}>
+          <CategoryAtom title={recipeByCategory.title} />
+          <ul className={categoryPageCss.RecipeTemplate}>
+            {recipeByCategory.recipes.map((recipe, index) => {
+              while (index < countOfElement) {
+                return (
+                  <RecipeOrganism
+                    className={css.HomeOrganismButton}
+                    key={nanoid()}
+                    imageSource={recipe.thumb}
+                    title={recipe.title}
+                  />
+                );
+              }
+            })}
+          </ul>
+          <HomeAtomLinkButton title={recipeByCategory.title}>
+            <HomeAtomButton />
+          </HomeAtomLinkButton>
         </ul>
-      </ul>
+      </>
     );
   });
 };

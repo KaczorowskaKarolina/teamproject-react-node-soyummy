@@ -1,4 +1,9 @@
 .HomeOrganism {
+  display: flex;
+  flex-direction: column;
+  a:last-of-type {
+    margin-left: auto;
+  }
   ul {
     display: flex;
   }
