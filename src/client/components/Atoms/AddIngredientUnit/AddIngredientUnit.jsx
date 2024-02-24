@@ -5,16 +5,14 @@ import { ReactComponent as Icon } from './iconAddIngredientUnit.svg';
 
 const AddIngredientUnit = () => {
   const [openDropdown, setOpenDropdown] = useState(false);
-  const [value, setValue] = useState('');
+  const [unit, setUnit] = useState('g');
   const unitTypes = ['tbs', 'tsp', 'kg', 'g', 'ml', 'l'];
 
   const handleCloseDropdown = event => {
     if (!event.target.dataset.scroll) {
       setOpenDropdown(false);
       window.removeEventListener('click', handleCloseDropdown);
-      return;
     }
-    return;
   };
 
   const handleOpenDropdown = event => {
@@ -24,24 +22,29 @@ const AddIngredientUnit = () => {
     }, 100);
   };
 
-  const changeValue = event => {
-    setValue(event.target.dataset.value);
+  const changeAmount = event => {
+    event.target.dataset.id = event.target.value;
+  };
+
+  const changeUnit = event => {
+    setUnit(event.target.dataset.value);
   };
 
   return (
-    <label htmlFor="ingdredientAmount" className={styles.AddIngredientUnit}>
+    <label className={styles.AddIngredientUnit}>
       <input
-        name="amount"
-        id="ingdredientAmount"
+        name="ingredientAmount"
         className={styles.inputAmount}
         type="text"
         autoComplete="off"
+        onChange={changeAmount}
       />
       <input
-        id="amountUnit"
+        name="ingredientUnit"
         className={styles.inputUnit}
         readOnly="readOnly"
-        value={value}
+        value={unit}
+        data-id={unit}
       />
       <button
         className={styles.icon}
@@ -54,7 +57,7 @@ const AddIngredientUnit = () => {
         <AddDropdownList
           array={unitTypes}
           isCentered={true}
-          onItemClick={changeValue}
+          onItemClick={changeUnit}
         />
       )}
     </label>
