@@ -1,0 +1,8 @@
+.AddRecipe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 72px;
+  padding: 16px;
+}
