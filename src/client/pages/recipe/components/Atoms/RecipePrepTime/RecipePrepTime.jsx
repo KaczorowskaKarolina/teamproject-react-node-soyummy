@@ -7,7 +7,10 @@ const RecipePrepTime = ({ recipePrepTime }) => {
       <div className={css.PrepTimeIcon}>
         <ClockIcon />
       </div>
-      <p className={css.PrepTimeText}>{recipePrepTime}</p>
+      <p className={css.PrepTimeText}>
+        {recipePrepTime}
+        {' min'}
+      </p>
     </div>
   );
 };

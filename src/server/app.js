@@ -6,6 +6,7 @@ import express from 'express';
 import './config/jwt-strategy.js';
 
 import userRouter from './routes/users/usersRoutes.js';
+import router from './routes/index.js';
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.use(express.static('src/server/public'));
 // WE NEED JWT STRATEGY
 
 app.use('/api', userRouter);
+app.use('/api', router);
 
 app.use((req, res) => {
   return res.status(404).json({ message: 'Not found' });

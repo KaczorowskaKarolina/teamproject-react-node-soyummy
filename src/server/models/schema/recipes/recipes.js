@@ -4,4 +4,8 @@ const getAllRecipesFromDB = async () => {
   return await Recipes.find({});
 };
 
-export { getAllRecipesFromDB };
+const getRecipeByIdFromDB = async recipeId => {
+  return await Recipes.find({ _id: recipeId });
+};
+
+export { getAllRecipesFromDB, getRecipeByIdFromDB };

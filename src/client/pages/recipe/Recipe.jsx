@@ -1,54 +1,80 @@
-// import { RecipeBanner } from '#pages/recipe/components/Templates/RecipeBanner/RecipeBanner.jsx';
-// import { RecipeIngredientsList } from '#pages/recipe/components/Templates/RecipeIngredientsList/RecipeIngredientsList.jsx';
+import { RecipeBanner } from '#pages/recipe/components/Templates/RecipeBanner/RecipeBanner.jsx';
+import { RecipeIngredientsList } from '#pages/recipe/components/Templates/RecipeIngredientsList/RecipeIngredientsList.jsx';
 // import { RecipeDetails } from '#pages/recipe/components/Templates/RecipeDetails/RecipeDetails.jsx';
 import css from './Recipe.module.css';
-import React, {
-  // useState,
-  useEffect,
-} from 'react';
-import { getAllRecipes } from 'server/routes/recipes/recipesRoutes.js';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-const Recipe = ({
-  recipeName,
-  recipeDesc,
-  recipePrepTime,
-  ingImageUrl,
-  ingTitle,
-  ingAmount,
-  recipeStepsText,
-  imageUrl,
-}) => {
-  // const [data, setData] = useState(null);
-  // getAllRecipes()
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await getAllRecipes();
-        console.log(response);
-      } catch (err) {
-        console.log(err);
+const Recipe = () =>
+  //   {
+  //   recipeName,
+  //   recipeDesc,
+  //   recipePrepTime,
+  //   ingImageUrl,
+  //   ingTitle,
+  //   ingAmount,
+  //   recipeStepsText,
+  //   imageUrl,
+  // }
+  {
+    const { id } = useParams();
+
+    const [data, setData] = useState(null);
+    const [recipeName, setRecipeName] = useState('loading...');
+    const [recipeDesc, setRecipeDesc] = useState('loading...');
+    const [recipePrepTime, setRecipePrepTime] = useState('loading...');
+    const [ingList, setIngList] = useState([]);
+
+    // let recipeName = `loading...`;
+    // let recipeDesc = `loading...`;
+    // let recipePrepTime = `loading...`;
+    // let ingList = [];
+
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          const response = await fetch(
+            `http://localhost:5000/api//getRecipeById/${id}`
+          );
+          const responseJson = await response.json();
+          const [dataFile] = await responseJson.data.file;
+          setData(dataFile);
+
+          setRecipeName(dataFile.title);
+          setRecipeDesc(dataFile.description);
+          setRecipePrepTime(dataFile.time);
+          setIngList(dataFile.ingredients);
+
+          console.log(dataFile);
+        } catch (err) {
+          console.log(err);
+        }
       }
-    }
 
-    fetchData();
-  }, []);
+      fetchData();
+    }, [id]);
 
-  return (
-    <div className={css.Recipe}>
-      {/* <RecipeBanner
-        recipeName={recipeName}
-        recipeDesc={recipeDesc}
-        recipePrepTime={recipePrepTime}
-      />
-      <RecipeIngredientsList
-        ingImageUrl={ingImageUrl}
-        ingTitle={ingTitle}
-        ingAmount={ingAmount}
-      />
-      <RecipeDetails recipeStepsText={recipeStepsText} imageUrl={imageUrl} /> */}
-    </div>
-  );
-};
+    console.log(data);
+    // recipe
+
+    // ingredients
+
+    // recipe
+    // let recipeStepsText = data ? data.description : `loading...`;
+    // let imageUrl = data ? data.description : `loading...`;
+
+    return (
+      <div className={css.Recipe}>
+        <RecipeBanner
+          recipeName={recipeName}
+          recipeDesc={recipeDesc}
+          recipePrepTime={recipePrepTime}
+        />
+        {ingList && <RecipeIngredientsList ingList={ingList} />}
+        {/* <RecipeDetails recipeStepsText={recipeStepsText} imageUrl={imageUrl} /> */}
+      </div>
+    );
+  };
 
 export { Recipe };
 
