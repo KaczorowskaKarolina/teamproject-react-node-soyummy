@@ -30,3 +30,7 @@
 .listItem:hover {
   color: #8baa36;
 }
+
+.isCentered {
+  text-align: center;
+}

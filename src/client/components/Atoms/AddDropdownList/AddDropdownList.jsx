@@ -1,6 +1,14 @@
 import styles from './AddDropdownList.module.css';
 
-const AddDropdownList = ({ array, filter = '', onItemClick }) => {
+const AddDropdownList = ({
+  array,
+  filter = '',
+  isCentered = false,
+  onItemClick,
+}) => {
+  const classes = isCentered
+    ? `${styles.listItem} ${styles.isCentered}`
+    : `${styles.listItem}`;
   return (
     <div className={styles.AddDropdownList} data-scroll="">
       <ul className={styles.list} data-scroll="">
@@ -10,7 +18,7 @@ const AddDropdownList = ({ array, filter = '', onItemClick }) => {
             .map((item, index) => (
               <li
                 key={index}
-                className={styles.listItem}
+                className={classes}
                 onClick={onItemClick}
                 data-value={item}
                 data-scroll=""
