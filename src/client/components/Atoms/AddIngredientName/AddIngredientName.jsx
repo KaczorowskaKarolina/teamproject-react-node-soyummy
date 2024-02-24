@@ -38,11 +38,9 @@ const AddIngredientName = () => {
 
   useEffect(() => {}, [openDropdown]);
   return (
-    <label htmlFor="ingdredientNames" className={styles.AddIngredientName}>
+    <label className={styles.AddIngredientName}>
       <input
-        list="ingredients"
         name="ingdredientName"
-        id="ingdredientNames"
         className={styles.input}
         onChange={onChange}
         value={value}
@@ -62,13 +60,6 @@ const AddIngredientName = () => {
           onItemClick={changeValue}
         />
       )}
-      {/* <datalist id="ingredients">
-        <option value="Chicken"></option>
-        <option value="Beef"></option>
-        <option value="Avocado"></option>
-        <option value="Bread"></option>
-        <option value="Ham"></option>
-      </datalist> */}
     </label>
   );
 };
