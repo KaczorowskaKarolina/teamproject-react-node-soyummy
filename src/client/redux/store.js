@@ -11,7 +11,7 @@ import {
 import storage from 'redux-persist/lib/storage/index.js';
 import { configureStore } from '@reduxjs/toolkit';
 
-// import { authReducer } from './auth/slice';
+// import { authReducer } from './auth/slice.js';
 import { recipesReducer } from './recipes/slice.js';
 // import { categoriesReducer } from './categories/slice';
 // import { ingredientsReducer } from './ingredients/slice';
