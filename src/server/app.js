@@ -6,6 +6,7 @@ import express from 'express';
 import './config/jwt-strategy.js';
 
 import userRouter from './routes/users/usersRoutes.js';
+// import ingredientRoutes from './routes/shopping-list/ingredientRoutes.js';
 
 dotenv.config();
 
