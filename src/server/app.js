@@ -6,6 +6,8 @@ import express from 'express';
 
 import router from './routes/index.js';
 
+
+
 dotenv.config();
 
 const app = express();
@@ -20,6 +22,7 @@ app.use(express.static('src/server/public'));
 // WE NEED JWT STRATEGY
 
 app.use('/', router);
+
 
 app.use((req, res) => {
   return res.status(404).json({ message: 'Not found' });

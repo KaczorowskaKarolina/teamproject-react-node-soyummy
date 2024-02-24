@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import styles from './Pagination.module.css';
-import {icons} from '#images/icons/pagination-arrow-icon.svg'
+import icons from '#images/icons/pagination-arrow-icon.svg'
+
+
 
 //optionally future import { useTheme }? (Dark Theme) and styles below
 

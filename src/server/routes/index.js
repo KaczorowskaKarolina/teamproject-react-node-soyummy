@@ -7,6 +7,7 @@ import { verify } from '#controllers/verify.js';
 import { authMiddleware } from '#middlewares/authMiddleware.js';
 import { resendVerifyEmail } from '#controllers/resendVerifyEmail.js';
 
+
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
