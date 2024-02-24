@@ -1,6 +1,6 @@
 import styles from './AddDropdownList.module.css';
 
-const AddDropdownList = ({ array, filter, onItemClick }) => {
+const AddDropdownList = ({ array, filter = '', onItemClick }) => {
   return (
     <div className={styles.AddDropdownList} data-scroll="">
       <ul className={styles.list} data-scroll="">
