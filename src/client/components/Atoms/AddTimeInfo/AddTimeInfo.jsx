@@ -1,22 +1,74 @@
 import styles from './AddTimeInfo.module.css';
+import { ReactComponent as Icon } from './iconAddTimeInfo.svg';
+import { useEffect, useState } from 'react';
+import { AddDropdownList } from '../AddDropdownList/AddDropdownList';
 
 const AddTimeInfo = () => {
+  const [openDropdown, setOpenDropdown] = useState(false);
+  const [value, setValue] = useState('');
+  const [timeArray, setTimeArray] = useState([]);
+
+  const handleCloseDropdown = event => {
+    if (!event.target.dataset.scroll) {
+      setOpenDropdown(false);
+      window.removeEventListener('click', handleCloseDropdown);
+      return;
+    }
+    return;
+  };
+
+  const handleOpenDropdown = event => {
+    setOpenDropdown(true);
+    setTimeout(() => {
+      window.addEventListener('click', handleCloseDropdown);
+    }, 100);
+  };
+
+  const changeValue = event => {
+    setValue(event.target.dataset.value);
+  };
+
+  const onChange = event => {
+    setValue(event.target.value);
+  };
+
+  useEffect(() => {}, [openDropdown]);
+
+  useEffect(() => {
+    const array = [];
+    for (let i = 10; i < 200; i = i + 5) {
+      array.push(i.toString());
+    }
+    setTimeArray(array);
+  }, []);
   return (
-    <label htmlFor="time" className={styles.AddTimeInfo}>
+    <label htmlFor="recipeTime" className={styles.AddTimeInfo}>
       Cooking time
-      <div>
+      <div className={styles.inputContainer}>
         <input
           name="recipeTime"
-          id="time"
+          id="recipeTime"
           className={styles.input}
           type="text"
+          onChange={onChange}
+          value={value}
+          data-scroll=""
         />
-        <select name="recipeTimeUnit" className={styles.select}>
-          <option value="tbs">sec</option>
-          <option value="ts">min</option>
-          <option value="kg">hr</option>
-          <option value="g">days</option>
-        </select>
+        min
+        <button
+          className={styles.icon}
+          type="button"
+          onClick={handleOpenDropdown}
+        >
+          <Icon />
+        </button>
+        {openDropdown && (
+          <AddDropdownList
+            array={timeArray}
+            isCentered={true}
+            onItemClick={changeValue}
+          />
+        )}
       </div>
     </label>
   );
