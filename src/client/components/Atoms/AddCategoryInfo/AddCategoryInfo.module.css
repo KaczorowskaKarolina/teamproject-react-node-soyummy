@@ -12,13 +12,27 @@
   color: #00000050;
 }
 
+.inputContainer {
+  width: 123px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: right;
+  position: relative;
+  padding-right: 25px;
+  gap: 5px;
+  color: #000;
+}
 .input {
-  background-image: url('./iconAddCategoryInfo.svg');
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 20px 20px;
+  background: none;
   border: none;
   outline: none;
   text-align: right;
-  padding-right: 28px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  padding: 0;
 }
