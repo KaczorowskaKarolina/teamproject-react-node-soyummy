@@ -1,0 +1,35 @@
+.AddRecipeForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 44px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ImageAndInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.AddRecipeButton {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .ImageAndInfo {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ImageAndInfo {
+    gap: 50px;
+  }
+}

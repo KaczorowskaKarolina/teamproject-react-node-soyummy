@@ -1,0 +1,8 @@
+.AddPreparation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: left;
+  width: 100%;
+  gap: 18px;
+}

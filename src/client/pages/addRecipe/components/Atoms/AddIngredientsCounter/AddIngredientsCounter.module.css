@@ -1,0 +1,37 @@
+.AddIngredientsCounter {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 14px;
+
+  border: 1px solid #3333334d;
+  border-radius: 18px;
+
+  width: 92px;
+  height: 28px;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  color: var(--closeIcon);
+}
+
+.button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.minusIcon {
+  width: 14px;
+  height: 14px;
+  color: var(--closeIcon);
+}
+
+.plusIcon {
+  width: 14px;
+  height: 14px;
+  color: var(--accent);
+}

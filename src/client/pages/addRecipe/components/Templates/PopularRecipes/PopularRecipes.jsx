@@ -1,0 +1,3 @@
+const PopularRecipes = () => {};
+
+export { PopularRecipes };

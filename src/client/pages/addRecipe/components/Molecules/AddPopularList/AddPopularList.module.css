@@ -1,0 +1,26 @@
+.AddPopularList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 24px;
+  
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .AddPopularList {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .AddPopularList {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 320px;
+  }
+}

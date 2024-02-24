@@ -1,0 +1,17 @@
+.SocialMedia {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .SocialMedia {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .SocialMediaTitle {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}

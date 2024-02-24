@@ -1,0 +1,73 @@
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  width: 279px;
+  height: 268px;
+
+  margin: 0 32px;
+  border-radius: 8px;
+  color: #fafafa;
+  background-color: #8baa36;
+  position: relative;
+  overflow: hidden;
+}
+
+.iconContainer:hover .icon {
+  transform: scale(1.2);
+  transition: transform 500ms;
+}
+
+.iconContainer:hover .imageBackground {
+  transform: scale(1.2);
+  transition: transform 500ms;
+}
+
+.icon {
+  transition: transform 500ms;
+  width: 64px;
+  height: 64px;
+  color: #fafafa;
+}
+
+.input {
+  overflow: hidden;
+
+  min-height: 100%;
+  min-width: 100%;
+  
+  text-align: right;
+  
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+
+  z-index: 1;
+}
+
+.imageBackground {
+  transition: transform 500ms;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .iconContainer {  
+    margin: 0;
+    flex-basis: 279px;
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .iconContainer {  
+    width: 357px;
+    height: 344px;
+  
+    margin: 0;
+  }
+}

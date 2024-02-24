@@ -1,0 +1,29 @@
+.AddIngredientsItem {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.Input {
+  flex: 1 1 auto;
+}
+
+.CloseButton {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 1 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .CloseButton {
+    flex: 0 1 150px;
+  }
+}
+
+@media screen and (min-width: 1024px) { 
+  .CloseButton {
+    flex: 0 1 50px;
+  }
+}

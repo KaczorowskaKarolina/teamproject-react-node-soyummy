@@ -1,0 +1,34 @@
+.AddRecipe {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  gap: 50px;
+
+  width: 343px;
+}
+
+.Recipe {
+  flex: 1;
+}
+
+.Addon {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .AddRecipe {
+    width: 704px;
+    gap: 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .AddRecipe {  
+    width: 1240px;
+    flex-direction: row;
+    gap: 120px;
+  }
+}

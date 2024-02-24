@@ -1,0 +1,44 @@
+.AddIngredients {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  padding: 0;
+  margin: 0;
+}
+
+.inputsStyles {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .AddIngredients {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .AddIngredients {
+    align-self: flex-start;
+    width: 609px;
+  }
+}

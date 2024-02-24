@@ -1,0 +1,17 @@
+.header {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.pageHeader {
+  font-size: 1.75rem;
+  color: var(--categorieTitle);
+  padding-bottom: 28px;
+}
+
+.formHeader {
+  font-size: 1.5rem;
+  color: var(--recipeTitle);
+}
