@@ -7,15 +7,18 @@ import { ReactComponent as Icon } from './iconAddIngredientName.svg';
 const AddIngredientName = () => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const [value, setValue] = useState('');
+  const [id, setId] = useState('');
   const [filter, setFilter] = useState('');
+
+  const handleDataFromChild = id => {
+    setId(id);
+  };
 
   const handleCloseDropdown = event => {
     if (!event.target.dataset.scroll) {
       setOpenDropdown(false);
       window.removeEventListener('click', handleCloseDropdown);
-      return;
     }
-    return;
   };
 
   const handleOpenDropdown = event => {
@@ -40,11 +43,12 @@ const AddIngredientName = () => {
   return (
     <label className={styles.AddIngredientName}>
       <input
-        name="ingdredientName"
+        name="ingredientName"
         className={styles.input}
         onChange={onChange}
         value={value}
         data-scroll=""
+        data-id={id}
       />
       <button
         className={styles.icon}
@@ -57,6 +61,7 @@ const AddIngredientName = () => {
         <AddDropdownList
           array={ingredientsType}
           filter={filter}
+          sendDataToParent={handleDataFromChild}
           onItemClick={changeValue}
         />
       )}
