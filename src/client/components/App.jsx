@@ -3,6 +3,7 @@ import { Registration } from '#pages/registration/Registration.jsx';
 import { SignIn } from '#pages/signIn/SignIn.jsx';
 import { CategoriesPage } from 'client/pages/categories/CategoriesPage.jsx';
 // import { StartPage } from 'client/pages/startPage/StartPage.jsx';
+import { ShoppingListPage } from 'client/pages/shoppingList/ShoppingListPage.jsx';
 
 import { Routes, Route } from 'react-router-dom';
 import { SharedLayout } from './Templates/SharedLayout/SharedLayout.jsx';
@@ -30,6 +31,7 @@ const App = () => {
             path="/categories/:categoryName"
             element={<CategoriesPage />}
           />
+          <Route path="/shopping-list" element={<ShoppingListPage />} />
           {/* <Route path="*" element={<Page404 />} /> */}
           {/* <Route index element={<Home />} /> */}
           {/* <Route path="/categories/:categoryName" element={<CategoriesPage />} />
