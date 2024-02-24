@@ -6,6 +6,7 @@ import { CategoriesPage } from 'client/pages/categories/CategoriesPage.jsx';
 
 import { Routes, Route } from 'react-router-dom';
 import { SharedLayout } from './Templates/SharedLayout/SharedLayout.jsx';
+import { Recipe } from '#pages/recipe/Recipe.jsx';
 
 // several pages imports
 
@@ -30,6 +31,7 @@ const App = () => {
             path="/categories/:categoryName"
             element={<CategoriesPage />}
           />
+          <Route path="/recipes/:id" element={<Recipe />} />
           {/* <Route path="*" element={<Page404 />} /> */}
           {/* <Route index element={<Home />} /> */}
           {/* <Route path="/categories/:categoryName" element={<CategoriesPage />} />
