@@ -3,12 +3,12 @@ import { AddIngredientName } from '../../Atoms/AddIngredientName/AddIngredientNa
 import { AddIngredientUnit } from '../../Atoms/AddIngredientUnit/AddIngredientUnit.jsx';
 import { AddIngredientCloseButton } from '../../Atoms/AddIngredientCloseButton/AddIngredientCloseButton.jsx';
 
-const AddIngredientsItem = () => {
+const AddIngredientsItem = ({ id, onClose }) => {
   return (
     <li className={styles.AddIngredientsItem}>
       <AddIngredientName />
       <AddIngredientUnit />
-      <AddIngredientCloseButton />
+      <AddIngredientCloseButton onClick={onClose} id={id} />
     </li>
   );
 };
