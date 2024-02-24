@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
-
+import { MainPageTitle } from './Templates/SearchedRecipesList/MainPageTitle/MainPageTitle';
 import { SearchBar } from '#pages/searchPage/Organisms/SearchBar/SearchBar.jsx';
 import { SearchedRecipesList } from '#pages/searchPage/Templates/SearchedRecipesList/SearchedRecipesList.jsx';
-// future import {MainPageTitle}
+
 // <MainPageTitle title="Search" need to be add in the code under the Header/>
 
 //Awaiting Header, Footer and MainPageTitle Component
@@ -12,6 +12,7 @@ const SearchPage = () => {
 
   return (
     <div>
+      <MainPageTitle title="Search" />
       <SearchBar />
       <SearchedRecipesList recipes={searchResults} />
     </div>
