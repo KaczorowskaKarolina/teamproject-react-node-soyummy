@@ -3,7 +3,7 @@ import styles from './AddRecipeTextarea.module.css';
 const AddRecipeTextarea = () => {
   return (
     <textarea
-      id="recipeDescription"
+      id="recipePreparation"
       className={styles.AddRecipeDescriptionInput}
       placeholder="Enter recipe"
       type="textarea"
