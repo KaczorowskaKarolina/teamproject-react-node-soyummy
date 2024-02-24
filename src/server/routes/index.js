@@ -5,7 +5,7 @@ import { signUp } from '#controllers/signUp.js';
 import { logout } from '#controllers/logout.js';
 import { verify } from '#controllers/verify.js';
 import { authMiddleware } from '#middlewares/authMiddleware.js';
-import { resendVerifyEmail } from '#controllers/resendVerifyEmail.js';
+import { resendVerifyEmail } from '#controllers/resendVerifyEmail.js'; 
 
 
 const router = express.Router();
