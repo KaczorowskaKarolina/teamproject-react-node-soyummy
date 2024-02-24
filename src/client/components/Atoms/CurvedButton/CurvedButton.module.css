@@ -66,6 +66,16 @@
   color: var(--primaryColor);
 }
 
+.recipeBanner {
+  border-color: var(--accent);
+  color: var(--inactiveBtnText);
+}
+
+.recipeBanner:hover {
+  background-color: var(--accent);
+  color: var(--activeBtnText);
+}
+
 @media screen and (min-width: 768px) {
   .recipes,
   .favorites {
