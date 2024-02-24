@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
-import ShoppingListItem from './ShoppingListItem';
+import ShoppingListItem from '../../components/Organisms/ShoppingListItem/ShoppingListItem';
 // import { selectShoppingList } from '../../redux/shopping-list/selectors';
 // import { getShoppingList } from '../../redux/shopping-list/operations';
 
