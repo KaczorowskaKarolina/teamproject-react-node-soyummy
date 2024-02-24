@@ -1,7 +1,7 @@
 import { Recipes } from './recipeSchema.js';
 
-const getAllRecipes = async () => {
-  return Recipes.find({});
+const getAllRecipesFromDB = async () => {
+  return await Recipes.find({});
 };
 
-export { getAllRecipes };
+export { getAllRecipesFromDB };
