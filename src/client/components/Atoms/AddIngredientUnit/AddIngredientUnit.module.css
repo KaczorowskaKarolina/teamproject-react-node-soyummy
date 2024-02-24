@@ -24,6 +24,7 @@
   border: none;
   outline: none;
   text-align: right;
+  color: #00000050;
 }
 
 .inputUnit {
@@ -32,6 +33,7 @@
   border: none;
   outline: none;
   text-align: right;
+  color: #00000050;
 }
 
 .icon {

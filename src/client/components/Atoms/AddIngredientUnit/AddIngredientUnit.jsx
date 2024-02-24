@@ -35,6 +35,7 @@ const AddIngredientUnit = () => {
         id="ingdredientAmount"
         className={styles.inputAmount}
         type="text"
+        autoComplete="off"
       />
       <input
         id="amountUnit"

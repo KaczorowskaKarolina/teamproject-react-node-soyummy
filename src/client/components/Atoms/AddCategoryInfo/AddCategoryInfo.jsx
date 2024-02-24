@@ -6,7 +6,7 @@ import { categories } from 'client/components/testingArrays.js';
 
 const AddCategoryInfo = () => {
   const [openDropdown, setOpenDropdown] = useState(false);
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState('Breakfast');
 
   const handleCloseDropdown = event => {
     if (!event.target.dataset.scroll) {
@@ -43,6 +43,7 @@ const AddCategoryInfo = () => {
           id="recipeCategory"
           className={styles.input}
           type="text"
+          readOnly="readOnly"
           onChange={onChange}
           value={value}
           data-scroll=""
