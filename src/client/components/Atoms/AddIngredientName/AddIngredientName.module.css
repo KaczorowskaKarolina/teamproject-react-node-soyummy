@@ -23,8 +23,12 @@
   text-align: left;
   color: #00000050;
   padding: 16px;
-  background-image: url('./iconAddIngredientName.svg');
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-  background-size: 18px 18px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 16px;
+  padding: 0;
 }
