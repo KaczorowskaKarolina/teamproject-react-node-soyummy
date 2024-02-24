@@ -1,5 +1,5 @@
-import { RecipeTitle } from '../../Atoms/RecipeTitle/RecipeTitle';
-import { RecipeDesc } from '../../Atoms/RecipeDesc/RecipeDesc';
+import { RecipeTitle } from '#pages/recipe/components/Atoms/RecipeTitle/RecipeTitle.jsx';
+import { RecipeDesc } from '#pages/recipe/components/Atoms/RecipeDesc/RecipeDesc.jsx';
 import css from './TitleWithDesc.module.css';
 
 const TitleWithDescription = ({ recipeName, recipeDesc }) => {

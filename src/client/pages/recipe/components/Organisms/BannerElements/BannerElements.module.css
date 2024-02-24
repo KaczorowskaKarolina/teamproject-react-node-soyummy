@@ -6,12 +6,18 @@
   gap: 24px;
 
   width: 300px;
+
+  margin: 80px auto 90px;
+  /* margin: 126px auto 32px; If needed for header (80+46 header height) */
 }
 
 @media screen and (min-width: 768px) {
   .BannerElements {
     gap: 30px;
     width: 500px;
+
+    margin: 72px auto 32px;
+    /* margin: 118px auto 32px; If needed for header (72+46 header height) */
   }
 }
 
