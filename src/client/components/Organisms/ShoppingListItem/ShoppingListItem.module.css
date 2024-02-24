@@ -5,9 +5,6 @@
 
   width: 343px;
   height: 84px;
-  /* margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px; */
 
   @media screen and (min-width: 768px) {
     width: 704px;
@@ -126,16 +123,5 @@
   @media screen and (min-width: 1280px) {
     margin-left: 153px;
     margin-right: 10px;
-  }
-}
-
-.crossIcon {
-  /* Stylizacja ikony kosza na śmieci */
-  width: 14px;
-  height: 14px;
-
-  @media screen and (min-width: 768px) {
-    width: 20px;
-    height: 20px;
   }
 }
