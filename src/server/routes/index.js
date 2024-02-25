@@ -10,7 +10,7 @@ import {
   getAllRecipes,
   getCategoriesList,
   getRecipeById,
-} from './recipes/recipesRoutes.js';
+} from '../controllers/recipes/getAll.js';
 import {
   getAllIngredients,
   getIngredientById,

@@ -1,42 +1,24 @@
-import { getCategoriesListFromDb } from '#server/models/schema/categoriesList/categoriesList.js';
-import { getAllRecipesFromDB } from '#server/models/schema/recipes/recipes.js';
-import { getRecipeByIdFromDB } from '#server/models/schema/recipes/recipes.js';
+import express from 'express';
 
-const getAllRecipes = async (req, res, next) => {
-  const response = await getAllRecipesFromDB();
-  return res.status(200).json({
-    status: 'success',
-    code: 200,
-    data: {
-      file: response,
-    },
-    message: 'nothing to load',
-  });
-};
+// import { getAllRecipes } from '#controllers/recipes/getAll.js';
+import { getRecipeById } from '#controllers/recipes/getOne.js';
+import { getRecipesQuery } from '#controllers/recipes/getWithQuery.js';
+import { getCategories } from '#controllers/categories/getAll.js';
+import { getRecipesByCategory } from '#controllers/recipes/getAllByCategory.js';
+import { getAllIngredients } from '#controllers/ingredients/getAll.js';
+import { getFavorites } from '#controllers/recipes/getFavorites.js';
 
-const getRecipeById = async (req, res, next) => {
-  const { id } = req.params;
-  const response = await getRecipeByIdFromDB(id);
-  return res.status(200).json({
-    status: 'success',
-    code: 200,
-    data: {
-      file: response,
-    },
-    message: 'nothing to load',
-  });
-};
+const router = express.Router();
 
-const getCategoriesList = async (req, res, next) => {
-  const response = await getCategoriesListFromDb();
-  return res.status(200).json({
-    status: 'success',
-    code: 200,
-    data: {
-      file: response,
-    },
-    message: 'nothing to load',
-  });
-};
+router.get('/recipes/category-list', getCategories);
+router.get('/recipes', getRecipesQuery);
+// router.get('/recipes/?', authMiddleware, getRecipesQuery);
+// not sure how to set for enpoints but getRecipesQuerry
+// is set by default to search all
+router.get('/recipes/:id', getRecipeById);
+router.get('/recipes/:category', getRecipesByCategory);
+router.get('recipes/ingredients/list', getAllIngredients);
+// router.get('recipes/:ingredients', getAllIngredients);
+router.get('recipes/favorites', getFavorites);
 
-export { getAllRecipes, getCategoriesList, getRecipeById };
+export default router;
