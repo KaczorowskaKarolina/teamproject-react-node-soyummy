@@ -7,6 +7,7 @@ import { getCategories } from '#controllers/categories/getAll.js';
 import { getRecipesByCategory } from '#controllers/recipes/getAllByCategory.js';
 import { getAllIngredients } from '#controllers/ingredients/getAll.js';
 import { getFavorites } from '#controllers/recipes/getFavorites.js';
+import { getIngredientById } from '#server/controllers/ingredients/getOne.js';
 
 const router = express.Router();
 
@@ -17,8 +18,8 @@ router.get('/recipes', getRecipesQuery);
 // is set by default to search all
 router.get('/recipes/:id', getRecipeById);
 router.get('/recipes/:category', getRecipesByCategory);
-router.get('recipes/ingredients/list', getAllIngredients);
-// router.get('recipes/:ingredients', getAllIngredients);
-router.get('recipes/favorites', getFavorites);
+router.get('/recipes/ingredients/list', getAllIngredients);
+router.get('/recipes/ingredient/:id', getIngredientById);
+router.get('/recipes/favorites', getFavorites);
 
 export default router;

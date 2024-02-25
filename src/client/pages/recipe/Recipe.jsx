@@ -34,10 +34,10 @@ const Recipe = () =>
       async function fetchData() {
         try {
           const response = await fetch(
-            `http://localhost:5000/api//getRecipeById/${id}`
+            `http://localhost:5000/api/recipes/${id}`
           );
           const responseJson = await response.json();
-          const [dataFile] = await responseJson.data.file;
+          const dataFile = await responseJson.data.file;
           setData(dataFile);
 
           setRecipeName(dataFile.title);
