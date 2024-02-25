@@ -14,41 +14,36 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
+const handleAsyncAction = (state, action) => {
+  state.isLoading = false;
+  state.error = null;
+  state.shoppingList = action.payload.data.shoppingList;
+};
+
 const initialState = {
   shoppingList: [],
   isLoading: false,
   error: null,
 };
-const shoppingListSlice = createSlice({
+
+export const shoppingListSlice = createSlice({
   name: 'products',
   initialState,
 
   extraReducers: builder => {
     builder
       .addCase(getShoppingList.pending, handlePending)
-      .addCase(getShoppingList.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.error = null;
-        state.shoppingList = action.payload.data.shoppingList;
-      })
+      .addCase(getShoppingList.fulfilled, handleAsyncAction)
       .addCase(getShoppingList.rejected, handleRejected)
 
       .addCase(addToShoppingList.pending, handlePending)
-      .addCase(addToShoppingList.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.error = null;
-        state.shoppingList = action.payload.data.shoppingList;
-      })
+      .addCase(addToShoppingList.fulfilled, handleAsyncAction)
       .addCase(addToShoppingList.rejected, handleRejected)
 
       .addCase(removeFromShoppingList.pending, handlePending)
-      .addCase(removeFromShoppingList.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.error = null;
-        state.shoppingList = action.payload.data.shoppingList;
-      })
+      .addCase(removeFromShoppingList.fulfilled, handleAsyncAction)
       .addCase(removeFromShoppingList.rejected, handleRejected);
   },
 });
 
-export default shoppingListSlice.reducer;
+export const { actions, reducer } = shoppingListSlice;
