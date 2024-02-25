@@ -3,6 +3,7 @@ import { StartPage } from '#pages/startPage/StartPage.jsx';
 import { Registration } from '#pages/registration/Registration.jsx';
 import { SignIn } from '#pages/signIn/SignIn.jsx';
 import { CategoriesPage } from '#pages/categories/CategoriesPage.jsx';
+import { SearchPage } from 'client/pages/searchPage/SearchPage';
 
 import { Routes, Route } from 'react-router-dom';
 import { SharedLayout } from './Templates/SharedLayout/SharedLayout.jsx';
@@ -30,8 +31,8 @@ const App = () => {
             path="/categories/:categoryName"
             element={<CategoriesPage />}
           />
-
-          {/* <Route path="/search" element={<SearchPage />} />
+          <Route path="/search" element={<SearchPage />} />
+          {/* 
         <Route path="/add" element={<AddRecipiesPage />} />
         <Route path="/my" element={<MyRecipiesPage />} />
         <Route path="/favorite" element={<FavoritePage />} />
