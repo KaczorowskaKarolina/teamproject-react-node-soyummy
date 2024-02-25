@@ -78,6 +78,7 @@
     "#icons/*": "./src/client/images/icons/*",
     "#handlers/*": "./src/server/handlers/*",
     "#schemas/*": "./src/server/models/schema/*",
+    "#pages/*": "./src/client/pages/*",
     "#server/*": "./src/server/*"
   },
   "type": "module"
