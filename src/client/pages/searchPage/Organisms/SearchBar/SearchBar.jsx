@@ -6,18 +6,15 @@ import { SearchTypeSelector } from '#pages/searchPage/Atoms/SearchTypeSelector/S
 import { SearchForm } from '#pages/searchPage/Molecules/SearchForm/SearchForm.jsx';
 import { searchRecipesByName } from '#redux/reducers/search/actions.js';
 
-
 const SearchBar = () => {
-const dispatch = useDispatch();
- const handleSearch = query => {
-  dispatch(searchRecipesByName(query));
+  const dispatch = useDispatch();
+  const handleSearch = query => {
+    dispatch(searchRecipesByName(query));
   };
 
-<SearchForm onSearch={handleSearch} />
-  
   return (
     <div className={styles.searchBar}>
-      <SearchForm />
+      <SearchForm onSearch={handleSearch} />
       <SearchTypeSelector />
     </div>
   );

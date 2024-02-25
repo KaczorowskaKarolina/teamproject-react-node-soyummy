@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
 import styles from './Pagination.module.css';
-import icons from '#images/icons/pagination-arrow-icon.svg'
-
-
+import icons from '#images/icons/pagination-arrow-icon.svg';
 
 //optionally future import { useTheme }? (Dark Theme) and styles below
 
 const Pagination = ({ currentPage, onPageChange }) => {
- // const { theme } = useTheme();
+  // const { theme } = useTheme();
   const [pageCount, setPageCount] = useState(5);
 
   const updatePageCount = () => {
@@ -36,9 +34,9 @@ const Pagination = ({ currentPage, onPageChange }) => {
         <span
           key={i}
           className={styles.pageNumber}
-         // className={`${styles.pageNumber} ${
-         //   theme === 'dark' ? styles.darkTheme : ''
-        //  } ${currentPage === i ? styles.activePage : ''}`}
+          // className={`${styles.pageNumber} ${
+          //   theme === 'dark' ? styles.darkTheme : ''
+          //  } ${currentPage === i ? styles.activePage : ''}`}
           onClick={() => onPageChange(i)}
         >
           {i}
@@ -63,10 +61,10 @@ const Pagination = ({ currentPage, onPageChange }) => {
 
   return (
     <div
-    className={styles.pagination} 
-    //  className={`${styles.pagination} ${
+      className={styles.pagination}
+      //  className={`${styles.pagination} ${
       //  theme === 'dark' ? styles.darkTheme : ''
-   //   }`}
+      //   }`}
     >
       <svg
         className={`${styles.icon} ${styles.arrow}`}
@@ -87,4 +85,4 @@ const Pagination = ({ currentPage, onPageChange }) => {
   );
 };
 
-export {Pagination};
+export { Pagination };

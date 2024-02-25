@@ -1,0 +1,62 @@
+.link {
+  text-decoration: none;
+  color: #22252a;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: #8baa36;
+}
+
+.active {
+  color: #8baa36;
+}
+
+.icon {
+  margin-right: 8px;
+  width: 1em;
+  height: 1em;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: #8baa36;
+}
+
+.title {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .link {
+    font-size: 24px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .link {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #23262a;
+  }
+
+  .icon {
+    margin-right: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  .title {
+    display: none;
+  }
+}

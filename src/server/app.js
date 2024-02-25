@@ -3,8 +3,9 @@ import cors from 'cors';
 import logger from 'morgan';
 import dotenv from 'dotenv';
 import express from 'express';
+import './config/jwt-strategy.js';
 
-import router from './routes/index.js';
+import userRouter from './routes/users/usersRoutes.js';
 
 
 
@@ -21,7 +22,7 @@ app.use(express.static('src/server/public'));
 
 // WE NEED JWT STRATEGY
 
-app.use('/', router);
+app.use('/api', userRouter);
 
 
 app.use((req, res) => {

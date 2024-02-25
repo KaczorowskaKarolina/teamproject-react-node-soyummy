@@ -6,7 +6,7 @@
 }
 
 .soYummy {
-  color: var(--secondaryColor);
+  color: var(--mainTitle);
   font-size: 60px;
   margin-bottom: 30px;
 }
@@ -34,7 +34,7 @@
   color: var(--primaryColor);
   border: none;
   outline: none;
-  background: var(--secondaryColor);
+  background: var(--mainTitleColor);
   margin-left: -20px;
   border-radius: 24px 44px;
   padding: 10px 20px 10px 20px;
@@ -45,9 +45,9 @@
   height: 52px;
   width: 248px;
   background-color: var(--activeBtnText);
-  color: var(--correct);
+  color: #BDBDBD;
   border-radius: 24px 44px;
-  border: 1px solid var(--correct);
+  border: 1px solid #BDBDBD;
   display: flex;
   justify-content: space-between;
   margin-top: 380px;
@@ -61,7 +61,7 @@
   }
 
   .soYummy {
-    color: black;
+    color: var(--mainTitle);
     font-size: 70px;
     margin-bottom: 30px;
   }
@@ -90,7 +90,7 @@
     color: var(--activeBtnText);
     border: none;
     outline: none;
-    background: var(--secondaryColor);
+    background: var(--mainTitle);
     border-radius: 24px 44px;
     padding: 10px;
     width: 161px;
@@ -100,9 +100,9 @@
     height: 71px;
     width: 360px;
     background-color: var(--activeBtnText);
-    color: var(--correct);
+    color: #BDBDBD;
     border-radius: 24px 44px;
-    border: 1px solid var(--correct);
+    border: 1px solid #BDBDBD;
     display: flex;
     justify-content: space-between;
     margin: 50px auto 0 auto;
@@ -117,7 +117,7 @@
   }
 
   .soYummy {
-    color: var(--secondaryColor);
+    color: var(--mainTitle);
     font-size: 100px;
     margin-bottom: 30px;
   }
@@ -145,7 +145,7 @@
     color: var(--primaryColor);
     border: none;
     outline: none;
-    background: var(--secondaryColor);
+    background: var(--mainTitle);
     border-radius: 24px 44px;
     padding: 10px;
     width: 161px;
@@ -155,9 +155,9 @@
     height: 71px;
     width: 400px;
     background-color: var(--activeBtnText);
-    color: var(--correct);
+    color: #BDBDBD;
     border-radius: 24px 44px;
-    border: 1px solid var(--correct);
+    border: 1px solid #BDBDBD;
     display: flex;
     justify-content: space-between;
   }

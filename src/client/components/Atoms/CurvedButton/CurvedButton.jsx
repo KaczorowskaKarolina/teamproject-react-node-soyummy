@@ -4,9 +4,10 @@ const CurvedButton = ({
   title,
   type = 'button',
   greenOrBlack,
+  recipesOrFavorites,
   onClick = () => {},
 }) => {
-  const classes = `${styles.CurvedButton} ${styles[`${greenOrBlack}`]}`;
+  const classes = `${styles.CurvedButton} ${styles[`${greenOrBlack}`]} ${styles[recipesOrFavorites]}`;
   return (
     <button className={classes} type={type} onClick={onClick}>
       {title}

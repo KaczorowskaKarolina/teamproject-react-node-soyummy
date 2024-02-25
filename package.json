@@ -28,7 +28,6 @@
     "passport-jwt": "^4.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-redux": "^9.1.0",
     "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
     "uuidv4": "^6.2.13",
@@ -67,13 +66,19 @@
     "#example/*": "./test/path/folder/*",
     "#controllers/*": "./src/server/controllers/*",
     "#middlewares/*": "./src/server/middlewares/*",
-    "#models/*":"./src/server/models/*",
-    "#images/*":"./src/client/images/*",
+    "#models/*": "./src/server/models/*",
+    "#images/*": "./src/client/images/*",
     "#pages/*": "./src/client/pages/*",
-    "#redux/*":"./src/client/redux/*",
-    "#components/*":"./src/client/components/*"
-
+    "#redux/*": "./src/client/redux/*",
+    "#components/*": "./src/client/components/*",
+    "#atoms/*": "./src/client/components/Atoms/*",
+    "#molecules/*": "./src/client/components/Molecules/*",
+    "#organisms/*": "./src/client/components/Organisms/*",
+    "#templates/*": "./src/client/components/Templates/*",
+    "#icons/*": "./src/client/images/icons/*",
+    "#handlers/*": "./src/server/handlers/*",
+    "#schemas/*": "./src/server/models/schema/*",
+    "#server/*": "./src/server/*"
   },
   "type": "module"
 }
-

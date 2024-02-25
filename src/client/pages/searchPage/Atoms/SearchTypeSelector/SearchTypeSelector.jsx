@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import styles from './SearchTypeSelector.module.css';
 //optionally future import { useTheme }? (Dark Theme) and styles below
 
-
 const SearchTypeSelector = () => {
   //const { theme } = useTheme();
   const [searchType, setSearchType] = useState('query');
@@ -16,10 +15,11 @@ const SearchTypeSelector = () => {
   return (
     <div>
       <label className={styles.searchTypeSelector}>
-        <p className={styles.searchText}
+        <p
+          className={styles.searchText}
           //className={`${styles.searchText} ${
-            //theme === 'dark' ? styles.darkTheme : ''
-        //  }`}
+          //theme === 'dark' ? styles.darkTheme : ''
+          //  }`}
         >
           Search by:{' '}
         </p>
@@ -28,23 +28,23 @@ const SearchTypeSelector = () => {
           onChange={handleSearchTypeChange}
           className={styles.cutomSelect}
           //className={`${styles.customSelect} ${
-           // theme === 'dark' ? styles.darkTheme : ''
-         // }`}
+          // theme === 'dark' ? styles.darkTheme : ''
+          // }`}
         >
           <option
-          className={styles.option}
+            className={styles.option}
             //className={`${styles.option} ${
-             // theme === 'dark' ? styles.darkTheme : ''
-           // }`}
-           value="query"
+            // theme === 'dark' ? styles.darkTheme : ''
+            // }`}
+            value="query"
           >
             Title
           </option>
           <option
-          className={styles.option}
-           // className={`${styles.option} ${
-           //   theme === 'dark' ? styles.darkTheme : ''
-           // }`}
+            className={styles.option}
+            // className={`${styles.option} ${
+            //   theme === 'dark' ? styles.darkTheme : ''
+            // }`}
             value="ingredient"
           >
             Ingredients
@@ -54,6 +54,5 @@ const SearchTypeSelector = () => {
     </div>
   );
 };
-
 
 export { SearchTypeSelector };
