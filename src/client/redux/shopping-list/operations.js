@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from '../../pages/shoppingList/const/axiosBaseUrl.js';
+import axios from '#pages/shoppingList/const/axiosBaseUrl.js';
 
 
 export const getShoppingList = createAsyncThunk(
