@@ -1,4 +1,71 @@
 .container {
+  position: relative;
   display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   justify-content: center;
+  background-image: url('../../../images/pages/layout/layout-left-mobile.png'),
+    url('../../../images/pages/layout/layout-right-mobile.png');
+  background-position: left bottom 200px, right bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.titleBox {
+  width: 343px;
+  background-image: url('../../../images/icons/black-dot-mobile.png'),
+    url('../../../images/icons/green-dot-mobile.png'),
+    url('../../../images/icons/green-dot-mobile.png');
+  background-position: right 104px top 141px, right top 108px,
+    left 104px top 76px;
+  background-repeat: no-repeat;
+}
+
+.title {
+  margin-top: 114px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1;
+  color: #001833;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    background-image: url('../../../images/pages/layout/layout-left-tablet.png'),
+      url('../../../images/pages/layout/layout-right-tablet.png');
+    background-position: left bottom 137px, right bottom;
+  }
+
+  .titleBox {
+    width: 704px;
+    background-image: url('../../../images/icons/black-dot-mobile.png'),
+      url('../../../images/icons/green-dot.png'),
+      url('../../../images/icons/green-dot.png');
+    background-position: right 283px top 155px, right top 98px,
+      left 187px top 85px;
+  }
+
+  .title {
+    margin-top: 136px;
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .container {
+    background-image: url('../../../images/pages/layout/layout-left-desktop.png'),
+      url('../../../images/pages/layout/layout-right-desktop.png');
+    background-position: left bottom 20px, right bottom;
+  }
+
+  .titleBox {
+    width: 1240px;
+    background-position: right 517px top 199px, right 71px top 129px,
+      left 228px top 116px;
+  }
+
+  .title {
+    margin-top: 164px;
+    font-size: 44px;
+  }
 }

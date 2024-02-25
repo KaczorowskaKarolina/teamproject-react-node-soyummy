@@ -6,8 +6,8 @@ const Navbar = () => {
   return (
     <nav className={css.navigation}>
       <ul className={css.list}>
-        {links.map(link => (
-          <li className={css.item}>
+        {links.map((link, index) => (
+          <li key={index} className={css.item}>
             <NavigationLink
               path={link.path}
               title={link.title}
