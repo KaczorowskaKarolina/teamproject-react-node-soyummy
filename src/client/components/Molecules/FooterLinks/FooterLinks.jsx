@@ -1,4 +1,4 @@
-import { FooterLink } from '#components/Atoms/FooterLink/FooterLink.jsx';
+import { FooterLink } from '#atoms/FooterLink/FooterLink.jsx';
 import css from './FooterLinks.module.css';
 
 const FooterLinks = () => {

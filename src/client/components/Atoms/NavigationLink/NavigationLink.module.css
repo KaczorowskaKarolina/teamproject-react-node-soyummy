@@ -1,6 +1,6 @@
 .link {
   text-decoration: none;
-  color: #22252a;
+  color: var(--addBtn);
   font-size: 18px;
   font-weight: 500;
   display: flex;
@@ -10,11 +10,11 @@
 
 .link:hover {
   cursor: pointer;
-  color: #8baa36;
+  color: var(--hoverIcon);
 }
 
 .active {
-  color: #8baa36;
+  color: var(--hoverIcon);
 }
 
 .icon {
@@ -25,7 +25,7 @@
 
 .icon:hover {
   cursor: pointer;
-  color: #8baa36;
+  color: var(--hoverIcon);
 }
 
 .title {
@@ -47,7 +47,7 @@
   .link {
     font-size: 14px;
     line-height: 1.6;
-    color: #23262a;
+    color: var(--navText);
   }
 
   .icon {
