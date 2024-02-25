@@ -44,8 +44,6 @@ const Recipe = () =>
           setRecipeDesc(dataFile.description);
           setRecipePrepTime(dataFile.time);
           setIngList(dataFile.ingredients);
-
-          console.log(dataFile);
         } catch (err) {
           console.log(err);
         }
@@ -54,7 +52,6 @@ const Recipe = () =>
       fetchData();
     }, [id]);
 
-    console.log(data);
     // recipe
 
     // ingredients
@@ -62,7 +59,6 @@ const Recipe = () =>
     // recipe
     // let recipeStepsText = data ? data.description : `loading...`;
     // let imageUrl = data ? data.description : `loading...`;
-
     return (
       <div className={css.Recipe}>
         <RecipeBanner
