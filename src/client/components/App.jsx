@@ -1,7 +1,8 @@
+import { Page404 } from '#pages/Page404/Page404.jsx';
 import { StartPage } from '#pages/startPage/StartPage.jsx';
 import { Registration } from '#pages/registration/Registration.jsx';
 import { SignIn } from '#pages/signIn/SignIn.jsx';
-import { CategoriesPage } from 'client/pages/categories/CategoriesPage.jsx';
+import { CategoriesPage } from '#pages/categories/CategoriesPage.jsx';
 
 import { Routes, Route } from 'react-router-dom';
 import { SharedLayout } from './Templates/SharedLayout/SharedLayout.jsx';
@@ -39,7 +40,9 @@ const App = () => {
         <Route path="/my" element={<MyRecipiesPage />} />
         <Route path="/favorite" element={<FavoritePage />} />
         <Route path="/shopping-list" element={<ShoppingListPage />} />
-        <Route path="*" element={<Page404 />} /> */}
+        <Route path="/search" element={<SearchPage />} /> */}
+
+          <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
     </div>

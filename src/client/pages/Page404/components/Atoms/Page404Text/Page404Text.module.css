@@ -1,0 +1,14 @@
+.Page404Text {
+    font-family: var(--font-family);
+        font-weight: var(--font-regular);
+        font-size: 0.875rem;
+        text-align: center;
+        color: var(--secondaryColor);
+        margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .Page404Text {
+        font-size: 1.125rem;
+    }
+}
