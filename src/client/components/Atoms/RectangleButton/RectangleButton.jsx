@@ -1,5 +1,5 @@
 import styles from './RectangleButton.module.css';
-import { variables } from 'client/styles/_vars.css';
+// import { variables } from 'client/styles/_vars.css';
 
 const RectangleButton = ({
   title,
@@ -8,7 +8,9 @@ const RectangleButton = ({
   colorScheme,
   onClick = () => {},
 }) => {
-  const classes = `${styles.RectangleButton} ${styles[`${size}`] } ${styles[`${colorScheme}`] }`;
+  const classes = `${styles.RectangleButton} ${styles[`${size}`]} ${
+    styles[`${colorScheme}`]
+  }`;
   return (
     <button className={classes} type={type} onClick={onClick}>
       {title}
