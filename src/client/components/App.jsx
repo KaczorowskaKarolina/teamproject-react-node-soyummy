@@ -43,7 +43,7 @@ const App = () => {
           {/* <Route path="/my" element={<MyRecipiesPage />} /> */}
           {/* <Route path="/favorite" element={<FavoritePage />} /> */}
           {/* <Route path="/shopping-list" element={<ShoppingListPage />} /> */}
-          {/* <Route path="*" element={<Page404 />} /> */}
+          <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
     </div>
