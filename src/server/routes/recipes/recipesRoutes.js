@@ -6,18 +6,19 @@ import { getRecipesQuery } from '#controllers/recipes/getWithQuery.js';
 import { getCategories } from '#controllers/categories/getAll.js';
 import { getRecipesByCategory } from '#controllers/recipes/getAllByCategory.js';
 import { getAllIngredients } from '#controllers/ingredients/getAll.js';
-import { authMiddleware } from '#middlewares/authMiddleware.js';
+import { getFavorites } from '#controllers/recipes/getFavorites.js';
 
 const router = express.Router();
 
-router.get('/recipes/category-list', authMiddleware, getCategories);
-router.get('/recipes', authMiddleware, getRecipesQuery);
+router.get('/recipes/category-list', getCategories);
+router.get('/recipes', getRecipesQuery);
 // router.get('/recipes/?', authMiddleware, getRecipesQuery);
 // not sure how to set for enpoints but getRecipesQuerry
 // is set by default to search all
-router.get('/recipes/:id', authMiddleware, getRecipeById);
-router.get('/recipes/:category', authMiddleware, getRecipesByCategory);
-router.get('recipes/ingredients/list', authMiddleware, getAllIngredients);
-// router.get('recipes/:ingredients', authMiddleware, getAllIngredients);
+router.get('/recipes/:id', getRecipeById);
+router.get('/recipes/:category', getRecipesByCategory);
+router.get('recipes/ingredients/list', getAllIngredients);
+// router.get('recipes/:ingredients', getAllIngredients);
+router.get('recipes/favorites', getFavorites);
 
 export default router;

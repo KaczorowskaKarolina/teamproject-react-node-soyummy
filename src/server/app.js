@@ -7,6 +7,7 @@ import './config/jwt-strategy.js';
 
 import userRouter from './routes/users/usersRoutes.js';
 import recipesRouter from './routes/recipes/recipesRoutes.js';
+import { authMiddleware } from './middlewares/authMiddleware.js';
 
 dotenv.config();
 
@@ -22,7 +23,7 @@ app.use(express.static('src/server/public'));
 // WE NEED JWT STRATEGY
 
 app.use('/api', userRouter);
-app.use('/api', recipesRouter);
+app.use('/api', authMiddleware, recipesRouter);
 
 app.use((req, res) => {
   return res.status(404).json({ message: 'Not found' });

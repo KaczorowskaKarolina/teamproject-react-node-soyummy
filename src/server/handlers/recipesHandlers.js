@@ -36,6 +36,13 @@ const getRecipesFromDbCategory = async ({
   return { recipes, pageAmount };
 };
 
+const getFavoritesRecipes = async ({ id }) => {
+  const recipes = await Recipes.find({
+    favorites: id,
+  });
+  return { recipes };
+};
+
 // code below is not finihsed
 const getRecipesFromDbIngredient = async ({
   page = 0,
@@ -56,4 +63,5 @@ export {
   getRecipeByIdFromDb,
   getRecipesFromDbQuery,
   getRecipesFromDbCategory,
+  getFavoritesRecipes,
 };
