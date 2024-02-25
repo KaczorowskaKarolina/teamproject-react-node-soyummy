@@ -8,3 +8,19 @@
   color: #fafafa;
   background-color: #22252a;
 }
+
+@media screen and (min-width: 768px) {
+  .recipeButton {
+    width: 138px;
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .recipeButton {
+    width: 160px;
+    height: 54px;
+    font-size: 16px;
+  }
+}
