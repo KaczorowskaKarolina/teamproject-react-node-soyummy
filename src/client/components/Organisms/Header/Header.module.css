@@ -77,6 +77,10 @@
 }
 
 @media screen and (min-width: 1240px) {
+  .container {
+    padding-top: 0;
+  }
+
   .box {
     width: 1240px;
   }

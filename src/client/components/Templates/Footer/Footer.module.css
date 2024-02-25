@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
+  position: relative;
+  left: 0;
   bottom: 0;
 }
 
