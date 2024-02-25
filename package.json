@@ -4,16 +4,12 @@
   "private": true,
   "homepage": "https://kaczorowskakarolina.github.io/teamproject-react-node-soyummy/",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "@reduxjs/toolkit": "^2.2.1",
+    "@sendgrid/mail": "^8.1.0",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-router-dom": "^6.22.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.3",
-    "@hapi/joi": "^17.1.1",
-    "@sendgrid/mail": "^8.1.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
@@ -29,7 +25,12 @@
     "nodemailer": "^6.9.9",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
-    "uuidv4": "^6.2.13"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.22.0",
+    "react-scripts": "5.0.1",
+    "uuidv4": "^6.2.13",
+    "web-vitals": "^2.1.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -64,21 +65,18 @@
     "#example/*": "./test/path/folder/*",
     "#controllers/*": "./src/server/controllers/*",
     "#middlewares/*": "./src/server/middlewares/*",
+    "#models/*": "./src/server/models/*",
     "#images/*": "./src/client/images/*",
-
+    "#pages/*": "./src/client/pages/*",
+    "#redux/*": "./src/client/redux/*",
+    "#components/*": "./src/client/components/*",
     "#atoms/*": "./src/client/components/Atoms/*",
     "#molecules/*": "./src/client/components/Molecules/*",
     "#organisms/*": "./src/client/components/Organisms/*",
     "#templates/*": "./src/client/components/Templates/*",
-
-    
-
-    
     "#icons/*": "./src/client/images/icons/*",
-
     "#handlers/*": "./src/server/handlers/*",
     "#schemas/*": "./src/server/models/schema/*",
-    "#pages/*": "./src/client/pages/*",
     "#server/*": "./src/server/*"
   },
   "type": "module"
