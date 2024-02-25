@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://kaczorowskakarolina.github.io/teamproject-react-node-soyummy/",
   "dependencies": {
-    "@babel/core": "^7.23.9",
     "@hapi/joi": "^17.1.1",
     "@reduxjs/toolkit": "^2.2.1",
     "@sendgrid/mail": "^8.1.0",
@@ -78,7 +77,6 @@
     "#icons/*": "./src/client/images/icons/*",
     "#handlers/*": "./src/server/handlers/*",
     "#schemas/*": "./src/server/models/schema/*",
-    "#pages/*": "./src/client/pages/*",
     "#server/*": "./src/server/*"
   },
   "type": "module"
