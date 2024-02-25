@@ -11,3 +11,17 @@
   width: 100%;
   height: auto;
 }
+
+@media screen and (min-width: 768px) {
+  .imageBox {
+    width: 228px;
+    height: 232px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .imageBox {
+    width: 318px;
+    height: 324px;
+  }
+}
