@@ -3,7 +3,7 @@
   display: flex;
   list-style: none;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   height: max-content;
   @media screen and (min-width: 30em) {
     flex-direction: row;

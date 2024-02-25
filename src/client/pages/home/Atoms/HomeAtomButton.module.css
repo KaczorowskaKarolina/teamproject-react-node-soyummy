@@ -1,19 +1,20 @@
 .HomeAtomButton {
   background-color: var(--accent);
-  width: 5.8em;
-  height: 2.3em;
+  width: 5.8rem;
+  height: 2.3rem;
   border-radius: 0.37em;
   border: none;
   color: var(--primaryColor);
   font-family: var(--font-family);
-  font-size: 0.87em;
-  margin-top: 0.7em;
+  font-size: 0.87rem;
+  margin-top: 0.7rem;
+  transition: ease-in-out 0.25s;
 
   @media screen and (min-width: 30em) {
-    margin-top: 1.2em;
+    margin-top: 1.2rem;
   }
   @media screen and (min-width: 48em) {
-    margin-top: 1.46em;
+    margin-top: 1.46rem;
   }
 }
 
