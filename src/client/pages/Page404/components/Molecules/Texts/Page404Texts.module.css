@@ -1,0 +1,14 @@
+.Page404Texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 206px;
+    gap: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .Page404Texts {
+        gap: 14px;
+        width: 428px;
+    }
+}

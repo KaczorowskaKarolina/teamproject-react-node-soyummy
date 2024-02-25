@@ -1,11 +1,17 @@
 .Footer {
   width: 100%;
-  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
 }
 
 .FooterMain {
+  width: 100%;
   background-color: var(--footerBg);
-  padding: 28px 85px 18px;
+  padding-top: 28px;
+  padding-bottom: 18px;
 }
 
 .FooterContent {
@@ -14,13 +20,16 @@
   justify-content: center;
   align-content: center;
   gap: 32px;
-
   padding-bottom: 44px;
 }
 
 @media screen and (min-width: 768px) {
   .FooterMain {
-    padding: 50px 94px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 24px;
   }
 
   .FooterContent {
@@ -28,22 +37,24 @@
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-
+    width: 704px;
     padding-bottom: 38px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1240px) {
   .FooterMain {
-    padding: 64px 100px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .FooterContent {
+    width: 1240px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
-
     padding-bottom: 41px;
   }
 }
