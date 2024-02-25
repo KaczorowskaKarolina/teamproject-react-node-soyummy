@@ -1,4 +1,5 @@
 import css from './StartPageText.module.css';
+// import { variables } from 'client/styles/_vars.css';
 
 const StartPageText = () => {
   return (
