@@ -22,7 +22,7 @@ const isLoginOrSignupAction = action => {
   return action.type.endsWith('/signup') || action.type.endsWith('/login');
 };
 
-const handleLogin = state => {
+const handleLogin = (state, action) => {
   state.user = action.payload.user;
   state.token = action.payload.token;
   state.isLoggedIn = true;

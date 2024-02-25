@@ -13,6 +13,18 @@ const fetchRecipes = createAsyncThunk(
   }
 );
 
+const fetchRecipesByCategory = createAsyncThunk(
+  'recipes/fetchByCategory',
+  async (category, thunkAPI) => {
+    try {
+      const response = await axios.get(`/recipes/${category}`);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
 const addRecipe = createAsyncThunk(
   'recipes/addRecipe',
   async (recipe, thunkAPI) => {
@@ -37,4 +49,4 @@ const deleteRecipe = createAsyncThunk(
   }
 );
 
-export { fetchRecipes, addRecipe, deleteRecipe };
+export { fetchRecipes, addRecipe, deleteRecipe, fetchRecipesByCategory };
