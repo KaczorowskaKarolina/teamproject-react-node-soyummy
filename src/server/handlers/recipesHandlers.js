@@ -36,6 +36,21 @@ const getRecipesFromDbCategory = async ({
   return { recipes, pageAmount };
 };
 
+// code below is not finihsed
+const getRecipesFromDbIngredient = async ({
+  page = 0,
+  limit = 8,
+  ingredient = '',
+}) => {
+  const recipes = await Recipes.find({
+    ingredient: { $regex: `.*${ingredient}.*`, $options: 'i' },
+  })
+    .skip(page * limit)
+    .limit(limit);
+  const pageAmount = await Recipes.find({}).countDocuments();
+  return { recipes, pageAmount };
+};
+
 export {
   getAllRecipesFromDb,
   getRecipeByIdFromDb,

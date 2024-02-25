@@ -7,7 +7,6 @@ import './config/jwt-strategy.js';
 
 import userRouter from './routes/users/usersRoutes.js';
 import recipesRouter from './routes/recipes/recipesRoutes.js';
-import ingredientsRouter from './routes/ingredients/ingredientsRoutes.js';
 
 dotenv.config();
 
@@ -24,7 +23,6 @@ app.use(express.static('src/server/public'));
 
 app.use('/api', userRouter);
 app.use('/api', recipesRouter);
-app.use('/api', ingredientsRouter);
 
 app.use((req, res) => {
   return res.status(404).json({ message: 'Not found' });
