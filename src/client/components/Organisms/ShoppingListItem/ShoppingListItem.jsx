@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ShoppingListItem.module.css';
 // import XIconComponent from './Atoms/ShoppingListIcon/Xicon.svg';
-import XIcon from '../../../images/icons/Xicon.svg';
+import XIcon from '#images/icons/Xicon.svg';
 // import { useDispatch } from 'react-redux';
 // import { removeFromShoppingList } from '../../redux/shopping-list/operations';
 
@@ -39,4 +39,4 @@ const ShoppingListItem = ({ product }) => {
   );
 };
 
-export default ShoppingListItem;
+export { ShoppingListItem };
