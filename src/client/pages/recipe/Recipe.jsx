@@ -2,7 +2,7 @@ import { RecipeBanner } from '#pages/recipe/components/Templates/RecipeBanner/Re
 import { RecipeIngredientsList } from '#pages/recipe/components/Templates/RecipeIngredientsList/RecipeIngredientsList.jsx';
 // import { RecipeDetails } from '#pages/recipe/components/Templates/RecipeDetails/RecipeDetails.jsx';
 import css from './Recipe.module.css';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 const Recipe = () =>
@@ -66,7 +66,7 @@ const Recipe = () =>
           recipeDesc={recipeDesc}
           recipePrepTime={recipePrepTime}
         />
-        {ingList && <RecipeIngredientsList ingList={ingList} />}
+        {data && ingList && <RecipeIngredientsList ingList={ingList} />}
         {/* <RecipeDetails recipeStepsText={recipeStepsText} imageUrl={imageUrl} /> */}
       </div>
     );
