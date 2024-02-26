@@ -22,7 +22,6 @@ const AddRecipeImage = () => {
   }, [file]);
 
   const onUpload = event => {
-    console.log('Test2');
     setFile(event.target.files[0]);
   };
 
