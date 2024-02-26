@@ -45,7 +45,11 @@ const AddIngredients = () => {
           {counter.map(
             item =>
               item !== 0 && (
-                <AddIngredientsItem key={item} id={item} onClose={handleClose} />
+                <AddIngredientsItem
+                  key={item}
+                  id={item}
+                  onClose={handleClose}
+                />
               )
           )}
         </ul>

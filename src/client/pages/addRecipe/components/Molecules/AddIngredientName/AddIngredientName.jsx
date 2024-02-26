@@ -4,6 +4,9 @@ import { ingredientsType } from '../../testingArrays.js';
 import { AddDropdownList } from '../../Atoms/AddDropdownList/AddDropdownList.jsx';
 import { ReactComponent as Icon } from './iconAddIngredientName.svg';
 
+// import { useSelector, useDispatch } from 'react-redux';
+// import { fetchIngredients } from 'client/redux/ingredients/operations.js';
+
 import styles from './AddIngredientName.module.css';
 
 const AddIngredientName = () => {
@@ -11,6 +14,18 @@ const AddIngredientName = () => {
   const [value, setValue] = useState('');
   const [id, setId] = useState('');
   const [filter, setFilter] = useState('');
+  const [ingredients, setIngredients] = useState([]);
+
+  // const dispatch = useDispatch();
+
+  const fetchIngredients = async () => {
+    fetch('http://localhost:5000/api/recipes/ingredients/list')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        setIngredients(data.data.file);
+      });
+  };
 
   const handleDataFromChild = id => {
     setId(id);
@@ -42,6 +57,10 @@ const AddIngredientName = () => {
   };
 
   useEffect(() => {}, [openDropdown]);
+  useEffect(() => {
+    // dispatch(fetchIngredients());
+    fetchIngredients();
+  }, []);
   return (
     <label className={styles.AddIngredientName}>
       <input
@@ -61,7 +80,7 @@ const AddIngredientName = () => {
       </button>
       {openDropdown && (
         <AddDropdownList
-          array={ingredientsType}
+          array={ingredients}
           filter={filter}
           sendDataToParent={handleDataFromChild}
           onItemClick={changeValue}
