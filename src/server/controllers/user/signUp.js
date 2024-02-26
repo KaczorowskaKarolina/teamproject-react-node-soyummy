@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid';
 import { sendVerificationEmail } from '#handlers/sendEmail.js';
 import { getUserByEmail, createUser } from '#handlers/userHandlers.js';
+import gravatar from 'gravatar';
 
 async function signUp(req, res) {
   try {
@@ -13,11 +14,11 @@ async function signUp(req, res) {
     const user = createUser(email);
     user.setPassword(password);
     user.name = name;
-    // user.avatarURL = gravatar.url(email, { s: 250, protocol: "https" });
-    // question if we will use it
+    user.avatarURL = gravatar.url(email, { s: 250, protocol: 'https' });
     const verificationToken = nanoid();
     user.verificationToken = verificationToken;
-    await sendVerificationEmail(user.email, verificationToken);
+    const message = await sendVerificationEmail(user.email, verificationToken);
+    console.log(message);
     await user.save();
     return res.status(200).json({ data: user });
   } catch (error) {

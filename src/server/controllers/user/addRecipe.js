@@ -19,8 +19,10 @@ async function addRecipe(req, res, next) {
     }
 
     const fileName = req.file.originalname;
-    const thumb = await Jimp.read(`tmp/${fileName}`);
-    await thumb.writeAsync(`public/images/${newRecipe.id}${fileName}`);
+    const thumb = await Jimp.read(`src/server/tmp/${fileName}`);
+    await thumb.writeAsync(
+      `src/server/public/images/${newRecipe.id}${fileName}`
+    );
     const preview = thumb.cover(250, 250);
     await preview.writeAsync(
       `public/images/${newRecipe.id}${fileName}_preview`

@@ -1,4 +1,5 @@
 import { getUserById } from '#handlers/userHandlers.js';
+import { deleteRecipeInDb } from '#handlers/recipesHandlers.js';
 
 async function removeRecipe(req, res, next) {
   try {
@@ -9,6 +10,7 @@ async function removeRecipe(req, res, next) {
       return res.status(401).json({ message: 'Nope' });
     }
     user.createdRecipes.pull({ createdRecipes: { $oid: recipeId } });
+    await deleteRecipeInDb(recipeId);
     await user.save();
     return res.status(204).json({ data: { message: 'no content' } });
   } catch (error) {

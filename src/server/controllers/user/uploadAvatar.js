@@ -9,9 +9,9 @@ async function uploadAvatar(req, res, next) {
       return res.status(404).json('Not found');
     }
     const fileName = req.file.originalname;
-    const avatar = await Jimp.read(`tmp/${fileName}`);
+    const avatar = await Jimp.read(`src/server/tmp/${fileName}`);
     avatar.cover(250, 250);
-    await avatar.writeAsync(`public/avatars/${user.id}${fileName}`);
+    await avatar.writeAsync(`src/server/public/avatars/${user.id}${fileName}`);
     user.avatarURL = `http://localhost:5000/avatars/${user.id}${fileName}`;
     await user.save();
     return res.status(200).json({

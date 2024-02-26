@@ -19,6 +19,7 @@ import { getShoppingList } from '#controllers/user/getShoppingList.js';
 import { removeProduct } from '#controllers/user/removeProduct.js';
 import { addProduct } from '#controllers/user/addProduct.js';
 import { fileMiddleware } from '#middlewares/filesMiddleware.js';
+import { uploadAvatar } from '#controllers/user/uploadAvatar.js';
 
 const router = Router();
 
