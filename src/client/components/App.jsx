@@ -33,13 +33,18 @@ const App = () => {
             element={<CategoriesPage />}
           />
 
-          {/* <Route path="/search" element={<SearchPage />} />
-        <Route path="/add" element={<AddRecipiesPage />} />
-        <Route path="/my" element={<MyRecipiesPage />} />
-        <Route path="/favorite" element={<FavoritePage />} />
-        <Route path="/shopping-list" element={<ShoppingListPage />} />
-        <Route path="/search" element={<SearchPage />} /> */}
+          <Route path="/registration" element={<Registration />} />
+          <Route path="/signin" element={<SignIn />} />
 
+          <Route path="/recipes/:id" element={<Recipe />} />
+
+          {/* <Route path="*" element={<Page404 />} /> */}
+          {/* <Route index element={<Home />} /> */}
+          {/* <Route path="/search" element={<SearchPage />} /> */}
+          {/* <Route path="/add" element={<AddRecipiesPage />} /> */}
+          {/* <Route path="/my" element={<MyRecipiesPage />} /> */}
+          {/* <Route path="/favorite" element={<FavoritePage />} /> */}
+          {/* <Route path="/shopping-list" element={<ShoppingListPage />} /> */}
           <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
