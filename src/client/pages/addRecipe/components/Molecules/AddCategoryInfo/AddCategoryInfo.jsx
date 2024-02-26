@@ -48,7 +48,6 @@ const AddCategoryInfo = () => {
         return response.json();
       })
       .then(data => {
-        console.log(data);
         setCategories(data.data.file);
       });
   };

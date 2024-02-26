@@ -25,7 +25,7 @@ const AddDropdownList = ({
                 onClick={event => {
                   onItemClick(event);
                   sendDataToParent(
-                    item.id ? item.id : item.title ? item.title : item
+                    item._id ? item._id : item.title ? item.title : item
                   );
                 }}
                 data-value={

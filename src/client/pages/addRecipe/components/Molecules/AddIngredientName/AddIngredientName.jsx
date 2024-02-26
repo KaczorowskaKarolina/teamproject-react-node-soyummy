@@ -22,7 +22,6 @@ const AddIngredientName = () => {
     fetch('http://localhost:5000/api/recipes/ingredients/list')
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setIngredients(data.data.file);
       });
   };

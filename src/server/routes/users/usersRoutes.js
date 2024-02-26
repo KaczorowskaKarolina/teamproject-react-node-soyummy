@@ -27,11 +27,11 @@ router.post('/logout', authMiddleware, logout);
 router.post('/current', authMiddleware, currentUser);
 router.post('/verify', resendVerifyEmail);
 router.get('/verify/:verificationToken', verify);
-router.get('/ownRecipes', authMiddleware, getUsersRecipes);
-router.post('/ownRecipes', authMiddleware, addRecipe);
-router.delete('/ownRecipes/:recipeId', authMiddleware, removeRecipe);
-router.get('/shopping-list', authMiddleware, getShoppingList);
-router.post('/shopping-list', authMiddleware, addProduct);
-router.delete('/shopping-list/:idProduct', authMiddleware, removeProduct);
+router.get('/ownRecipes', getUsersRecipes);
+router.post('/ownRecipes', addRecipe);
+router.delete('/ownRecipes/:recipeId', removeRecipe);
+router.get('/shopping-list', getShoppingList);
+router.post('/shopping-list', addProduct);
+router.delete('/shopping-list/:idProduct', removeProduct);
 
 export default router;
