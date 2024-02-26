@@ -8,19 +8,20 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import storage from 'rux-persist/lib/storage/index.js';
+import storage from 'redux-persist/lib/storage/index.js';
 import { configureStore } from '@reduxjs/toolkit';
 
 // import { authReducer } from './auth/slice.js';
 import { recipesReducer } from './recipes/slice.js';
 import { categoriesReducer } from './categories/slice.js';
+import { authReducer } from './auth/slice.js';
 // import { ingredientsReducer } from './ingredients/slice';
 
-// const authPersistConfig = {
-//   key: 'auth',
-//   storage,
-//   whitelist: ['token'],
-// };
+const authPersistConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['token'],
+};
 
 const store = configureStore({
   reducer: {
