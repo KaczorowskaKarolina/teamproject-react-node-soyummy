@@ -1,5 +1,5 @@
 import express from 'express';
-import { getIngredientById } from '../../../models/schema/shopping-list/ingredients';
+import { getIngredientById } from '#models/schema/shopping-list/ingredients';
 
 const routerIng = express.Router();
 

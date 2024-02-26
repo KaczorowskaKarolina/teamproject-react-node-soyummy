@@ -77,7 +77,8 @@
     "#handlers/*": "./src/server/handlers/*",
     "#schemas/*": "./src/server/models/schema/*",
     "#server/*": "./src/server/*",
-    "#client/*": "./src/client/*"
+    "#client/*": "./src/client/*",
+    "#models/*": "./src/client/models/*"
   },
   "type": "module"
 }
