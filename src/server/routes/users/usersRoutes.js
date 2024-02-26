@@ -18,6 +18,7 @@ import { removeRecipe } from '#controllers/user/removeRecipe.js';
 import { getShoppingList } from '#controllers/user/getShoppingList.js';
 import { removeProduct } from '#controllers/user/removeProduct.js';
 import { addProduct } from '#controllers/user/addProduct.js';
+import { fileMiddleware } from '#middlewares/filesMiddleware.js';
 
 const router = Router();
 
@@ -27,6 +28,12 @@ router.post('/logout', authMiddleware, logout);
 router.post('/current', authMiddleware, currentUser);
 router.post('/verify', resendVerifyEmail);
 router.get('/verify/:verificationToken', verify);
+router.post(
+  '/avatar',
+  authMiddleware,
+  fileMiddleware.single('avatar'),
+  uploadAvatar
+);
 router.get('/ownRecipes', authMiddleware, getUsersRecipes);
 router.post('/ownRecipes', authMiddleware, addRecipe);
 router.delete('/ownRecipes/:recipeId', authMiddleware, removeRecipe);
