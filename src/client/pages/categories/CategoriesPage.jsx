@@ -21,6 +21,7 @@ const CategoriesPage = () => {
       try {
         await dispatch(changeQuery(null));
         const fetchAllCategoriesFromDB = await dispatch(fetchAllCategories());
+        // console.log(fetchAllCategoriesFromDB);
         const allCategories = fetchAllCategoriesFromDB.payload.map(
           category => category.title
         );

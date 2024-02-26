@@ -20,9 +20,8 @@ const fetchAllCategories = createAsyncThunk(
   'categories/fetchAll',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get(`/getAllCategoriesList`);
-      const file = response.data.data.file;
-      return file;
+      const response = await axios.get('/recipes/category-list');
+      return response.data.data.file;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }

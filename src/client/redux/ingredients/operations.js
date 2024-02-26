@@ -5,8 +5,8 @@ const fetchIngredients = createAsyncThunk(
   'ingredients/fetchAll',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get('/ingredients');
-      return response.data;
+      const response = await axios.get('recipes/ingredients-list');
+      return response.data.data.file;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }

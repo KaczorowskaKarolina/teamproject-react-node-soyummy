@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { addRecipe, fetchRecipes, deleteRecipe } from './operations.js';
+import { addProduct, fetchShoppingList, deleteProduct } from './operations.js';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -23,25 +23,24 @@ const isRejectAction = action => {
   return action.type.endsWith('/rejected');
 };
 
-const recipesSlice = createSlice({
-  name: 'recipes',
+const shoppingList = createSlice({
+  name: 'shoppingList',
   initialState: {
     items: [],
     isLoading: false,
     error: null,
   },
-  reducers: {},
   extraReducers: builder => {
     builder
-      .addCase(fetchRecipes.fulfilled, (state, action) => {
+      .addCase(fetchShoppingList.fulfilled, (state, action) => {
         clearLoadingError(state);
         state.items = action.payload;
       })
-      .addCase(addRecipe.fulfilled, (state, action) => {
+      .addCase(addProduct.fulfilled, (state, action) => {
         clearLoadingError(state);
         state.items.push(action.payload);
       })
-      .addCase(deleteRecipe.fulfilled, (state, action) => {
+      .addCase(deleteProduct.fulfilled, (state, action) => {
         clearLoadingError(state);
         const index = state.items.findIndex(
           contact => contact.id === action.payload
@@ -53,4 +52,4 @@ const recipesSlice = createSlice({
   },
 });
 
-export const recipesReducer = recipesSlice.reducer;
+export const shoppingListReducer = shoppingList.reducer;

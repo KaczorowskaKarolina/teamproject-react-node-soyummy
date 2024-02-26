@@ -1,4 +1,5 @@
-import { Categories } from '#schemas/categories/categoriesListSchema.js';
+// import { Categories } from '#schemas/categories/categoriesListSchema.js';
+import { Categories } from '../models/schema/categories/categoriesListSchema.js';
 
 const getAllCategoriesFromDb = async () => {
   return await Categories.find({});
