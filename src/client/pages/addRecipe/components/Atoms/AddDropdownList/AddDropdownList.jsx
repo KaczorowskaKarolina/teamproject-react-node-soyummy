@@ -24,12 +24,16 @@ const AddDropdownList = ({
                 className={classes}
                 onClick={event => {
                   onItemClick(event);
-                  sendDataToParent(item.id ? item.id : item);
+                  sendDataToParent(
+                    item.id ? item.id : item.title ? item.title : item
+                  );
                 }}
-                data-value={item.ttl ? item.ttl : item}
+                data-value={
+                  item.ttl ? item.ttl : item.title ? item.title : item
+                }
                 data-scroll=""
               >
-                {item.ttl ? item.ttl : item}
+                {item.ttl ? item.ttl : item.title ? item.title : item}
               </li>
             ))}
       </ul>

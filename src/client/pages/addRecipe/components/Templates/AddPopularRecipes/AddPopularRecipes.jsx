@@ -49,7 +49,6 @@ const AddPopularRecipes = () => {
         return data.json();
       })
       .then(recipes => {
-        console.log(recipes.data);
         setRecipes(recipes.data.file);
       });
   };
