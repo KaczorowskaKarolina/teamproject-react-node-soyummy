@@ -5,7 +5,7 @@ const RightsAndTerms = () => {
   return (
     <div className={css.RightsAndTerms}>
       <p className={css.Rights}>© 2023 All Rights Reserved.</p>
-      <a href="www.google.com/" className={css.Terms}>
+      <a href="www.google.com" className={css.Terms}>
         Terms of Service
       </a>
     </div>

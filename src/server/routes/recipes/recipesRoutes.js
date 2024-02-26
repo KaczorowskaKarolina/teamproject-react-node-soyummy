@@ -1,29 +1,25 @@
-import { getCategoriesListFromDb } from '#server/models/schema/categoriesList/categoriesList.js';
-import { getAllRecipesFromDB } from '#server/models/schema/recipes/recipes.js';
+import express from 'express';
 
-const getAllRecipes = async (req, res, next) => {
-  const response = await getAllRecipesFromDB();
-  return res.status(200).json({
-    status: 'success',
-    code: 200,
-    data: {
-      file: response,
-    },
-    message: 'nothing to load',
-  });
-};
+// import { getAllRecipes } from '#controllers/recipes/getAll.js';
+import { getRecipeById } from '#controllers/recipes/getOne.js';
+import { getRecipesQuery } from '#controllers/recipes/getWithQuery.js';
+import { getCategories } from '#controllers/categories/getAll.js';
+import { getRecipesByCategory } from '#controllers/recipes/getAllByCategory.js';
+import { getAllIngredients } from '#controllers/ingredients/getAll.js';
+import { getFavorites } from '#controllers/recipes/getFavorites.js';
+import { getIngredientById } from '#server/controllers/ingredients/getOne.js';
 
-const getCategoriesList = async (req, res, next) => {
-  const { query } = req.query;
-  const response = await getCategoriesListFromDb(query);
-  return res.status(200).json({
-    status: 'success',
-    code: 200,
-    data: {
-      file: response,
-    },
-    message: 'nothing to load',
-  });
-};
+const router = express.Router();
 
-export { getAllRecipes, getCategoriesList };
+router.get('/recipes/category-list', getCategories);
+router.get('/recipes', getRecipesQuery);
+// router.get('/recipes/?', authMiddleware, getRecipesQuery);
+// not sure how to set for enpoints but getRecipesQuerry
+// is set by default to search all
+router.get('/recipes/:id', getRecipeById);
+router.get('/recipes/:category', getRecipesByCategory);
+router.get('/recipes/ingredients/list', getAllIngredients);
+router.get('/recipes/ingredient/:id', getIngredientById);
+router.get('/recipes/favorites', getFavorites);
+
+export default router;

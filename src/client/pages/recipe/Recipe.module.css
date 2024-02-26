@@ -1,0 +1,16 @@
+.Recipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  width: 100%;
+
+  gap: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .Recipe {
+    gap: 50px;
+  }
+}

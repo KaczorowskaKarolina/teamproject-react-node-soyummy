@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  background-color: transparent;
+  background-color: var(--addInputBgDark);
   position: fixed;
   top: 0;
   width: 100vw;
@@ -14,6 +14,11 @@
   align-items: center;
   justify-content: space-between;
   width: 343px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
 }
 
 .rightContainer {
@@ -34,11 +39,10 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background-color: blue;
 }
 
 .name {
-  color: #22252a;
+  color: var(--mainTitle);
   font-size: 12px;
   font-weight: 600;
   line-height: 1.7;
@@ -54,6 +58,11 @@
     height: 44px;
   }
 
+  .logo {
+    width: 44px;
+    height: 44px;
+  }
+
   .name {
     font-size: 14px;
   }
@@ -63,7 +72,7 @@
   }
 
   .box {
-    width: 768px;
+    width: 704px;
   }
 }
 
