@@ -22,7 +22,7 @@ app.use(express.static('src/server/public'));
 
 // WE NEED JWT STRATEGY
 
-app.use('/api', userRouter);
+app.use('/api/users', userRouter);
 app.use(
   '/api',
   // authMiddleware,
