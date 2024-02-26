@@ -1,0 +1,30 @@
+.PopularRecipeInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+.popularTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--recipeTitle);
+
+  padding: 0;
+  margin: 0;
+}
+
+.popularDescription {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: -0.02em;
+  color: var(--popularDescriptionText);
+
+  padding: 0;
+  margin: 0;
+}

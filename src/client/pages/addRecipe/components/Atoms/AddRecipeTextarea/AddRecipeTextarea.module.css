@@ -1,0 +1,41 @@
+.AddRecipeDescriptionInput {
+  width: 100%;
+  height: 154px;
+
+  overflow: scroll;
+  resize: none;
+  border: none;
+  outline: none;
+
+  padding: 10px 16px;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+
+  color: var(--secondaryColor);
+  opacity: 0.5;
+}
+
+.AddRecipeDescriptionTextarea {
+  display: flex;
+  width: 343px;
+
+  border-radius: 6px;
+  background-color: #d9d9d9;
+}
+
+
+@media screen and (min-width: 768px) {
+  .AddRecipeDescriptionTextarea {
+    width: 505px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .IngImage {
+    width: 128px;
+    height: 128px;
+  }
+}

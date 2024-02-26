@@ -1,0 +1,41 @@
+.AddPopularListItem {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  border-bottom: 1px solid #70707017;
+  padding-bottom: 13px;
+}
+
+.image {
+  width: 104px;
+  height: 85px;
+  border-radius: 8px;
+  background-color: rgba(128, 255, 0, 0.209);
+  flex: 1;
+}
+
+.info {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--addStepTitle);
+  margin-top: 0;
+}
+
+.about {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: -0.02em;
+  color: var(--popularDescriptionText);
+}

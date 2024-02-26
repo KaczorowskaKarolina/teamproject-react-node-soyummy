@@ -10,6 +10,11 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
+const clearLoadingError = state => {
+  state.isLoading = false;
+  state.error = null;
+};
+
 const isPendingAction = action => {
   return action.type.endsWith('/pending');
 };
@@ -28,18 +33,15 @@ const recipesSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(fetchRecipes.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.error = null;
+        clearLoadingError(state);
         state.items = action.payload;
       })
       .addCase(addRecipe.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.error = null;
+        clearLoadingError(state);
         state.items.push(action.payload);
       })
       .addCase(deleteRecipe.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.error = null;
+        clearLoadingError(state);
         const index = state.items.findIndex(
           contact => contact.id === action.payload
         );

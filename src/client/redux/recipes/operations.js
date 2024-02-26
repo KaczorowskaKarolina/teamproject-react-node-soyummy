@@ -3,35 +3,78 @@ import axios from 'axios';
 
 const fetchRecipes = createAsyncThunk(
   'recipes/fetchAll',
-  async (_, thunkAPI) => {
+  async (data = {}, thunkAPI) => {
     try {
-      const response = await axios.get('http://localhost:3000/api/recipes');
-      return response.data.file;
+      const { page, limit } = data;
+      if (data) {
+        const response = await axios.get(
+          `/recipes/?page=${page}&limit=${limit}`
+        );
+        return response.data.data.file;
+      }
+      const response = await axios.get('/recipes');
+      return response.data.data.file;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
-const addRecipe = createAsyncThunk('recipes/addRecipe', async (_, thunkAPI) => {
-  try {
-    console.log('Testing');
-    return;
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+const fetchRecipesByQuery = createAsyncThunk(
+  'recipes/fetchByCategory',
+  async (data, thunkAPI) => {
+    try {
+      const { query, page, limit } = data;
+      const response = await axios.get(
+        `/recipes/?query=${query}page=${page}&limit=${limit}`
+      );
+      return response.data.data.file;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
   }
-});
+);
+
+const fetchRecipesByCategory = createAsyncThunk(
+  'recipes/fetchByCategory',
+  async (category, thunkAPI) => {
+    try {
+      const response = await axios.get(`/recipes/${category}`);
+      return response.data.data.file;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+const addRecipe = createAsyncThunk(
+  'recipes/addRecipe',
+  async (recipe, thunkAPI) => {
+    try {
+      const response = await axios.post('/recipes', recipe);
+      return response.data.data.file;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
 
 const deleteRecipe = createAsyncThunk(
   'recipes/deleteRecipe',
-  async (_, thunkAPI) => {
+  async (recipeId, thunkAPI) => {
     try {
-      console.log('Testing');
-      return;
+      const response = await axios.post(`/recipes/${recipeId}`);
+      return response.data.data.file;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
-export { fetchRecipes, addRecipe, deleteRecipe };
+export {
+  fetchRecipes,
+  addRecipe,
+  deleteRecipe,
+  fetchRecipesByCategory,
+  fetchRecipesByQuery,
+};

@@ -1,0 +1,42 @@
+.AddDropdownList {
+  width: 100%;
+  max-height: 154px;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: -0.02em;
+  color: #00000050;
+
+  position: absolute;
+  top: 100%;
+
+  border-radius: 6px;
+  box-shadow: 0 7px 8px 0 rgba(0, 0, 0, 0.03);
+  background: #fff;
+
+  z-index: 1;
+  overflow-y: scroll;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 6px;
+
+  padding: 8px 18px;
+  list-style: none;
+}
+
+.listItem {
+  width: 100%;
+}
+
+.listItem:hover {
+  color: var(--accent);
+}
+
+.isCentered {
+  text-align: center;
+}

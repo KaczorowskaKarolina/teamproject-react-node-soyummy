@@ -3,11 +3,11 @@ import { getRecipesFromDbIngredient } from '#handlers/recipesHandlers.js';
 const getRecipesByIngredient = async (req, res, next) => {
   try {
     const { page, limit } = req.query;
-    const { category } = req.params;
+    const { ingredientId } = req.params;
     const response = await getRecipesFromDbIngredient({
       page,
       limit,
-      category,
+      ingredientId,
     });
     return res.status(200).json({
       data: {
