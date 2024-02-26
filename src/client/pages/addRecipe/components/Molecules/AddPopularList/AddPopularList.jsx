@@ -1,4 +1,4 @@
-import { AddPopularListItem } from '../../Atoms/AddPopularListItem/AddPopularListItem.jsx'
+import { AddPopularListItem } from '../../Atoms/AddPopularListItem/AddPopularListItem.jsx';
 
 import styles from './AddPopularList.module.css';
 
