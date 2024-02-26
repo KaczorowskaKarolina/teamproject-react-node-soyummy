@@ -7,6 +7,7 @@ import { Footer } from '#templates/Footer/Footer.jsx';
 
 const SharedLayout = () => {
   const [menuState, setMenuState] = useState(false);
+  const [title, setTitle] = useState('');
 
   if (menuState) {
     return <Navigation closeMenu={setMenuState} />;
@@ -15,9 +16,9 @@ const SharedLayout = () => {
     <div className={css.container}>
       <Header openMenu={setMenuState} />
       <div className={css.titleBox}>
-        <h2 className={css.title}>Title</h2>
+        <h2 className={css.title}>{title}</h2>
       </div>
-      <Outlet />
+      <Outlet context={[setTitle]} />
       <Footer />
     </div>
   );
