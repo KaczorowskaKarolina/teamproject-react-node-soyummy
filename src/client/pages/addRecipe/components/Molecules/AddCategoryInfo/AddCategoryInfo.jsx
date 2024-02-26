@@ -2,7 +2,7 @@ import { categories } from '../../testingArrays.js';
 import { useEffect, useState } from 'react';
 
 import { ReactComponent as Icon } from './iconAddCategoryInfo.svg';
-import { AddDropdownList } from '../../Atoms/AddDropdownList/AddDropdownList.jsx';
+import { AddDropdownList } from '#pages/addRecipe/components/Atoms/AddDropdownList/AddDropdownList.jsx';
 
 import styles from './AddCategoryInfo.module.css';
 

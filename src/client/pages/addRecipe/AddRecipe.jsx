@@ -1,6 +1,5 @@
 import { AddRecipeForm } from './components/Templates/AddRecipeForm/AddRecipeForm.jsx';
 import { AddRecipeHeaders } from './components/Atoms/AddRecipeHeader/AddRecipeHeader.jsx';
-// import { PopularRecipes } from './components/Templates/PopularRecipes/PopularRecipes.jsx';
 import { AddPopularRecipes } from './components/Templates/AddPopularRecipes/AddPopularRecipes.jsx';
 import { SocialMedia } from './components/Organisms/SocialMedia/SocialMedia.jsx';
 

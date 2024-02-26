@@ -6,6 +6,8 @@ import express from 'express';
 import './config/jwt-strategy.js';
 
 import userRouter from './routes/users/usersRoutes.js';
+import recipesRouter from './routes/recipes/recipesRoutes.js';
+import { authMiddleware } from './middlewares/authMiddleware.js';
 
 dotenv.config();
 

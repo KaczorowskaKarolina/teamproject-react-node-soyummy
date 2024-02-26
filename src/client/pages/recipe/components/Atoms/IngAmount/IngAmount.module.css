@@ -1,0 +1,21 @@
+.IngAmount {
+  font-size: 0.625rem;
+  font-weight: 600;
+
+  color: var(--descriptionTextDark);
+  background-color: var(--accent);
+  border-radius: 4px;
+
+  margin: 0;
+  padding: 4px;
+
+  cursor: default;
+}
+
+@media screen and (min-width: 768px) {
+  .IngAmount {
+    font-size: 1.125rem;
+
+    padding: 4px 8px;
+  }
+}

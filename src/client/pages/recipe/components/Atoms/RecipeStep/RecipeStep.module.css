@@ -1,0 +1,40 @@
+.RecipeSteps {
+  display: flex;
+  gap: 14px;
+
+  list-style: none;
+  counter-reset: item;
+
+  margin: 0;
+  padding: 0;
+
+  cursor: default;
+}
+
+.RecipeStep {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--descriptionText);
+
+  counter-increment: item;
+
+  margin: 0;
+}
+
+.RecipeStep:before {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  content: counter(item);
+
+  border-radius: 100%;
+  background: var(--accent);
+  
+  color: var(--primaryColor);
+  font-weight: 600;
+
+  margin-right: 14px;
+
+  width: 21px;
+  height: 21px;
+}
