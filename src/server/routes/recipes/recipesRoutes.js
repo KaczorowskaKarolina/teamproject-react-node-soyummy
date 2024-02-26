@@ -14,7 +14,8 @@ const getAllRecipes = async (req, res, next) => {
 };
 
 const getCategoriesList = async (req, res, next) => {
-  const response = await getCategoriesListFromDb();
+  const { query } = req.query;
+  const response = await getCategoriesListFromDb(query);
   return res.status(200).json({
     status: 'success',
     code: 200,

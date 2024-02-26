@@ -3,7 +3,10 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { fetchRecipes } from 'client/redux/recipes/operations.js';
-import { fetchCategories } from 'client/redux/categories/operations.js';
+import {
+  changeQuery,
+  fetchAllCategories,
+} from 'client/redux/categories/operations.js';
 import { RecipeTemplate } from './components/Templates/RecipeTemplate.jsx';
 import { CategoryTemplate } from 'client/pages/categories/components/Templates/CategoryTemplate.jsx';
 
@@ -16,8 +19,9 @@ const CategoriesPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetchAllCategories = await dispatch(fetchCategories());
-        const allCategories = fetchAllCategories.payload.map(
+        await dispatch(changeQuery(null));
+        const fetchAllCategoriesFromDB = await dispatch(fetchAllCategories());
+        const allCategories = fetchAllCategoriesFromDB.payload.map(
           category => category.title
         );
         setCategories(allCategories);
@@ -32,7 +36,7 @@ const CategoriesPage = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [dispatch, categoryName]);
 
   return (
     <div>
