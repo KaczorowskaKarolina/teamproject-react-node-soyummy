@@ -13,6 +13,11 @@ import { authMiddleware } from '#middlewares/authMiddleware.js';
 import { resendVerifyEmail } from '#controllers/user/resendVerifyEmail.js';
 import { getUsersRecipes } from '#controllers/user/getUsersRecipes.js';
 import { validationMiddleware } from '#middlewares/validationMiddleware.js';
+import { addRecipe } from '#controllers/user/addRecipe.js';
+import { removeRecipe } from '#controllers/user/removeRecipe.js';
+import { getShoppingList } from '#controllers/user/getShoppingList.js';
+import { removeProduct } from '#controllers/user/removeProduct.js';
+import { addProduct } from '#controllers/user/addProduct.js';
 
 const router = Router();
 
@@ -23,5 +28,10 @@ router.post('/current', authMiddleware, currentUser);
 router.post('/verify', resendVerifyEmail);
 router.get('/verify/:verificationToken', verify);
 router.get('/ownRecipes', authMiddleware, getUsersRecipes);
+router.post('/ownRecipes', authMiddleware, addRecipe);
+router.delete('/ownRecipes/:recipeId', authMiddleware, removeRecipe);
+router.get('/shopping-list', authMiddleware, getShoppingList);
+router.post('/shopping-list', authMiddleware, addProduct);
+router.delete('/shopping-list/:idProduct', authMiddleware, removeProduct);
 
 export default router;
