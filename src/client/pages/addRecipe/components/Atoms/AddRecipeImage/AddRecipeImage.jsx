@@ -12,7 +12,6 @@ const AddRecipeImage = () => {
     if (!file) {
       return;
     }
-    console.log('Test');
     const reader = new FileReader();
 
     reader.onloadend = () => {
