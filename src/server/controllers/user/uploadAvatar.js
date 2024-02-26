@@ -1,5 +1,6 @@
 import { getUserById } from '#handlers/userHandlers.js';
 import Jimp from 'jimp';
+import { promises as fs } from 'fs';
 
 async function uploadAvatar(req, res, next) {
   try {
@@ -19,6 +20,8 @@ async function uploadAvatar(req, res, next) {
     });
   } catch (error) {
     return next(error);
+  } finally {
+    fs.unlink(`./src/server/tmp/${fileName}`);
   }
 }
 
