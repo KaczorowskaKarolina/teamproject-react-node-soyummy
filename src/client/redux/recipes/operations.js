@@ -8,7 +8,7 @@ const fetchRecipes = createAsyncThunk(
   'recipes/fetchAll',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get('/getAllRecipes');
+      const response = await axios.get('/recipes');
       const file = response.data.data.file;
       return file;
     } catch (error) {
