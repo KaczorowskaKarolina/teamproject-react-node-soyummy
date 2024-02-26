@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 axios.defaults.baseURL =
-  process.env.REACT_APP_API_URL || 'http://localhost:3000';
+  process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 const fetchRecipes = createAsyncThunk(
   'recipes/fetchAll',
