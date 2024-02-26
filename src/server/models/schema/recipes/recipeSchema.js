@@ -12,7 +12,7 @@ const recipes = new Schema(
     },
     area: {
       type: String,
-      required: [true, 'area is required'],
+      // required: [true, 'area is required'],
     },
     instructions: {
       type: String,
@@ -28,15 +28,15 @@ const recipes = new Schema(
     },
     youtube: {
       type: String,
-      required: [true, 'youtube is required'],
+      // required: [true, 'youtube is required'],
     },
     tags: {
       type: Array,
-      required: [true, 'tags are required'],
+      // required: [true, 'tags are required'],
     },
     favorites: {
       type: Array,
-      required: [true, 'favorites are required'],
+      // required: [true, 'favorites are required'],
     },
     ingredients: {
       type: Array,

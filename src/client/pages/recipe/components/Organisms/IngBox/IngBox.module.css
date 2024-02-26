@@ -1,0 +1,33 @@
+.IngBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+
+  padding: 14px 29px 14px 14px;
+
+  background-color: var(--elementBg);
+  border-radius: 8px;
+}
+
+.IngBoxElement:first-child {
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .IngBox {
+    gap: 78px;
+
+    padding: 33px 58px 33px 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .IngBox {
+    gap: 151px;
+
+    padding: 26px 70px 26px 58px;
+  }
+}
