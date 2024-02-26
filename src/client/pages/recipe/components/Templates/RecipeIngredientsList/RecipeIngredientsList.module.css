@@ -1,0 +1,47 @@
+.RecipeIngredientsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.IngListHeader {
+  width: 343px;
+}
+
+.IngListElements {
+  display: flex;
+  flex-direction: column;
+  width: 343px;
+  gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .RecipeIngredientsList {
+    gap: 32px;
+  }
+
+  .IngListHeader {
+    width: 704px;
+  }
+
+  .IngListElements {
+    width: 704px;
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .RecipeIngredientsList {
+    gap: 50px;
+  }
+
+  .IngListHeader {
+    width: 1240px;
+  }
+
+  .IngListElements {
+    width: 1240px;
+  }
+}

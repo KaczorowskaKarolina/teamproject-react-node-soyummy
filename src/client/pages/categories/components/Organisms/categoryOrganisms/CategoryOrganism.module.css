@@ -1,0 +1,13 @@
+.CategoryOrganism {
+  /* VARS */
+  padding-inline-start: 0;
+  width: 500px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  list-style: none;
+  overflow-x: auto;
+  white-space: nowrap;
+}

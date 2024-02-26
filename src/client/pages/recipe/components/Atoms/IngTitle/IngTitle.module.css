@@ -1,0 +1,14 @@
+.IngTitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--recipeTitle);
+
+  margin: 0;
+  cursor: default;
+}
+
+@media screen and (min-width: 768px) {
+  .IngTitle {
+    font-size: 1.5rem;
+  }
+}

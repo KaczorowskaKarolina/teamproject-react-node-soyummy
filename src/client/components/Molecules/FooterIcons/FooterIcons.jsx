@@ -1,4 +1,4 @@
-import { FooterIcon } from '#components/Atoms/FooterIcon/FooterIcon.jsx';
+import { FooterIcon } from '#atoms/FooterIcon/FooterIcon.jsx';
 import css from './FooterIcons.module.css';
 
 const FooterIcons = () => {

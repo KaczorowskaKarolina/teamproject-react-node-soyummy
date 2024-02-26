@@ -11,6 +11,7 @@ import {
 } from '#handlers/userValidation.js';
 import { authMiddleware } from '#middlewares/authMiddleware.js';
 import { resendVerifyEmail } from '#controllers/user/resendVerifyEmail.js';
+import { getUsersRecipes } from '#controllers/user/getUsersRecipes.js';
 import { validationMiddleware } from '#middlewares/validationMiddleware.js';
 
 const router = Router();
@@ -21,5 +22,6 @@ router.post('/logout', authMiddleware, logout);
 router.post('/current', authMiddleware, currentUser);
 router.post('/verify', resendVerifyEmail);
 router.get('/verify/:verificationToken', verify);
+router.get('/ownRecipes', authMiddleware, getUsersRecipes);
 
 export default router;
