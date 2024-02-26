@@ -1,16 +1,12 @@
-import { ReactComponent as PhotoPlaceholder } from '#images/icons/name-icon.svg';
-
-import { variables } from 'client/styles/_vars.css';
+import { ReactComponent as PhotoPlaceholder } from '#icons/name-icon.svg';
 import css from './ProfilePhoto.module.css';
 
 const ProfilePhoto = ({ userName, photoUrl, Header }) => {
   if (photoUrl && Header) {
     return (
-      <img
-        src={photoUrl}
-        alt={`${userName} profile photo`}
-        className={css.HeaderPhoto}
-      />
+      <div className={css.HeaderPhoto}>
+        <img src={photoUrl} alt={userName} />
+      </div>
     );
   } else if (Header) {
     return (
@@ -20,15 +16,13 @@ const ProfilePhoto = ({ userName, photoUrl, Header }) => {
     );
   } else if (photoUrl) {
     return (
-      <img
-        src={photoUrl}
-        alt={`${userName} profile photo`}
-        className={css.ProfilePhoto}
-      />
+      <div className={css.HeaderPhoto}>
+        <img src={photoUrl} alt={userName} />
+      </div>
     );
   } else {
     return (
-      <div className={css.PhotoPlaceholder}>
+      <div className={css.HeaderPlaceholder}>
         <PhotoPlaceholder />
       </div>
     );
