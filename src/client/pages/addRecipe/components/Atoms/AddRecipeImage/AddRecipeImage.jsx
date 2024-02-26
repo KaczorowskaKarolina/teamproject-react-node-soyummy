@@ -25,7 +25,6 @@ const AddRecipeImage = () => {
     setFile(event.target.files[0]);
   };
 
-  useEffect(() => {}, [imagePath]);
   return (
     <label className={styles.iconContainer} htmlFor="image">
       <input
