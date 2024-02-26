@@ -8,7 +8,7 @@ import css from './FavoriteBox.module.css';
 const FavoriteBox = () => {
   return (
     <div className={css.box}>
-      <div classname={css.image}>
+      <div className={css.image}>
         <Image />
       </div>
       <div className={css.content}>
