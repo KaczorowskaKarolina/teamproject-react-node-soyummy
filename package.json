@@ -4,7 +4,10 @@
   "private": true,
   "homepage": "https://kaczorowskakarolina.github.io/teamproject-react-node-soyummy/",
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@hapi/joi": "^17.1.1",
+    "@mui/material": "^5.15.11",
     "@reduxjs/toolkit": "^2.2.1",
     "@sendgrid/mail": "^8.1.0",
     "@testing-library/jest-dom": "^5.16.3",
@@ -67,22 +70,17 @@
     "#example/*": "./test/path/folder/*",
     "#controllers/*": "./src/server/controllers/*",
     "#middlewares/*": "./src/server/middlewares/*",
-    "#images/*": "./src/client/images/*",
-
     "#atoms/*": "./src/client/components/Atoms/*",
     "#molecules/*": "./src/client/components/Molecules/*",
     "#organisms/*": "./src/client/components/Organisms/*",
     "#templates/*": "./src/client/components/Templates/*",
-
-    
-
-    
+    "#pages/*": "./src/client/pages/*",
+    "#images/*": "./src/client/images/*",
     "#icons/*": "./src/client/images/icons/*",
-
     "#handlers/*": "./src/server/handlers/*",
     "#schemas/*": "./src/server/models/schema/*",
-    "#pages/*": "./src/client/pages/*",
-    "#server/*": "./src/server/*"
+    "#server/*": "./src/server/*",
+    "#client/*": "./src/client/*"
   },
   "type": "module"
 }

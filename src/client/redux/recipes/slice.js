@@ -30,6 +30,7 @@ const recipesSlice = createSlice({
     isLoading: false,
     error: null,
   },
+  reducers: {},
   extraReducers: builder => {
     builder
       .addCase(fetchRecipes.fulfilled, (state, action) => {

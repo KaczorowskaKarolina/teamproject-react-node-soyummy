@@ -6,8 +6,13 @@ const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 const SERVER_PORT = process.env.SERVER_PORT;
 const MAIN_ENDPOINT = process.env.MAIN_ENDPOINT;
 
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
+const SERVER_PORT = process.env.SERVER_PORT;
+const MAIN_ENDPOINT = process.env.MAIN_ENDPOINT;
+
 axios.defaults.baseURL =
   REACT_APP_API_URL || `http://localhost:${SERVER_PORT}${MAIN_ENDPOINT}`;
+REACT_APP_API_URL || `http://localhost:${SERVER_PORT}${MAIN_ENDPOINT}`;
 
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;

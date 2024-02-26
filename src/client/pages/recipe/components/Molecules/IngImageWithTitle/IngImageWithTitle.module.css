@@ -1,0 +1,18 @@
+.IngImageWithTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .IngImageWithTitle {
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .IngImageWithTitle {
+    gap: 66px;
+  }
+}
