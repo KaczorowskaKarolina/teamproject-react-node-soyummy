@@ -3,6 +3,7 @@ import css from './Header.module.css';
 import { BurgerMenu } from '#atoms/BurgerMenu/BurgerMenu.jsx';
 import { Navbar } from '#molecules/Navbar/Navbar';
 import { Link } from 'react-router-dom';
+import { ProfilePhoto } from 'client/components/Atoms/ProfilePhoto/ProfilePhoto';
 
 const Header = ({ openMenu }) => {
   let width = window.innerWidth;
@@ -16,7 +17,9 @@ const Header = ({ openMenu }) => {
         {width < 1240 ? null : <Navbar />}
         <div className={css.rightContainer}>
           <div className={css.userMenu}>
-            <div className={css.avatar}></div>
+            <div className={css.avatar}>
+              <ProfilePhoto />
+            </div>
             <p className={css.name}>Name</p>
           </div>
           <BurgerMenu openMenu={openMenu} />

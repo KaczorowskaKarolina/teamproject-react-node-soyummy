@@ -1,4 +1,4 @@
-import { FooterTitle } from '#components/Molecules/FooterTitle/FooterTitle.jsx';
+import { FooterTitle } from '#molecules/FooterTitle/FooterTitle.jsx';
 import css from './FooterInfo.module.css';
 
 const FooterInfo = () => {
