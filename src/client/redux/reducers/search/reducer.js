@@ -28,4 +28,4 @@ const searchSlice = createSlice({
   },
 });
 
-export default searchSlice.reducer;
+export { searchSlice };

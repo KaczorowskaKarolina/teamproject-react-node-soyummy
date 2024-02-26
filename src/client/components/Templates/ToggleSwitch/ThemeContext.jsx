@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import css from './ToggleSwitch.module.css';
 const ThemeContext = createContext();
 
-export const ThemeProvider = ({ children }) => {
+ const ThemeProvider = ({ children }) => {
   const savedTheme = localStorage.getItem('theme');
   const [theme, setTheme] = useState(savedTheme);
 
@@ -23,6 +23,9 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-export const useTheme = () => {
+ const useTheme = () => {
   return useContext(ThemeContext);
 };
+
+
+export {ThemeProvider, useTheme};
