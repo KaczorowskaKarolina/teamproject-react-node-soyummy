@@ -7,6 +7,7 @@ import { CategoriesPage } from '#pages/categories/CategoriesPage.jsx';
 import { Routes, Route } from 'react-router-dom';
 import { SharedLayout } from './Templates/SharedLayout/SharedLayout.jsx';
 import { Recipe } from 'client/pages/recipe/Recipe.jsx';
+import { AddRecipe } from '#pages/addRecipe/AddRecipe.jsx';
 // import { Recipe } from '#pages/recipe/Recipe.jsx';
 
 // several pages imports
@@ -39,7 +40,7 @@ const App = () => {
           {/* <Route path="*" element={<Page404 />} /> */}
           {/* <Route index element={<Home />} /> */}
           {/* <Route path="/search" element={<SearchPage />} /> */}
-          {/* <Route path="/add" element={<AddRecipiesPage />} /> */}
+          <Route path="/add" element={<AddRecipe />} />
           {/* <Route path="/my" element={<MyRecipiesPage />} /> */}
           {/* <Route path="/favorite" element={<FavoritePage />} /> */}
           {/* <Route path="/shopping-list" element={<ShoppingListPage />} /> */}
