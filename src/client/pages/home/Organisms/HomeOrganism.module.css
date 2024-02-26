@@ -1,0 +1,16 @@
+.HomeOrganism {
+  display: flex;
+  flex-direction: column;
+  a:last-of-type {
+    margin-left: auto;
+  }
+  ul {
+    display: flex;
+  }
+  padding-inline-start: 0;
+}
+
+.HomeTemplate {
+  display: flex;
+  flex-direction: column;
+}

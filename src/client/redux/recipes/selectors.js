@@ -1,3 +1,3 @@
-const selectContacts = state => state.contacts.items;
+const selectRecipes = state => state.contacts.items;
 
-export { selectContacts };
+export { selectRecipes };
