@@ -1,8 +1,8 @@
-import { FooterInfo } from '#components/Organisms/FooterInfo/FooterInfo.jsx';
-import { FooterLinks } from '#components/Molecules/FooterLinks/FooterLinks.jsx';
-import { Newsletter } from '#components/Organisms/Newsletter/Newsletter.jsx';
-import { FooterIcons } from '#components/Molecules/FooterIcons/FooterIcons.jsx';
-import { RightsAndTerms } from '#components/Molecules/RightsAndTerms/RightsAndTerms.jsx';
+import { FooterInfo } from '#organisms/FooterInfo/FooterInfo.jsx';
+import { FooterLinks } from '#molecules/FooterLinks/FooterLinks.jsx';
+import { Newsletter } from '#organisms/Newsletter/Newsletter.jsx';
+import { FooterIcons } from '#molecules/FooterIcons/FooterIcons.jsx';
+import { RightsAndTerms } from '#molecules/RightsAndTerms/RightsAndTerms.jsx';
 
 import css from './Footer.module.css';
 

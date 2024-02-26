@@ -1,0 +1,14 @@
+.RecipeImage {
+  width: 343px;
+  height: 250px;
+
+  background-color: var(--chooseOptionBg);
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .RecipeImage {
+    width: 433px;
+    height: 332px;
+  }
+}

@@ -1,0 +1,41 @@
+.ListHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+
+  margin: 0;
+  padding: 12px 14px;
+
+  background-color: var(--accent);
+  border-radius: 8px;
+
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: var(--signInUpText);
+
+  list-style: none;
+  cursor: default;
+}
+
+.ListItem:first-child {
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .ListHeader {
+    gap: 38px;
+
+    padding: 21px 32px;
+
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ListHeader {
+    gap: 109px;
+
+    padding: 21px 40px;
+  }
+}
