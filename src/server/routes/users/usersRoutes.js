@@ -23,11 +23,18 @@ import { uploadAvatar } from '#controllers/user/uploadAvatar.js';
 
 const router = Router();
 
-router.post('/signup', validationMiddleware(userSignUpValidation), signUp);
+router.post(
+  '/signup',
+  validationMiddleware(userSignUpValidation),
+  signUp
+); /* For some reason sending email stopped working */
 router.post('/login', validationMiddleware(userLogInValidation), logIn);
 router.post('/logout', authMiddleware, logout);
 router.post('/current', authMiddleware, currentUser);
-router.post('/verify', resendVerifyEmail);
+router.post(
+  '/verify',
+  resendVerifyEmail
+); /* Probably the same here with sending email */
 router.get('/verify/:verificationToken', verify);
 router.post(
   '/avatar',
@@ -41,10 +48,18 @@ router.post(
   authMiddleware,
   fileMiddleware.single('recipeImage'),
   addRecipe
-);
-router.delete('/ownRecipes/:recipeId', authMiddleware, removeRecipe);
+); /* Need to check */
+router.delete(
+  '/ownRecipes/:recipeId',
+  authMiddleware,
+  removeRecipe
+); /* Need to check */
 router.get('/shopping-list', authMiddleware, getShoppingList);
 router.post('/shopping-list', authMiddleware, addProduct);
-router.delete('/shopping-list/:idProduct', authMiddleware, removeProduct);
+router.delete(
+  '/shopping-list/:idProduct',
+  authMiddleware,
+  removeProduct
+); /* Not working */
 
 export default router;
