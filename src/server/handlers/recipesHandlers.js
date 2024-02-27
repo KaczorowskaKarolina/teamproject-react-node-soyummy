@@ -1,4 +1,5 @@
 import { Recipes } from '#schemas/recipes/recipeSchema.js';
+import { Types } from 'mongoose';
 
 const getAllRecipesFromDb = async ({ page = 0, limit = 6 }) => {
   const recipes = await Recipes.find({})
@@ -58,12 +59,12 @@ const getRecipesFromDbIngredient = async ({
   ingredientId = '',
 }) => {
   const recipes = await Recipes.find({
-    'ingredients.id': { $in: [`${ingredientId}`] },
+    'ingredients.id': new Types.ObjectId(ingredientId),
   })
     .skip(page * limit)
     .limit(limit);
   const docNumbers = await Recipes.find({
-    'ingredients.id': { $in: [`${ingredientId}`] },
+    'ingredients.id': new Types.ObjectId(ingredientId),
   }).countDocuments();
   return { recipes, pageAmount: Math.ceil(docNumbers / limit) };
 };
