@@ -27,6 +27,7 @@ const CategoriesPage = () => {
         setCategories(allCategories);
 
         const allRecipes = await dispatch(fetchRecipes());
+        console.log(allRecipes);
         const filteredRecipes = allRecipes.payload.filter(
           recipe => recipe.category === categoryName
         );
