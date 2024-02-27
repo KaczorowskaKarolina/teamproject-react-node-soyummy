@@ -4,7 +4,10 @@
   "private": true,
   "homepage": "https://kaczorowskakarolina.github.io/teamproject-react-node-soyummy/",
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@hapi/joi": "^17.1.1",
+    "@mui/material": "^5.15.11",
     "@reduxjs/toolkit": "^2.2.1",
     "@sendgrid/mail": "^8.1.0",
     "@testing-library/jest-dom": "^5.16.3",

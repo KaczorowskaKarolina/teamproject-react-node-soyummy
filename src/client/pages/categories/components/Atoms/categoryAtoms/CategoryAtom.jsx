@@ -4,7 +4,7 @@ const CategoryAtom = ({ title }) => {
   const categoryAddress = `http://localhost:5000/categories/${title}`;
 
   return (
-    <a className={css.CategoryAtom} href={categoryAddress}>
+    <a className={css.CategoryNameAtom} href={categoryAddress}>
       {title}
     </a>
   );
