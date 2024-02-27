@@ -23,11 +23,7 @@ app.use(express.static('src/server/public'));
 // WE NEED JWT STRATEGY
 
 app.use('/api/users', userRouter);
-app.use(
-  '/api',
-  // authMiddleware,
-  recipesRouter
-);
+app.use('/api', authMiddleware, recipesRouter);
 
 app.use((req, res) => {
   return res.status(404).json({ message: 'Not found' });

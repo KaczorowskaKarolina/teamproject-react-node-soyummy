@@ -36,7 +36,12 @@ router.post(
   uploadAvatar
 );
 router.get('/ownRecipes', authMiddleware, getUsersRecipes);
-router.post('/ownRecipes', authMiddleware, addRecipe);
+router.post(
+  '/ownRecipes',
+  authMiddleware,
+  fileMiddleware.single('recipeImage'),
+  addRecipe
+);
 router.delete('/ownRecipes/:recipeId', authMiddleware, removeRecipe);
 router.get('/shopping-list', authMiddleware, getShoppingList);
 router.post('/shopping-list', authMiddleware, addProduct);

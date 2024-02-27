@@ -4,8 +4,10 @@ import Jimp from 'jimp';
 
 async function addRecipe(req, res, next) {
   try {
+    console.log('Test');
     const id = req.user.id;
     const recipe = req.body;
+    console.log(req.body);
     const user = await getUserById(id);
     if (!user) {
       return res.status(401).json({ message: 'Nope' });

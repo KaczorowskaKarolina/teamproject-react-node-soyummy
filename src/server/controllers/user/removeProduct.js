@@ -8,10 +8,7 @@ async function removeProduct(req, res, next) {
     if (!user) {
       return res.status(401).json({ message: 'Nope' });
     }
-    if (!recipe) {
-      return res.status(401).json({ message: 'Nope' });
-    }
-    user.shoppingList.pull({ _id: idProduct });
+    user.shoppingList.pull({ $oid: idProduct });
     await user.save();
     return res.status(204).json({ data: { message: 'no content' } });
   } catch (error) {

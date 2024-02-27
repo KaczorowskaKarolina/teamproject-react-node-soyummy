@@ -63,7 +63,7 @@ const getRecipesFromDbIngredient = async ({
     .skip(page * limit)
     .limit(limit);
   const docNumbers = await Recipes.find({
-    'ingredients.id': { $in: [ObjectId(`${ingredientId}`)] },
+    'ingredients.id': { $in: [`${ingredientId}`] },
   }).countDocuments();
   return { recipes, pageAmount: Math.ceil(docNumbers / limit) };
 };
@@ -86,6 +86,20 @@ const deleteRecipeInDb = async id => {
   return response;
 };
 
+const addToFavoritesInDb = async ({ userId, recipeId }) => {
+  const recipe = await Recipes.findById(recipeId);
+  recipe.favorites.push(userId);
+  await recipe.save();
+  return;
+};
+
+const deleteFromFavoritesInDb = async ({ userId, recipeId }) => {
+  const recipe = await Recipes.findById(recipeId);
+  recipe.favorites.pull(userId);
+  await recipe.save();
+  return;
+};
+
 export {
   getAllRecipesFromDb,
   getRecipeByIdFromDb,
@@ -96,4 +110,6 @@ export {
   createRecipeToDb,
   deleteRecipeInDb,
   getPopularRecipesFromDb,
+  addToFavoritesInDb,
+  deleteFromFavoritesInDb,
 };
