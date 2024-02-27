@@ -56,10 +56,6 @@ router.delete(
 ); /* Need to check */
 router.get('/shopping-list', authMiddleware, getShoppingList);
 router.post('/shopping-list', authMiddleware, addProduct);
-router.delete(
-  '/shopping-list/:idProduct',
-  authMiddleware,
-  removeProduct
-); /* Not working */
+router.delete('/shopping-list/:idProduct', authMiddleware, removeProduct);
 
 export default router;
