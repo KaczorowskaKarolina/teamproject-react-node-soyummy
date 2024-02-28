@@ -3,7 +3,7 @@ import { getFavoritesRecipes } from '#handlers/recipesHandlers.js';
 async function getFavorites(req, res, next) {
   try {
     const id = req.user.id;
-    const response = await getFavoritesRecipes(id);
+    const response = await getFavoritesRecipes({ userId: id });
     if (!response) {
       return res.status(401).json({ message: 'No recipes' });
     }

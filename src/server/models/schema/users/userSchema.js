@@ -30,6 +30,9 @@ const users = new Schema(
     createdRecipes: {
       type: Array,
     },
+    shoppingList: {
+      type: Array,
+    },
     verificationToken: {
       type: String,
       required: [true, 'Verify token is required'],
