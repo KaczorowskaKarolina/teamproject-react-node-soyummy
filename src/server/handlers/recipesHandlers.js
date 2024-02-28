@@ -41,14 +41,14 @@ const getRecipesFromDbCategory = async ({
   return { recipes, pageAmount: Math.ceil(docNumbers / limit) };
 };
 
-const getFavoritesRecipes = async ({ id, page = 0, limit = 4 }) => {
+const getFavoritesRecipes = async ({ userId, page = 0, limit = 4 }) => {
   const recipes = await Recipes.find({
-    favorites: `${id}`,
+    favorites: new Types.ObjectId(userId),
   })
     .skip(page * limit)
     .limit(limit);
   const docNumbers = await Recipes.find({
-    favorites: id,
+    favorites: new Types.ObjectId(userId),
   }).countDocuments();
   return { recipes, pageAmount: Math.ceil(docNumbers / limit) };
 };
@@ -89,7 +89,7 @@ const deleteRecipeInDb = async id => {
 
 const addToFavoritesInDb = async ({ userId, recipeId }) => {
   const recipe = await Recipes.findById(recipeId);
-  recipe.favorites.push(userId);
+  recipe.favorites.push(new Types.ObjectId(userId));
   await recipe.save();
   return;
 };
