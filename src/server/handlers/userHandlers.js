@@ -11,7 +11,7 @@ async function getUserByEmail(email) {
 }
 
 async function getUserByToken(token) {
-  const user = await User.findOne({ varificationToken: token });
+  const user = await User.findOne({ verificationToken: token });
   return user;
 }
 
