@@ -23,18 +23,11 @@ import { uploadAvatar } from '#controllers/user/uploadAvatar.js';
 
 const router = Router();
 
-router.post(
-  '/signup',
-  validationMiddleware(userSignUpValidation),
-  signUp
-); /* For some reason sending email stopped working */
+router.post('/signup', validationMiddleware(userSignUpValidation), signUp);
 router.post('/login', validationMiddleware(userLogInValidation), logIn);
 router.post('/logout', authMiddleware, logout);
 router.post('/current', authMiddleware, currentUser);
-router.post(
-  '/verify',
-  resendVerifyEmail
-); /* Probably the same here with sending email */
+router.post('/verify', resendVerifyEmail);
 router.get('/verify/:verificationToken', verify);
 router.post(
   '/avatar',
