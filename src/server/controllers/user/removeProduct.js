@@ -1,4 +1,5 @@
 import { getUserById } from '#handlers/userHandlers.js';
+import { Types } from 'mongoose';
 
 async function removeProduct(req, res, next) {
   try {
@@ -8,7 +9,9 @@ async function removeProduct(req, res, next) {
     if (!user) {
       return res.status(401).json({ message: 'Nope' });
     }
-    const index = user.shoppingList.findIndex(item => (item._id = idProduct));
+    const index = user.shoppingList.findIndex(
+      item => (item._id = new Types.ObjectId(idProduct))
+    );
     if (index === -1) {
       return res.status(404).json({ data: { message: 'Not found' } });
     }

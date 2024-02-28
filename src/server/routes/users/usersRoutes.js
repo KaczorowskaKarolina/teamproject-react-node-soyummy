@@ -41,12 +41,8 @@ router.post(
   authMiddleware,
   fileMiddleware.single('recipeImage'),
   addRecipe
-); /* Need to check */
-router.delete(
-  '/ownRecipes/:recipeId',
-  authMiddleware,
-  removeRecipe
-); /* Need to check */
+);
+router.delete('/ownRecipes/:recipeId', authMiddleware, removeRecipe);
 router.get('/shopping-list', authMiddleware, getShoppingList);
 router.post('/shopping-list', authMiddleware, addProduct);
 router.delete('/shopping-list/:idProduct', authMiddleware, removeProduct);

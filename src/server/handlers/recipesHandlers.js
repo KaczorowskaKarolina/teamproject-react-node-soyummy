@@ -78,6 +78,10 @@ const getPopularRecipesFromDb = async ({ page = 0, limit = 5 }) => {
 };
 
 const createRecipeToDb = async ({ recipe }) => {
+  for (const item of recipe.ingredients) {
+    const ingredientId = new Types.ObjectId(item.id);
+    item.id = ingredientId;
+  }
   const response = await new Recipes({ ...recipe });
   return response;
 };

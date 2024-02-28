@@ -1,4 +1,5 @@
 import { getUserById } from '#handlers/userHandlers.js';
+import { Types } from 'mongoose';
 
 async function addProduct(req, res, next) {
   try {
@@ -8,7 +9,10 @@ async function addProduct(req, res, next) {
     if (!user) {
       return res.status(401).json({ message: 'Nope' });
     }
-    user.shoppingList.push(product);
+    user.shoppingList.push({
+      _id: new Types.ObjectId(product.id),
+      measure: product.measure,
+    });
     await user.save();
     return res.status(204).json({ data: { message: 'no content' } });
   } catch (error) {

@@ -1,13 +1,12 @@
 import { getUserById } from '#handlers/userHandlers.js';
 import { createRecipe } from '#controllers/recipes/createRecipe.js';
 import Jimp from 'jimp';
+import { nanoid } from 'nanoid';
 
 async function addRecipe(req, res, next) {
   try {
-    console.log('Test');
     const id = req.user.id;
-    const recipe = req.body;
-    console.log(req.body);
+    const recipe = JSON.parse(req.body.recipe);
     const user = await getUserById(id);
     if (!user) {
       return res.status(401).json({ message: 'Nope' });
@@ -22,20 +21,18 @@ async function addRecipe(req, res, next) {
 
     const fileName = req.file.originalname;
     const thumb = await Jimp.read(`src/server/tmp/${fileName}`);
-    await thumb.writeAsync(
-      `src/server/public/images/${newRecipe.id}${fileName}`
-    );
+    const randomName = nanoid();
+    await thumb.writeAsync(`src/server/public/images/${randomName}${fileName}`);
     const preview = thumb.cover(250, 250);
-    await preview.writeAsync(
-      `public/images/${newRecipe.id}${fileName}_preview`
-    );
-    newRecipe.thumb = 'http://localhost:5000/images/${newRecipe.id}${fileName}';
-    newRecipe.preview =
-      'http://localhost:5000/images/${newRecipe.id}${fileName}_preview';
+    await preview.writeAsync(`public/images/PreV${randomName}${fileName}`);
+    newRecipe.thumb = `http://localhost:5000/images/${randomName}${fileName}`;
+    newRecipe.preview = `http://localhost:5000/images/PreV${randomName}${fileName}`;
     await newRecipe.save();
     user.createdRecipes.push(newRecipe);
     await user.save();
-    return res.status(204).json({ data: { message: 'no content' } });
+    return res
+      .status(200)
+      .json({ data: { file: newRecipe }, message: 'no content' });
   } catch (error) {
     return next(error);
   }
