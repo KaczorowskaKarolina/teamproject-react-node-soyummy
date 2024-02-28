@@ -70,11 +70,12 @@ const getRecipesFromDbIngredient = async ({
 };
 
 const getPopularRecipesFromDb = async ({ page = 0, limit = 5 }) => {
-  const response = await Recipes.find({})
+  const recipes = await Recipes.find({})
     .sort({ favorites: 1 })
     .skip(page * limit)
     .limit(limit);
-  return response;
+  const docNumbers = await Recipes.find({}).countDocuments();
+  return { recipes, pageAmount: Math.ceil(docNumbers / limit) };
 };
 
 const createRecipeToDb = async ({ recipe }) => {
