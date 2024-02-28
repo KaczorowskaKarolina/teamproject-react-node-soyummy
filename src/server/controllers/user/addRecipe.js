@@ -24,9 +24,11 @@ async function addRecipe(req, res, next) {
     const randomName = nanoid();
     await thumb.writeAsync(`src/server/public/images/${randomName}${fileName}`);
     const preview = thumb.cover(250, 250);
-    await preview.writeAsync(`public/images/PreV${randomName}${fileName}`);
+    await preview.writeAsync(
+      `src/server/public/images/${randomName}${fileName}_preview`
+    );
     newRecipe.thumb = `http://localhost:5000/images/${randomName}${fileName}`;
-    newRecipe.preview = `http://localhost:5000/images/PreV${randomName}${fileName}`;
+    newRecipe.preview = `http://localhost:5000/images/${randomName}${fileName}_preview`;
     await newRecipe.save();
     user.createdRecipes.push(newRecipe);
     await user.save();
