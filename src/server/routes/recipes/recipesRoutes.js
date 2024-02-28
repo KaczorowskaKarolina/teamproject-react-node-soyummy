@@ -17,7 +17,7 @@ router.get('/recipes', getRecipesQuery);
 router.get('/recipes/category/:category', getRecipesByCategory);
 router.get('/recipes/ingredients/list', getAllIngredients);
 router.get('/recipes/ingredients/:ingredientId', getRecipesByIngredient);
-router.get('/recipes/favorites', getFavorites); /* Not working */
+router.get('/recipes/favorites', getFavorites);
 router.post('/recipes/favorites/:recipeId', addToFavorites);
 router.delete('/recipes/favorites/:recipeId', deleteFromFavorites);
 router.get('/recipes/:id', getRecipeById);
