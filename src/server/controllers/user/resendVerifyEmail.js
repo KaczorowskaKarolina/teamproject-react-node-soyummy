@@ -20,7 +20,10 @@ async function resendVerifyEmail(req, res, next) {
         .status(400)
         .json({ message: 'Verification has already been passed' });
     }
-    await sendVerificationEmail(userEmail, token);
+    await sendVerificationEmail({
+      emailTo: userEmail,
+      verificationToken: token,
+    });
     return res.status(200).json({ data: 'Email has been sent' });
   } catch (error) {
     return next(error);

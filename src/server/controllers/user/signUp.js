@@ -17,8 +17,7 @@ async function signUp(req, res) {
     user.avatarURL = gravatar.url(email, { s: 250, protocol: 'https' });
     const verificationToken = nanoid();
     user.verificationToken = verificationToken;
-    const message = await sendVerificationEmail(user.email, verificationToken);
-    console.log(message);
+    await sendVerificationEmail({ emailTo: user.email, verificationToken });
     await user.save();
     return res.status(200).json({ data: user });
   } catch (error) {
